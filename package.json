@@ -1,0 +1,31 @@
+{
+  "name": "pickleball-poacher",
+  "version": "1.0.0",
+  "description": "City of Ottawa recreation centre drop-in reservation script.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morinted/pickleball-poacher.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morinted/pickleball-poacher/issues"
+  },
+  "homepage": "https://github.com/morinted/pickleball-poacher#readme",
+  "dependencies": {
+    "conf": "^10.0.3",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.34",
+    "puppeteer": "^11.0.0",
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "prettier": "2.4.1"
+  }
+}
