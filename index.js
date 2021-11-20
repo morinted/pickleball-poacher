@@ -48,15 +48,25 @@ yargs(hideBin(process.argv))
           default: 23.75,
         })
     },
-    (yargs) => {
+    ({ interval, limit }) => {
+      const scriptStart = moment()
       puppeteer.use(StealthPlugin())
       const config = new Conf()
+
+      /** Main recursive loop. */
       const register = async () => {
+        // Take a break overnight.
+        const now = moment.tz('America/Toronto')
+        const afterTen = now.hour() >= 22
+        const beforeEight = now.hour() < 8
+        if (afterTen || beforeEight) {
+          return setTimeout(register, 1000 * 60 * 30)
+        }
+
         const events = config.get('events')
         const identities = config.get('identities')
         const registrations = config.get('registrations', [])
 
-        const now = moment.tz('America/Toronto')
         const afterSix = now.hour() >= 18
         const day = now.day()
         const registerableDays = [
@@ -79,10 +89,12 @@ yargs(hideBin(process.argv))
             return validDay && eventMoment.isAfter(now) && !eventAlreadyBooked
           }
         )
-        console.log(targetEvents)
+        console.log('registering', targetEvents)
 
         const browser = await puppeteer.launch({ headless: false })
-        const results = await Promise.all(
+
+        // Run one registration per tab.
+        const results = await Promise.allSettled(
           targetEvents.map(async (targetEvent) => {
             const page = await browser.newPage()
 
@@ -104,12 +116,14 @@ yargs(hideBin(process.argv))
               `//a[contains(., '${targetEvent.activity}')]`
             )
             if (!activityLink) {
-              return `Activity not found ${JSON.stringify(targetEvent)}`
+              throw new Error(
+                `Activity not found ${JSON.stringify(targetEvent)}`
+              )
             }
             await activityLink.click()
             await page.waitForNavigation()
 
-            await setValue('input#reservationCount', '2') // Customize value here.
+            await setValue('input#reservationCount', targetEvent.spots)
             await page.click('#submit-btn')
             await page.waitForNavigation()
 
@@ -127,20 +141,25 @@ yargs(hideBin(process.argv))
             )
             await page.waitForNavigation()
 
-            await page.waitForSelector('input#telephone')
-            await page.focus('input#telephone')
-            await page.keyboard.type(identities[0].uniquePhone)
-            await page.focus('input#email')
-            await page.keyboard.type(identities[0].uniqueEmail)
-            await page.keyboard.press('Tab')
-            await page.keyboard.type(identities[0].name)
-            await page.click('#submit-btn')
-            await page.waitForNavigation()
+            const inputForm = async ({ uniquePhone, uniqueEmail, name }) => {
+              await page.waitForSelector('input#telephone')
+              await page.focus('input#telephone')
+              await page.keyboard.type(uniquePhone)
+              await page.focus('input#email')
+              await page.keyboard.type(uniqueEmail)
+              await page.keyboard.press('Tab')
+              await page.keyboard.type(name)
+              await page.click('#submit-btn')
+              await page.waitForNavigation()
+            }
+
+            // TODO: handle duped email and resubmit.
+            await inputForm(identities[0])
 
             const url = await page.url()
             const success = url.toLowerCase().includes('confirmationpage')
             await page.close()
-            return { ...targetEvent, success }
+            return { ...targetEvent, success, phone: identities[0].uniquePhone }
           })
         )
 
@@ -157,6 +176,15 @@ yargs(hideBin(process.argv))
           ]
         })
         config.set('registrations', [...registrations, ...newRegistrations])
+        await browser.close()
+
+        // If we didn't register everything, try again.
+        if (results.length > newRegistrations) {
+          if (scriptStart.diff(moment(), 'hours', true) > limit) {
+            return
+          }
+          setTimeout(() => register(), interval * 1000)
+        }
       }
       register()
     }
