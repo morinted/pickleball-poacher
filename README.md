@@ -11,3 +11,15 @@ The City of Ottawa opens registration for drop-in events 2 days in advance at 6 
 The goal is to enumerate the slots you'd like to reserve, and then run the script on a schedule where it will wake up once a day at 6 PM and fulfill any outstanding reservations. It should be able to do these in tandem and will retry if the site's connection is spotty. It won't stop until it finds a spot, so if the day fills up it will retry over time.
 
 It will need n sets of email + phone, which would match up to how many slots you want to reserve \* the number of people you want to reserve for, divided by two. E.g. if you want to schedule for 2 people for 3 sessions at once, that is 3 identities. If you want to register for 6 people, 2 sessions at once, t'at is 6 identities.
+
+## Configure
+
+Run `node index.js init` to create a config file. Its path will be in the console.
+
+You can then edit the config file in order to add which slots you want to reserve. All the drop-in sites have the same URL format, e.g. [Hintonburg Community Center](https://reservation.frontdesksuite.ca/rcfs/hintonburgcc/). The part of the URL that belongs in the location field is "hintonburgcc". The time should include AM/PM so that the script won't try to register for things in the past.
+
+This configuration file is also used to store successful registrations.
+
+## Run
+
+To run, simply use `node index.js register` and the script will try to fill all desired slots, every 5 minutes for the next 23.5 hours. It will stop when it has registered all desired slots.

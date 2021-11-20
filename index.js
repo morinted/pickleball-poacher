@@ -4,7 +4,8 @@ import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import Conf from 'conf'
 import moment from 'moment-timezone'
-import puppeteer from 'puppeteer'
+import puppeteer from 'puppeteer-extra'
+import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 
 const getEventMoment = ({ day, time }) =>
   moment.tz(time, ['h:m a', 'H:m'], 'America/Toronto').day(day)
@@ -48,6 +49,7 @@ yargs(hideBin(process.argv))
         })
     },
     (yargs) => {
+      puppeteer.use(StealthPlugin())
       const config = new Conf()
       const register = async () => {
         const events = config.get('events')
@@ -77,44 +79,86 @@ yargs(hideBin(process.argv))
             return validDay && eventMoment.isAfter(now) && !eventAlreadyBooked
           }
         )
+        console.log(targetEvents)
 
-        const browser = await puppeteer.launch()
-        const results = Promise.all(
+        const browser = await puppeteer.launch({ headless: false })
+        const results = await Promise.all(
           targetEvents.map(async (targetEvent) => {
             const page = await browser.newPage()
+
+            async function setValue(selector, value) {
+              page.evaluate(
+                ({ selector, value }) => {
+                  return (document.querySelector(selector).value = value)
+                },
+                { selector, value }
+              )
+            }
+
             await page.goto(
               `https://reservation.frontdesksuite.ca/rcfs/${targetEvent.location}`,
               { waitUntil: 'networkidle0' }
             )
 
-            const [button] = await page.$x(
-              `//button[contains(., '${targetEvent.activity}')]`
+            const [activityLink] = await page.$x(
+              `//a[contains(., '${targetEvent.activity}')]`
             )
-            if (!button) {
+            if (!activityLink) {
               return `Activity not found ${JSON.stringify(targetEvent)}`
             }
-            await button.click()
+            await activityLink.click()
+            await page.waitForNavigation()
 
-            function getElementWithText(selector, text, root = document) {
-              return [...root.querySelectorAll(selector).values()].find((el) =>
-                el.textContent.includes(selector)
-              )
-            }
+            await setValue('input#reservationCount', '2') // Customize value here.
+            await page.click('#submit-btn')
+            await page.waitForNavigation()
 
-            getElementWithText('a', 'Pickleball')
-            document.querySelector('input#reservationCount')
-            const scheduleForDay = getElementWithText('.date', 'Wednesday')
-            getElementWithText('a', '7:45', scheduleForDay) // Disabled: li.reserved
-            document.querySelector('input#telephone')
-            document.querySelector('input#email')
-            const nameContainer = getElementWithText('label', 'Name')
-            const nameInput = nameContainer.querySelector('input')
-            document.querySelector('#submit-btn')
+            await page.evaluate(
+              (day, time) =>
+                [
+                  ...[...document.querySelectorAll('.date')]
+                    .find((daySection) => daySection.textContent.includes(day))
+                    .querySelectorAll('.times-list a'),
+                ]
+                  .find((timeLink) => timeLink.textContent.includes(time))
+                  .click(),
+              targetEvent.day,
+              targetEvent.time
+            )
+            await page.waitForNavigation()
 
-            await browser.close()
+            await page.waitForSelector('input#telephone')
+            await page.focus('input#telephone')
+            await page.keyboard.type(identities[0].uniquePhone)
+            await page.focus('input#email')
+            await page.keyboard.type(identities[0].uniqueEmail)
+            await page.keyboard.press('Tab')
+            await page.keyboard.type(identities[0].name)
+            await page.click('#submit-btn')
+            await page.waitForNavigation()
+
+            const url = await page.url()
+            const success = url.toLowerCase().includes('confirmationpage')
+            await page.close()
+            return { ...targetEvent, success }
           })
         )
+
+        const newRegistrations = results.flatMap((result) => {
+          const { success, ...targetEvent } = result
+          if (!success) {
+            return []
+          }
+          return [
+            {
+              ...targetEvent,
+              date: formatEventMoment(getEventMoment(targetEvent)),
+            },
+          ]
+        })
+        config.set('registrations', [...registrations, ...newRegistrations])
       }
+      register()
     }
   )
   .parse()
