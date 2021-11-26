@@ -104,72 +104,89 @@ yargs(hideBin(process.argv))
                 { selector, value }
               )
             }
-
-            await page.goto(
-              `https://reservation.frontdesksuite.ca/rcfs/${targetEvent.location}`,
-              { waitUntil: 'networkidle0' }
-            )
-
-            const [activityLink] = await page.$x(
-              `//a[contains(., '${targetEvent.activity}')]`
-            )
-            if (!activityLink) {
-              throw new Error(
-                `Activity not found ${JSON.stringify(targetEvent)}`
+            try {
+              await page.goto(
+                `https://reservation.frontdesksuite.ca/rcfs/${targetEvent.location}`,
+                { waitUntil: 'networkidle0' }
               )
-            }
-            await activityLink.click()
-            await page.waitForNavigation()
 
-            await setValue('input#reservationCount', targetEvent.spots)
-            await page.click('#submit-btn')
-            await page.waitForNavigation()
+              const [activityLink] = await page.$x(
+                `//a[contains(., '${targetEvent.activity}')]`
+              )
+              if (!activityLink) {
+                throw new Error(
+                  `Activity not found ${JSON.stringify(targetEvent)}`
+                )
+              }
+              await activityLink.click()
+              await page.waitForNavigation()
 
-            await page.evaluate(
-              (day, time) =>
-                [
-                  ...[...document.querySelectorAll('.date')]
-                    .find((daySection) => daySection.textContent.includes(day))
-                    .querySelectorAll('.times-list a'),
-                ]
-                  .find((timeLink) => timeLink.textContent.includes(time))
-                  .click(),
-              targetEvent.day,
-              targetEvent.time
-            )
-            await page.waitForNavigation()
+              // When the input is missing, it means there are no remaining times.
+              const inputPresent = !!(await page.$(
+                'input#reservationCount[type="number"]'
+              ))
+              console.log(inputPresent)
+              if (!inputPresent) {
+                throw new Error('No time left')
+              }
 
-            const inputForm = async ({ phone, email, name }) => {
-              await page.waitForSelector('input#telephone')
-              await page.focus('input#telephone')
-              await page.keyboard.type(phone)
-              await page.focus('input#email')
-              await page.keyboard.type(email)
-              await page.keyboard.press('Tab')
-              await page.keyboard.type(name)
+              await setValue('input#reservationCount', targetEvent.spots)
               await page.click('#submit-btn')
               await page.waitForNavigation()
+
+              await page.evaluate(
+                (day, time) =>
+                  [
+                    ...[...document.querySelectorAll('.date')]
+                      .find((daySection) =>
+                        daySection.textContent.includes(day)
+                      )
+                      .querySelectorAll('.times-list a'),
+                  ]
+                    .find((timeLink) => timeLink.textContent.includes(time))
+                    .click(),
+                targetEvent.day,
+                targetEvent.time
+              )
+              await page.waitForNavigation()
+
+              const inputForm = async ({ phone, email, name }) => {
+                await page.waitForSelector('input#telephone')
+                await page.focus('input#telephone')
+                await page.keyboard.type(phone)
+                await page.focus('input#email')
+                await page.keyboard.type(email)
+                await page.keyboard.press('Tab')
+                await page.keyboard.type(name)
+                await page.click('#submit-btn')
+                await page.waitForNavigation()
+              }
+
+              // TODO: handle duped email and resubmit.
+              await inputForm(identity)
+
+              const url = await page.url()
+              const success = url.toLowerCase().includes('confirmationpage')
+              if (!success) {
+                return new Error('No confirmation page!')
+              }
+              return { ...targetEvent, phone: identity.phone }
+            } finally {
+              await page.close()
             }
-
-            // TODO: handle duped email and resubmit.
-            await inputForm(identity)
-
-            const url = await page.url()
-            const success = url.toLowerCase().includes('confirmationpage')
-            await page.close()
-            return { ...targetEvent, success, phone: identity.phone }
           })
         )
 
         const newRegistrations = results.flatMap((result) => {
-          const { success, ...targetEvent } = result
-          if (!success) {
+          const { status, value, reason } = result
+          if (status === 'rejected') {
+            console.log('Failure:', reason)
             return []
           }
           return [
             {
-              ...targetEvent,
-              date: formatEventMoment(getEventMoment(targetEvent)),
+              ...value,
+              date: formatEventMoment(getEventMoment(value)),
             },
           ]
         })
