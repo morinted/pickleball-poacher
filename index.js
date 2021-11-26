@@ -24,13 +24,11 @@ yargs(hideBin(process.argv))
         spots: 1,
       },
     ])
-    config.set('identities', [
-      {
-        uniqueEmail: 'email@example.com',
-        uniquePhone: '6131231234',
-        name: 'Your name',
-      },
-    ])
+    config.set('identity', {
+      email: 'email@example.com',
+      phone: '6131231234',
+      name: 'Your name',
+    })
     config.set('registrations', [])
     console.log(`Config file created! Edit it at ${config.path}`)
   })
@@ -64,7 +62,7 @@ yargs(hideBin(process.argv))
         }
 
         const events = config.get('events')
-        const identities = config.get('identities')
+        const identity = config.get('identity')
         const registrations = config.get('registrations', [])
 
         const afterSix = now.hour() >= 18
@@ -91,7 +89,7 @@ yargs(hideBin(process.argv))
         )
         console.log('registering', targetEvents)
 
-        const browser = await puppeteer.launch({ headless: false })
+        const browser = await puppeteer.launch()
 
         // Run one registration per tab.
         const results = await Promise.allSettled(
@@ -141,12 +139,12 @@ yargs(hideBin(process.argv))
             )
             await page.waitForNavigation()
 
-            const inputForm = async ({ uniquePhone, uniqueEmail, name }) => {
+            const inputForm = async ({ phone, email, name }) => {
               await page.waitForSelector('input#telephone')
               await page.focus('input#telephone')
-              await page.keyboard.type(uniquePhone)
+              await page.keyboard.type(phone)
               await page.focus('input#email')
-              await page.keyboard.type(uniqueEmail)
+              await page.keyboard.type(email)
               await page.keyboard.press('Tab')
               await page.keyboard.type(name)
               await page.click('#submit-btn')
@@ -154,12 +152,12 @@ yargs(hideBin(process.argv))
             }
 
             // TODO: handle duped email and resubmit.
-            await inputForm(identities[0])
+            await inputForm(identity)
 
             const url = await page.url()
             const success = url.toLowerCase().includes('confirmationpage')
             await page.close()
-            return { ...targetEvent, success, phone: identities[0].uniquePhone }
+            return { ...targetEvent, success, phone: identity.phone }
           })
         )
 
