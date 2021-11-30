@@ -42,14 +42,16 @@ yargs(hideBin(process.argv))
       return yargs
         .positional('interval', {
           describe: 'the interval in seconds to retry when sessions are filled',
-          default: 300,
+          default: '300',
         })
         .positional('limit', {
           describe: 'the time limit in hours to retry for',
-          default: 23.75,
+          default: '23.75',
         })
     },
     ({ interval, limit }) => {
+      interval = parseFloat(interval)
+      limit = parseFloat(limit)
       const scriptStart = moment()
       const config = new Conf()
       const token = config.get('2captcha-token')
