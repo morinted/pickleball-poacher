@@ -6,11 +6,13 @@ import Conf from 'conf'
 import moment from 'moment-timezone'
 import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
+import RecaptchaPlugin from 'puppeteer-extra-plugin-recaptcha'
 
 const getEventMoment = ({ day, time }) =>
-  moment.tz(time, ['h:m a', 'H:m'], 'America/Toronto').day(day)
+  moment.tz(time, ['h:m A', 'h:m'], 'America/Toronto').day(day)
 const formatEventMoment = (eventMoment) =>
   eventMoment.format('YYYY/MM/DD h:mm a')
+const waitFor = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
 yargs(hideBin(process.argv))
   .command('init', 'create a default config file', () => {
@@ -30,6 +32,7 @@ yargs(hideBin(process.argv))
       name: 'Your name',
     })
     config.set('registrations', [])
+    config.set('2captcha-token', '')
     console.log(`Config file created! Edit it at ${config.path}`)
   })
   .command(
@@ -48,8 +51,17 @@ yargs(hideBin(process.argv))
     },
     ({ interval, limit }) => {
       const scriptStart = moment()
-      puppeteer.use(StealthPlugin())
       const config = new Conf()
+      const token = config.get('2captcha-token')
+
+      puppeteer.use(StealthPlugin())
+      if (token) {
+        puppeteer.use(
+          RecaptchaPlugin({
+            provider: { id: '2captcha', token },
+          })
+        )
+      }
 
       /** Main recursive loop. */
       const register = async () => {
@@ -66,6 +78,7 @@ yargs(hideBin(process.argv))
         const registrations = config.get('registrations', [])
 
         const afterSix = now.hour() >= 18
+        console.log('now hour', now.hour())
         const day = now.day()
         const registerableDays = [
           day,
@@ -94,7 +107,10 @@ yargs(hideBin(process.argv))
         // Run one registration per tab.
         const results = await Promise.allSettled(
           targetEvents.map(async (targetEvent) => {
-            const page = await browser.newPage()
+            const context = await browser.createIncognitoBrowserContext()
+            const page = await context.newPage()
+            // Allow up to 2 minutes for slow site.
+            await page.setDefaultTimeout(120000)
 
             async function setValue(selector, value) {
               page.evaluate(
@@ -119,47 +135,61 @@ yargs(hideBin(process.argv))
                 )
               }
               await activityLink.click()
-              await page.waitForNavigation()
+              await page.waitForNavigation({ waitUntil: 'networkidle0' })
 
               // When the input is missing, it means there are no remaining times.
               const inputPresent = !!(await page.$(
                 'input#reservationCount[type="number"]'
               ))
-              console.log(inputPresent)
+              console.log('reservation count input?', inputPresent)
               if (!inputPresent) {
                 throw new Error('No time left')
               }
 
               await setValue('input#reservationCount', targetEvent.spots)
               await page.click('#submit-btn')
-              await page.waitForNavigation()
+              await page.waitForSelector('.date')
 
-              await page.evaluate(
-                (day, time) =>
-                  [
-                    ...[...document.querySelectorAll('.date')]
-                      .find((daySection) =>
-                        daySection.textContent.includes(day)
-                      )
-                      .querySelectorAll('.times-list a'),
-                  ]
-                    .find((timeLink) => timeLink.textContent.includes(time))
-                    .click(),
+              const isButtonClicked = await page.evaluate(
+                (day, time) => {
+                  const targetDay = [
+                    ...document.querySelectorAll('.date'),
+                  ].find((daySection) => daySection.textContent.includes(day))
+                  const targetTime = [
+                    ...targetDay.querySelectorAll('.times-list li'),
+                  ].find((timeLink) => timeLink.textContent.includes(time))
+
+                  // Greyed-out button.
+                  const isFull = targetTime.classList.contains('reserved')
+                  if (isFull) return false
+
+                  // Get nested link and click it.
+                  targetTime.querySelector('a').click()
+                  return true
+                },
                 targetEvent.day,
                 targetEvent.time
               )
-              await page.waitForNavigation()
+              if (!isButtonClicked) throw new Error('time slot full')
 
               const inputForm = async ({ phone, email, name }) => {
                 await page.waitForSelector('input#telephone')
+
+                if (token) {
+                  console.log('solving captchas with token:', token)
+                  await page.solveRecaptchas()
+                }
+
                 await page.focus('input#telephone')
-                await page.keyboard.type(phone)
+                await page.keyboard.type(phone, { delay: 50 })
                 await page.focus('input#email')
-                await page.keyboard.type(email)
+                await page.keyboard.type(email, { delay: 50 })
                 await page.keyboard.press('Tab')
-                await page.keyboard.type(name)
+                await page.keyboard.type(name, { delay: 50 })
+                await waitFor(1000)
+
                 await page.click('#submit-btn')
-                await page.waitForNavigation()
+                await page.waitForNavigation({ waitUntil: 'networkidle0' })
               }
 
               // TODO: handle duped email and resubmit.
@@ -168,7 +198,7 @@ yargs(hideBin(process.argv))
               const url = await page.url()
               const success = url.toLowerCase().includes('confirmationpage')
               if (!success) {
-                return new Error('No confirmation page!')
+                throw new Error('No confirmation page!')
               }
               return { ...targetEvent, phone: identity.phone }
             } finally {
@@ -183,6 +213,7 @@ yargs(hideBin(process.argv))
             console.log('Failure:', reason)
             return []
           }
+          console.log('saving', value)
           return [
             {
               ...value,
@@ -194,7 +225,7 @@ yargs(hideBin(process.argv))
         await browser.close()
 
         // If we didn't register everything, try again.
-        if (results.length > newRegistrations) {
+        if (results.some((result) => result.status === 'rejected')) {
           if (scriptStart.diff(moment(), 'hours', true) > limit) {
             return
           }
