@@ -69,6 +69,7 @@ yargs(hideBin(process.argv))
       const register = async () => {
         // Take a break overnight.
         const now = moment.tz('America/Toronto')
+        console.log(now.format('YYYY-MM-DD hh:mm:ss'))
         const afterTen = now.hour() >= 22
         const beforeEight = now.hour() < 8
         if (afterTen || beforeEight) {
@@ -80,12 +81,14 @@ yargs(hideBin(process.argv))
         const registrations = config.get('registrations', [])
 
         const afterSix = now.hour() >= 18
+        const closeToSix =
+          now.clone().add(5, 'minutes').hour() === 18 && now.hour() === 17
         console.log('now hour', now.hour())
         const day = now.day()
         const registerableDays = [
           day,
           day + 1,
-          ...(afterSix ? [day + 2] : []),
+          ...(afterSix || closeToSix ? [day + 2] : []),
         ].map((dayNumber) => moment().day(dayNumber).format('dddd'))
 
         const targetEvents = events.filter(
@@ -136,6 +139,19 @@ yargs(hideBin(process.argv))
                   `Activity not found ${JSON.stringify(targetEvent)}`
                 )
               }
+
+              // If we are near 6 PM but not quite there, delay checking for spots until 6.
+              if (closeToSix) {
+                while (moment.tz('America/Toronto').hour() < 18) {
+                  console.log('waiting for 6...')
+                  await waitFor(7500)
+                }
+                console.log(
+                  "Happy six o'clock, let's go!",
+                  moment().format('YYYY-MM-DD hh:mm:ss')
+                )
+              }
+
               await activityLink.click()
               await page.waitForNavigation({ waitUntil: 'networkidle0' })
 
