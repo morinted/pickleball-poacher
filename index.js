@@ -91,18 +91,40 @@ yargs(hideBin(process.argv))
           ...(afterSix || closeToSix ? [day + 2] : []),
         ].map((dayNumber) => moment().day(dayNumber).format('dddd'))
 
-        const targetEvents = events.filter(
-          ({ day, time, location, activity }) => {
+        const targetEvents = events.flatMap(
+          (event) => {
+            const { day, time, location, activity, spots, maxSpots } = event
             const validDay = registerableDays.includes(day)
             const eventMoment = getEventMoment({ day, time })
             const date = formatEventMoment(eventMoment)
-            const eventAlreadyBooked = registrations.some(
-              (registration) =>
-                registration.date === date &&
+
+            if (!validDay || eventMoment.isBefore(now)) return []
+
+            const spotsAlreadyBooked = registrations.reduce(
+              (sum, registration) => {
+                console.log(date)
+                const eventMatches = registration.date === date &&
                 registration.location === location &&
                 registration.activity === activity
-            )
-            return validDay && eventMoment.isAfter(now) && !eventAlreadyBooked
+                if (!eventMatches) return sum
+                return sum + registration.spots
+              }, 0)
+
+            const spotsToBook = spots - spotsAlreadyBooked
+
+            // All required spots filled.
+            if (spotsToBook <= 0) return []
+
+            // Only need to book the one event.
+            if (spotsToBook <= maxSpots) return [event]
+
+            const eventCount = Math.ceil(spotsToBook / maxSpots)
+
+            // Split the event into multiple based on what needs remain.
+            return Array.from(new Array(eventCount), (_, index) => ({
+              ...event,
+              spots: index < eventCount - 1 ? maxSpots : spotsToBook - maxSpots * index
+            }))
           }
         )
         console.log('registering', targetEvents)
