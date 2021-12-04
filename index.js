@@ -8,8 +8,16 @@ import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 import RecaptchaPlugin from 'puppeteer-extra-plugin-recaptcha'
 
-const getEventMoment = ({ day, time }) =>
-  moment.tz(time, ['h:m A', 'h:m'], 'America/Toronto').day(day)
+const getEventMoment = ({ day, time }) => {
+  const event = moment.tz(time, ['h:m A', 'h:m'], 'America/Toronto').day(day)
+  if (event.day() < moment().day()) {
+    // Add 1 week if the day is before today in the week so that it's next week's day.
+    event.add(1, 'week')
+  }
+  return event
+}
+const eventToString = ({ day, location, activity, time, spots }) =>
+  `${day} ${time} - ${spots} for ${activity} at ${location}`
 const formatEventMoment = (eventMoment) =>
   eventMoment.format('YYYY/MM/DD h:mm a')
 const waitFor = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
@@ -69,7 +77,9 @@ yargs(hideBin(process.argv))
       const register = async () => {
         // Take a break overnight.
         const now = moment.tz('America/Toronto')
-        console.log(now.format('YYYY-MM-DD hh:mm:ss'))
+
+        console.log('----')
+        console.log('Time:', now.format('YYYY-MM-DD hh:mm:ss a'))
         const afterTen = now.hour() >= 22
         const beforeEight = now.hour() < 8
         if (afterTen || beforeEight) {
@@ -83,7 +93,6 @@ yargs(hideBin(process.argv))
         const afterSix = now.hour() >= 18
         const closeToSix =
           now.clone().add(5, 'minutes').hour() === 18 && now.hour() === 17
-        console.log('now hour', now.hour())
         const day = now.day()
         const registerableDays = [
           day,
@@ -105,7 +114,10 @@ yargs(hideBin(process.argv))
             return validDay && eventMoment.isAfter(now) && !eventAlreadyBooked
           }
         )
-        console.log('registering', targetEvents)
+        console.log('\nRegistering for:\n')
+        console.log(
+          targetEvents.map((event) => `- ${eventToString(event)}`).join('\n')
+        )
 
         const browser = await puppeteer.launch()
 
@@ -159,7 +171,7 @@ yargs(hideBin(process.argv))
               const inputPresent = !!(await page.$(
                 'input#reservationCount[type="number"]'
               ))
-              console.log('reservation count input?', inputPresent)
+
               if (!inputPresent) {
                 throw new Error('No time left')
               }
@@ -225,13 +237,18 @@ yargs(hideBin(process.argv))
           })
         )
 
-        const newRegistrations = results.flatMap((result) => {
+        console.log('\nResults:\n')
+        const newRegistrations = results.flatMap((result, index) => {
           const { status, value, reason } = result
           if (status === 'rejected') {
-            console.log('Failure:', reason)
+            console.log(
+              'Failure:',
+              reason.message,
+              `(${eventToString(targetEvents[index])})`
+            )
             return []
           }
-          console.log('saving', value)
+          console.log('Sucess! Registered for:', eventToString(value))
           return [
             {
               ...value,
