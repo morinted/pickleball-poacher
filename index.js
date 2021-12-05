@@ -97,11 +97,6 @@ yargs(hideBin(process.argv))
 
         console.log('----')
         console.log('Time:', now.format('YYYY-MM-DD hh:mm:ss a'))
-        const afterTen = now.hour() >= 22
-        const beforeEight = now.hour() < 8
-        if (afterTen || beforeEight) {
-          return setTimeout(register, 1000 * 60 * 30)
-        }
 
         const events = config.get('events')
         const identity = config.get('identity')
@@ -312,7 +307,15 @@ yargs(hideBin(process.argv))
           if (scriptStart.diff(moment(), 'hours', true) > limit) {
             return
           }
-          setTimeout(() => register(), interval * 1000)
+          const afterTen = now.hour() >= 22
+          const beforeEight = now.hour() < 8
+          if (afterTen || beforeEight) {
+            console.log('It is night time, so we will wait for a longer time.')
+            await waitFor(1000 * 60 * (Math.random() * (45 - 15) + 15))
+          } else {
+            await waitFor(interval * 1000)
+          }
+          register()
         }
       }
       register()
