@@ -9,8 +9,13 @@ import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 import RecaptchaPlugin from 'puppeteer-extra-plugin-recaptcha'
 
 const getEventMoment = ({ day, time }) => {
-  const event = moment.tz(time, ['h:m A', 'h:m'], 'America/Toronto').day(day)
-  if (event.day() < moment().day()) {
+  const event = moment.tz(time, ['h:m A', 'h:m'], 'America/Toronto')
+  // Make sure we're always beginning on the same day as today.
+  if (event.day() !== moment().day()) event.subtract(1, 'day')
+  // Set day.
+  event.day(day)
+  // If the event is on an "earlier" day of the week *and* is in the past, that means it's next week.
+  if (event.day() < moment().day() && event.isBefore(moment())) {
     // Add 1 week if the day is before today in the week so that it's next week's day.
     event.add(1, 'week')
   }
@@ -21,6 +26,15 @@ const eventToString = ({ day, location, activity, time, spots }) =>
 const formatEventMoment = (eventMoment) =>
   eventMoment.format('YYYY/MM/DD h:mm a')
 const waitFor = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
+/**
+ * If the rollover time for the day is within this many minutes, we will wait before trying to register further.
+ */
+const CLOSE_MINUTES = 10
+/**
+ * The events rollover at 6 PM, 2 days before the event.
+ */
+const ROLLOVER_TIME = 18
 
 yargs(hideBin(process.argv))
   .command('init', 'create a default config file', () => {
@@ -42,6 +56,9 @@ yargs(hideBin(process.argv))
     config.set('registrations', [])
     config.set('2captcha-token', '')
     console.log(`Config file created! Edit it at ${config.path}`)
+  })
+  .command('config', 'show the path to the config file', () => {
+    console.log(new Conf().path)
   })
   .command(
     'register [interval] [limit]',
@@ -90,9 +107,10 @@ yargs(hideBin(process.argv))
         const identity = config.get('identity')
         const registrations = config.get('registrations', [])
 
-        const afterSix = now.hour() >= 18
+        const afterSix = now.hour() >= ROLLOVER_TIME
         const closeToSix =
-          now.clone().add(5, 'minutes').hour() === 18 && now.hour() === 17
+          now.clone().add(CLOSE_MINUTES, 'minutes').hour() === ROLLOVER_TIME &&
+          now.hour() === ROLLOVER_TIME - 1
         const day = now.day()
         const registerableDays = [
           day,
@@ -100,42 +118,47 @@ yargs(hideBin(process.argv))
           ...(afterSix || closeToSix ? [day + 2] : []),
         ].map((dayNumber) => moment().day(dayNumber).format('dddd'))
 
-        const targetEvents = events.flatMap(
-          (event) => {
-            const { day, time, location, activity, spots, maxSpots } = event
-            const validDay = registerableDays.includes(day)
-            const eventMoment = getEventMoment({ day, time })
-            const date = formatEventMoment(eventMoment)
+        const targetEvents = events.flatMap((event) => {
+          const { day, time, location, activity, spots, maxSpots } = event
+          const validDay = registerableDays.includes(day)
+          const eventMoment = getEventMoment({ day, time })
+          const date = formatEventMoment(eventMoment)
 
-            if (!validDay || eventMoment.isBefore(now)) return []
+          if (!validDay || eventMoment.isBefore(now)) return []
+          // No need to do math if there is no spot limit.
+          if (!maxSpots) return [event]
 
-            const spotsAlreadyBooked = registrations.reduce(
-              (sum, registration) => {
-                console.log(date)
-                const eventMatches = registration.date === date &&
+          const spotsAlreadyBooked = registrations.reduce(
+            (sum, registration) => {
+              const eventMatches =
+                registration.date === date &&
                 registration.location === location &&
                 registration.activity === activity
-                if (!eventMatches) return sum
-                return sum + registration.spots
-              }, 0)
+              if (!eventMatches) return sum
+              return sum + registration.spots
+            },
+            0
+          )
 
-            const spotsToBook = spots - spotsAlreadyBooked
+          const spotsToBook = spots - spotsAlreadyBooked
 
-            // All required spots filled.
-            if (spotsToBook <= 0) return []
+          // All required spots filled.
+          if (spotsToBook <= 0) return []
 
-            // Only need to book the one event.
-            if (spotsToBook <= maxSpots) return [event]
+          // Only need to book the one event.
+          if (spotsToBook <= maxSpots) return [event]
 
-            const eventCount = Math.ceil(spotsToBook / maxSpots)
+          const eventCount = Math.ceil(spotsToBook / maxSpots)
 
-            // Split the event into multiple based on what needs remain.
-            return Array.from(new Array(eventCount), (_, index) => ({
-              ...event,
-              spots: index < eventCount - 1 ? maxSpots : spotsToBook - maxSpots * index
-            }))
-          }
-        )
+          // Split the event into multiple based on what needs remain.
+          return Array.from(new Array(eventCount), (_, index) => ({
+            ...event,
+            spots:
+              index < eventCount - 1
+                ? maxSpots
+                : spotsToBook - maxSpots * index,
+          }))
+        })
         console.log('\nRegistering for:\n')
         console.log(
           targetEvents.map((event) => `- ${eventToString(event)}`).join('\n')
@@ -176,8 +199,11 @@ yargs(hideBin(process.argv))
 
               // If we are near 6 PM but not quite there, delay checking for spots until 6.
               if (closeToSix) {
-                while (moment.tz('America/Toronto').hour() < 18) {
-                  console.log('waiting for 6...')
+                while (moment.tz('America/Toronto').hour() < ROLLOVER_TIME) {
+                  console.log(
+                    moment().format('hh:mm:ss a:'),
+                    'Waiting for 6 PM...'
+                  )
                   await waitFor(7500)
                 }
                 console.log(
