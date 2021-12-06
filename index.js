@@ -8,6 +8,7 @@ import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 import RecaptchaPlugin from 'puppeteer-extra-plugin-recaptcha'
 
+const getJobName = (index) => `[${index + 1}]`
 const getEventMoment = ({ day, time }) => {
   const event = moment.tz(time, ['h:m A', 'h:m'], 'America/Toronto')
   // Make sure we're always beginning on the same day as today.
@@ -114,14 +115,19 @@ yargs(hideBin(process.argv))
         ].map((dayNumber) => moment().day(dayNumber).format('dddd'))
 
         const targetEvents = events.flatMap((event) => {
-          const { day, time, location, activity, spots, maxSpots } = event
+          const {
+            day,
+            time,
+            location,
+            activity,
+            spots,
+            maxSpots = event.spots,
+          } = event
           const validDay = registerableDays.includes(day)
           const eventMoment = getEventMoment({ day, time })
           const date = formatEventMoment(eventMoment)
 
           if (!validDay || eventMoment.isBefore(now)) return []
-          // No need to do math if there is no spot limit.
-          if (!maxSpots) return [event]
 
           const spotsAlreadyBooked = registrations.reduce(
             (sum, registration) => {
@@ -140,9 +146,6 @@ yargs(hideBin(process.argv))
           // All required spots filled.
           if (spotsToBook <= 0) return []
 
-          // Only need to book the one event.
-          if (spotsToBook <= maxSpots) return [event]
-
           const eventCount = Math.ceil(spotsToBook / maxSpots)
 
           // Split the event into multiple based on what needs remain.
@@ -154,16 +157,26 @@ yargs(hideBin(process.argv))
                 : spotsToBook - maxSpots * index,
           }))
         })
-        console.log('\nRegistering for:\n')
-        console.log(
-          targetEvents.map((event) => `- ${eventToString(event)}`).join('\n')
-        )
+        if (targetEvents.length) {
+          console.log('\nRegistering for:\n')
+          console.log(
+            targetEvents
+              .map((event, index) => `[${index + 1}] ${eventToString(event)}`)
+              .join('\n')
+          )
+          console.log('\nGo! 🏁\n')
+        } else {
+          console.log('No unbooked events found.')
+          return
+        }
 
         const browser = await puppeteer.launch()
 
         // Run one registration per tab.
         const results = await Promise.allSettled(
-          targetEvents.map(async (targetEvent) => {
+          targetEvents.map(async (targetEvent, index) => {
+            const log = (...messages) =>
+              console.log(getJobName(index), ...messages)
             const context = await browser.createIncognitoBrowserContext()
             const page = await context.newPage()
             // Allow up to 2 minutes for slow site.
@@ -195,18 +208,16 @@ yargs(hideBin(process.argv))
               // If we are near 6 PM but not quite there, delay checking for spots until 6.
               if (closeToSix) {
                 while (moment.tz('America/Toronto').hour() < ROLLOVER_TIME) {
-                  console.log(
-                    moment().format('hh:mm:ss a:'),
-                    'Waiting for 6 PM...'
-                  )
+                  log(moment().format('hh:mm:ss a:'), 'Waiting for 6 PM...')
                   await waitFor(7500)
                 }
-                console.log(
+                log(
                   "Happy six o'clock, let's go!",
                   moment().format('YYYY-MM-DD hh:mm:ss')
                 )
               }
 
+              log('Clicking activity link')
               await activityLink.click()
               await page.waitForNavigation({ waitUntil: 'networkidle0' })
 
@@ -219,9 +230,11 @@ yargs(hideBin(process.argv))
                 throw new Error('No time left')
               }
 
+              log('Setting group size')
               await setValue('input#reservationCount', targetEvent.spots)
               await page.click('#submit-btn')
               await page.waitForSelector('.date')
+              log('Clicking date time')
 
               const isButtonClicked = await page.evaluate(
                 (day, time) => {
@@ -232,6 +245,11 @@ yargs(hideBin(process.argv))
                     ...targetDay.querySelectorAll('.times-list li'),
                   ].find((timeLink) => timeLink.textContent.includes(time))
 
+                  if (!targetTime) {
+                    throw new Error(
+                      'Could not find time button, maybe the time changed?'
+                    )
+                  }
                   // Greyed-out button.
                   const isFull = targetTime.classList.contains('reserved')
                   if (isFull) return false
@@ -246,13 +264,9 @@ yargs(hideBin(process.argv))
               if (!isButtonClicked) throw new Error('time slot full')
 
               const inputForm = async ({ phone, email, name }) => {
+                log('Waiting for form to load')
                 await page.waitForSelector('input#telephone')
-
-                if (token) {
-                  console.log('solving captchas with token:', token)
-                  await page.solveRecaptchas()
-                }
-
+                log('Filling form')
                 await page.focus('input#telephone')
                 await page.keyboard.type(phone, { delay: 50 })
                 await page.focus('input#email')
@@ -260,7 +274,10 @@ yargs(hideBin(process.argv))
                 await page.keyboard.press('Tab')
                 await page.keyboard.type(name, { delay: 50 })
                 await waitFor(1000)
-
+                if (token) {
+                  log('Looking for and solving captchas')
+                  await page.solveRecaptchas()
+                }
                 await page.click('#submit-btn')
                 await page.waitForNavigation({ waitUntil: 'networkidle0' })
               }
@@ -283,15 +300,17 @@ yargs(hideBin(process.argv))
         console.log('\nResults:\n')
         const newRegistrations = results.flatMap((result, index) => {
           const { status, value, reason } = result
+          const jobName = getJobName(index)
           if (status === 'rejected') {
             console.log(
+              jobName,
               'Failure:',
               reason.message,
               `(${eventToString(targetEvents[index])})`
             )
             return []
           }
-          console.log('Sucess! Registered for:', eventToString(value))
+          console.log(jobName, 'Success! Registered for:', eventToString(value))
           return [
             {
               ...value,
