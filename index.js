@@ -176,7 +176,11 @@ yargs(hideBin(process.argv))
         const results = await Promise.allSettled(
           targetEvents.map(async (targetEvent, index) => {
             const log = (...messages) =>
-              console.log(getJobName(index), ...messages)
+              console.log(
+                getJobName(index),
+                `[${moment().format('HH:mm:ss')}]`,
+                ...messages
+              )
             const context = await browser.createIncognitoBrowserContext()
             const page = await context.newPage()
             // Allow up to 2 minutes for slow site.
@@ -329,8 +333,13 @@ yargs(hideBin(process.argv))
           const afterTen = now.hour() >= 22
           const beforeEight = now.hour() < 8
           if (afterTen || beforeEight) {
-            console.log('It is night time, so we will wait for a longer time.')
-            await waitFor(1000 * 60 * (Math.random() * (45 - 15) + 15))
+            const randomInterval = Math.random() * (45 - 15) + 15
+            console.log(
+              '\nIt is night time, so we will wait',
+              Math.round(randomInterval),
+              'minutes.\n'
+            )
+            await waitFor(1000 * 60 * randomInterval)
           } else {
             await waitFor(interval * 1000)
           }
