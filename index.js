@@ -27,6 +27,7 @@ const eventToString = ({ day, location, activity, time, spots }) =>
 const formatEventMoment = (eventMoment) =>
   eventMoment.format('YYYY/MM/DD h:mm a')
 const waitFor = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+const timestamp = () => `[${moment().format('HH:mm:ss')}]`
 
 /**
  * If the rollover time for the day is within this many minutes, we will wait before trying to register further.
@@ -176,11 +177,7 @@ yargs(hideBin(process.argv))
         const results = await Promise.allSettled(
           targetEvents.map(async (targetEvent, index) => {
             const log = (...messages) =>
-              console.log(
-                getJobName(index),
-                `[${moment().format('HH:mm:ss')}]`,
-                ...messages
-              )
+              console.log(getJobName(index), timestamp(), ...messages)
             const context = await browser.createIncognitoBrowserContext()
             const page = await context.newPage()
             // Allow up to 2 minutes for slow site.
@@ -212,13 +209,10 @@ yargs(hideBin(process.argv))
               // If we are near 6 PM but not quite there, delay checking for spots until 6.
               if (closeToSix) {
                 while (moment.tz('America/Toronto').hour() < ROLLOVER_TIME) {
-                  log(moment().format('hh:mm:ss a:'), 'Waiting for 6 PM...')
-                  await waitFor(7500)
+                  log('Waiting for 6 PM...')
+                  await waitFor(5000)
                 }
-                log(
-                  "Happy six o'clock, let's go!",
-                  moment().format('YYYY-MM-DD hh:mm:ss')
-                )
+                log("Happy six o'clock, let's go!")
               }
 
               log('Clicking activity link')
@@ -330,7 +324,26 @@ yargs(hideBin(process.argv))
         await browser.close()
 
         // If we didn't register everything, try again.
-        if (results.some((result) => result.status === 'rejected')) {
+        const failures = results.filter(
+          (result) => result.status === 'rejected'
+        )
+        if (failures.length) {
+          const submitFailed = failures.some((failure) =>
+            failure.reason.message.includes('confirmation')
+          )
+          const timeoutError = failures.some((failure) =>
+            failure.reason.message.includes('timeout')
+          )
+          const retry = submitFailed || timeoutError
+          if (retry) {
+            console.log(
+              timestamp(),
+              'Retrying immediately due to failure type.'
+            )
+            register()
+            return
+          }
+
           if (scriptStart.diff(moment(), 'hours', true) > limit) {
             return
           }
