@@ -278,6 +278,7 @@ yargs(hideBin(process.argv))
                 await page.keyboard.press('Tab')
                 await page.keyboard.type(name, { delay: 50 })
                 await waitFor(1000)
+                await page.waitForNavigation({ waitUntil: 'networkidle0' })
                 if (token) {
                   log('Looking for and solving captchas')
                   await page.solveRecaptchas()
@@ -292,6 +293,9 @@ yargs(hideBin(process.argv))
               const url = await page.url()
               const success = url.toLowerCase().includes('confirmationpage')
               if (!success) {
+                await page.screenshot({
+                  path: moment().format('YYYY-MM-DD_HH:mm') + '-error.png',
+                })
                 throw new Error('No confirmation page!')
               }
               return { ...targetEvent, phone: identity.phone }
