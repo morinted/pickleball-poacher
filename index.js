@@ -171,7 +171,7 @@ yargs(hideBin(process.argv))
           return
         }
 
-        const browser = await puppeteer.launch()
+        const browser = await puppeteer.launch({ headless: false })
 
         // Run one registration per tab.
         const results = await Promise.allSettled(
@@ -263,6 +263,7 @@ yargs(hideBin(process.argv))
 
               const inputForm = async ({ phone, email, name }) => {
                 log('Waiting for form to load')
+                await page.waitForNavigation({ waitUntil: 'networkidle0' })
                 await page.waitForSelector('input#telephone')
                 log('Filling form')
                 await page.focus('input#telephone')
@@ -272,7 +273,6 @@ yargs(hideBin(process.argv))
                 await page.keyboard.press('Tab')
                 await page.keyboard.type(name, { delay: 50 })
                 await waitFor(1000)
-                await page.waitForNavigation({ waitUntil: 'networkidle0' })
                 if (token) {
                   log('Looking for and solving captchas')
                   await page.solveRecaptchas()
@@ -281,14 +281,20 @@ yargs(hideBin(process.argv))
                 await page.waitForNavigation({ waitUntil: 'networkidle0' })
               }
 
-              // TODO: handle duped email and resubmit.
               await inputForm(identity)
 
               const url = await page.url()
-              const success = url.toLowerCase().includes('confirmationpage')
+
+              // New summary page before confirming.
+              if (url.toLowerCase().includes('summarypage')) {
+                await page.click('#submit-btn')
+                await page.waitForNavigation({ waitUntil: 'networkidle0' })
+              }
+
+              const success = !!(await page.$('.confirmed-reservation'))
               if (!success) {
                 await page.screenshot({
-                  path: moment().format('YYYY-MM-DD_HH:mm') + '-error.png',
+                  path: moment().format('YYYY-MM-DD_HH-mm') + '-error.png',
                 })
                 throw new Error('No confirmation page!')
               }
