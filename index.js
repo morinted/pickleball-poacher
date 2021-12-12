@@ -171,7 +171,7 @@ yargs(hideBin(process.argv))
           return
         }
 
-        const browser = await puppeteer.launch({ headless: false })
+        const browser = await puppeteer.launch()
 
         // Run one registration per tab.
         const results = await Promise.allSettled(
