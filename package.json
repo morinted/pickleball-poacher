@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/morinted/pickleball-poacher#readme",
   "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
     "conf": "^10.0.3",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.34",
