@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import yargs from 'yargs'
+import fetch from 'node-fetch'
 import { hideBin } from 'yargs/helpers'
 import Conf from 'conf'
 import moment from 'moment-timezone'
@@ -57,6 +58,8 @@ yargs(hideBin(process.argv))
     })
     config.set('registrations', [])
     config.set('2captcha-token', '')
+    config.set('telegram-bot', '')
+    config.set('telegram-channel', '')
     console.log(`Config file created! Edit it at ${config.path}`)
   })
   .command('config', 'show the path to the config file', () => {
@@ -103,6 +106,8 @@ yargs(hideBin(process.argv))
         const events = config.get('events')
         const identity = config.get('identity')
         const registrations = config.get('registrations', [])
+        const telegramBotKey = config.get('telegram-bot')
+        const telegramChannel = config.get('telegram-channel')
 
         const afterSix = now.hour() >= ROLLOVER_TIME
         const closeToSix =
@@ -114,6 +119,18 @@ yargs(hideBin(process.argv))
           day + 1,
           ...(afterSix || closeToSix ? [day + 2] : []),
         ].map((dayNumber) => moment().day(dayNumber).format('dddd'))
+
+        const logToTelegram = (...messages) => {
+          const toSend = messages.join(' ')
+          if (closeToSix && telegramBotKey) {
+            fetch(
+              `https://api.telegram.org/bot${telegramBotKey}/sendMessage?chat_id=${encodeURIComponent(
+                telegramChannel
+              )}&text=${encodeURIComponent(toSend)}`
+            )
+          }
+          return toSend
+        }
 
         const targetEvents = events.flatMap((event) => {
           const {
@@ -159,15 +176,18 @@ yargs(hideBin(process.argv))
           }))
         })
         if (targetEvents.length) {
-          console.log('\nRegistering for:\n')
-          console.log(
+          let registerString = []
+          registerString.push('\nRegistering for:\n')
+          registerString.push(
             targetEvents
               .map((event, index) => `[${index + 1}] ${eventToString(event)}`)
               .join('\n')
           )
-          console.log('\nGo! 🏁\n')
+          registerString.push('\nGo! 🏁\n')
+          registerString = registerString.join('\n')
+          console.log(logToTelegram(registerString))
         } else {
-          console.log('No unbooked events found.')
+          console.log(logToTelegram('No unbooked events found.'))
           return
         }
 
@@ -176,8 +196,10 @@ yargs(hideBin(process.argv))
         // Run one registration per tab.
         const results = await Promise.allSettled(
           targetEvents.map(async (targetEvent, index) => {
-            const log = (...messages) =>
-              console.log(getJobName(index), timestamp(), ...messages)
+            const log = (...messages) => {
+              const output = [getJobName(index), timestamp(), ...messages]
+              console.log(...output)
+            }
             const context = await browser.createIncognitoBrowserContext()
             const page = await context.newPage()
             // Allow up to 2 minutes for slow site.
@@ -213,6 +235,7 @@ yargs(hideBin(process.argv))
                   await waitFor(5000)
                 }
                 log("Happy six o'clock, let's go!")
+                logToTelegram('It is six, time to go!')
               }
 
               log('Clicking activity link')
@@ -305,20 +328,27 @@ yargs(hideBin(process.argv))
           })
         )
 
-        console.log('\nResults:\n')
+        const resultsString = []
+        resultsString.push('\nResults:\n')
         const newRegistrations = results.flatMap((result, index) => {
           const { status, value, reason } = result
           const jobName = getJobName(index)
           if (status === 'rejected') {
-            console.log(
-              jobName,
-              'Failure:',
-              reason.message,
-              `(${eventToString(targetEvents[index])})`
+            resultsString.push(
+              [
+                jobName,
+                'Failure:',
+                reason.message,
+                `(${eventToString(targetEvents[index])})`,
+              ].join(' ')
             )
             return []
           }
-          console.log(jobName, 'Success! Registered for:', eventToString(value))
+          resultsString.push(
+            [jobName, 'Success! Registered for:', eventToString(value)].join(
+              ' '
+            )
+          )
           return [
             {
               ...value,
@@ -326,6 +356,8 @@ yargs(hideBin(process.argv))
             },
           ]
         })
+
+        console.log(logToTelegram(resultsString.join('\n')))
         config.set('registrations', [...registrations, ...newRegistrations])
         await browser.close()
 
