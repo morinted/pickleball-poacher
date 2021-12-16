@@ -139,6 +139,9 @@ yargs(hideBin(process.argv))
             location,
             activity,
             spots,
+            name,
+            phone,
+            email,
             maxSpots = event.spots,
           } = event
           const validDay = registerableDays.includes(day)
@@ -152,7 +155,10 @@ yargs(hideBin(process.argv))
               const eventMatches =
                 registration.date === date &&
                 registration.location === location &&
-                registration.activity === activity
+                registration.activity === activity &&
+                registration.name === name &&
+                registration.phone === phone &&
+                registration.email === email
               if (!eventMatches) return sum
               return sum + registration.spots
             },
@@ -290,11 +296,17 @@ yargs(hideBin(process.argv))
                 await page.waitForSelector('input#telephone')
                 log('Filling form')
                 await page.focus('input#telephone')
-                await page.keyboard.type(phone, { delay: 50 })
+                await page.keyboard.type(targetEvent.phone || phone, {
+                  delay: 50,
+                })
                 await page.focus('input#email')
-                await page.keyboard.type(email, { delay: 50 })
+                await page.keyboard.type(targetEvent.email || email, {
+                  delay: 50,
+                })
                 await page.keyboard.press('Tab')
-                await page.keyboard.type(name, { delay: 50 })
+                await page.keyboard.type(targetEvent.name || name, {
+                  delay: 50,
+                })
                 await waitFor(1000)
                 if (token) {
                   log('Looking for and solving captchas')
@@ -321,7 +333,7 @@ yargs(hideBin(process.argv))
                 })
                 throw new Error('No confirmation page!')
               }
-              return { ...targetEvent, phone: identity.phone }
+              return targetEvent
             } finally {
               await page.close()
             }
