@@ -1,20 +1,10 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
 
-const days = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
-]
-
 const returnOnlyEveningsAndWeekends = true
 
 const eveningsAndWeekends = (day) => (time) => {
-  if (day >= days.indexOf('Saturday')) return true
+  if (/sat|sun/i.test(day)) return true
 
   const afternoon = time.includes('pm')
   if (!afternoon) return false
@@ -43,13 +33,23 @@ async function main() {
           const centreResponse = await axios.get(centre)
           $ = cheerio.load(centreResponse.data)
           const location = $('h1').text().trim()
+          const days = $('thead tr th')
+            .toArray()
+            .map((el) => $(el).text())
+
           const activities = $('tr:contains("Pickleball")')
             .toArray()
             .map((element) => {
-              const activity = $('th', element).text().replace(/\s+/g, ' ')
+              const headName = $('th', element).text().replace(/\s+/g, ' ')
+              const activityIsHead = !!headName
+              const activity =
+                headName ||
+                $('td:first-of-type', element).text().replace(/\s+/g, ' ')
+
               const schedules = $('td', element)
                 .toArray()
                 .map((day, index) => {
+                  const actualIndex = index - (activityIsHead ? 0 : 1)
                   const schedule = $(day)
                     .text()
                     .toLowerCase()
@@ -59,10 +59,10 @@ async function main() {
                     .filter((time) => !isNaN(parseInt(time)))
                     .filter(
                       returnOnlyEveningsAndWeekends
-                        ? eveningsAndWeekends(index)
+                        ? eveningsAndWeekends(days[actualIndex])
                         : () => true
                     )
-                  return { day: days[index], schedule }
+                  return { day: days[actualIndex], schedule }
                 })
                 .reduce((result, current) => {
                   if (current.schedule.length) {
