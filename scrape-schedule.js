@@ -1,7 +1,17 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
+import moment from 'moment'
 
 const returnOnlyEveningsAndWeekends = true
+const defaultDays = [
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
+]
 
 const eveningsAndWeekends = (day) => (time) => {
   if (/sat|sun/i.test(day)) return true
@@ -77,7 +87,35 @@ async function main() {
         })
       )
     ).flatMap((x) => x)
-    console.log(JSON.stringify(results, null, 2))
+
+    const resultsByLocation = results.reduce((acc, activitySchedule) => {
+      const location = {}
+      defaultDays.forEach((day) => {
+        const daySchedule = [
+          ...(acc[activitySchedule.location]?.[day] || []),
+          ...(activitySchedule.schedules[day] || []).map(
+            (time) => `${time} (${activitySchedule.activity})`
+          ),
+        ].sort((a, b) => {
+          const getTime = (x) =>
+            moment(
+              x
+                .split(/[–-]/)[1]
+                .substring(0, Math.max(x.indexOf('am'), x.indexOf('pm') + 2))
+                .trim(),
+              ['h:mm a', 'h a']
+            )
+          return getTime(a) - getTime(b)
+        })
+        if (daySchedule.length) {
+          location[day] = daySchedule
+        }
+      })
+      acc[activitySchedule.location] = location
+      return acc
+    }, {})
+
+    console.log(JSON.stringify(resultsByLocation, null, 2))
   } catch (e) {
     console.error(e.message)
   }
