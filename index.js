@@ -8,6 +8,7 @@ import moment from 'moment-timezone'
 import puppeteer from 'puppeteer-extra'
 import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 import RecaptchaPlugin from 'puppeteer-extra-plugin-recaptcha'
+import _ from 'lodash'
 
 const getJobName = (index) => `[${index + 1}]`
 const getEventMoment = ({ day, time }) => {
@@ -110,24 +111,38 @@ yargs(hideBin(process.argv))
         const telegramChannel = config.get('telegram-channel')
 
         const afterSix = now.hour() >= ROLLOVER_TIME
-        const closeToSix =
+        const almostSix =
           now.clone().add(CLOSE_MINUTES, 'minutes').hour() === ROLLOVER_TIME &&
           now.hour() === ROLLOVER_TIME - 1
+
+        const timeSinceSix = now.diff(moment().hour(ROLLOVER_TIME).minute(0).second(0), 'minutes')
+        const justAfterSix =
+           0 <= timeSinceSix && timeSinceSix <= 5
+
+
         const day = now.day()
         const registerableDays = [
           day,
           day + 1,
-          ...(afterSix || closeToSix ? [day + 2] : []),
+          ...(afterSix || almostSix ? [day + 2] : []),
         ].map((dayNumber) => moment().day(dayNumber).format('dddd'))
 
+        const telegramQueue = []
+        const sendToTelegram = _.debounce(() => {
+          // Clear the queue and get the removed elements to send.
+          const message = telegramQueue.splice(0, telegramQueue.length).join('\n')
+
+          fetch(
+            `https://api.telegram.org/bot${telegramBotKey}/sendMessage?chat_id=${encodeURIComponent(
+              telegramChannel
+            )}&text=${encodeURIComponent(message)}`
+          )
+        }, 500)
         const logToTelegram = (...messages) => {
           const toSend = messages.join(' ')
-          if (closeToSix && telegramBotKey) {
-            fetch(
-              `https://api.telegram.org/bot${telegramBotKey}/sendMessage?chat_id=${encodeURIComponent(
-                telegramChannel
-              )}&text=${encodeURIComponent(toSend)}`
-            )
+          if ((almostSix || justAfterSix) && telegramBotKey) {
+            telegramQueue.push(toSend)
+            sendToTelegram()
           }
           return toSend
         }
@@ -235,7 +250,7 @@ yargs(hideBin(process.argv))
               }
 
               // If we are near 6 PM but not quite there, delay checking for spots until 6.
-              if (closeToSix) {
+              if (almostSix) {
                 while (moment.tz('America/Toronto').hour() < ROLLOVER_TIME) {
                   log('Waiting for 6 PM...')
                   await waitFor(5000)
@@ -394,7 +409,7 @@ yargs(hideBin(process.argv))
             return
           }
 
-          if (scriptStart.diff(moment(), 'hours', true) > limit) {
+          if (moment().diff(scriptStart, 'hours', true) > limit) {
             return
           }
           const afterTen = now.hour() >= 22
