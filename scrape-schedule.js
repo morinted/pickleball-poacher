@@ -23,33 +23,47 @@ const eveningsAndWeekends = (day) => (time) => {
   return startTime !== 12 && startTime >= 5 && startTime < 10
 }
 
+const facilityUrl =
+  'https://ottawa.ca/en/recreation-and-parks/recreation-facilities/place-listing'
+const ottawaCa = 'https://ottawa.ca'
 async function main() {
   try {
-    const response = await axios.get(
-      'https://ottawa.ca/en/recreation-and-parks/recreation-and-cultural-programs/drop-activities'
-    )
-    let $ = cheerio.load(response.data)
-    const centres = $(
-      'article:contains("Recreation centres and complexes") ul li a'
-    )
-      .toArray()
-      .map((el) => $(el).attr('href'))
-      .map((link) => (link.startsWith('/') ? `https://ottawa.ca${link}` : link))
-      .filter((link) => link.includes('recreation-and-parks'))
-
+    const centres = []
+    let link = `${facilityUrl}?place_facets%5B0%5D=place_type%3A4210`
+    while (link) {
+      const response = (await axios.get(link)).data
+      const $ = cheerio.load(response)
+      link = $('[title="Go to next page"]').attr('href')
+      if (link) {
+        link = `${facilityUrl}${link}`
+      }
+      centres.push(
+        ...$('td.views-field.views-field-title a')
+          .toArray()
+          .map((el) => $(el).attr('href'))
+          .map((link) =>
+            link.startsWith('/') ? `${ottawaCa}${link}` : link
+          )
+          .filter((link) => link.includes('recreation-facilities'))
+      )
+    }
+    console.log('About to scrape', centres.length, 'centres.')
     const results = (
       await Promise.all(
         centres.map(async (centre) => {
           const centreResponse = await axios.get(centre)
-          $ = cheerio.load(centreResponse.data)
+          const $ = cheerio.load(centreResponse.data)
           const location = $('h1').text().trim()
-          const days = $('thead tr th')
-            .toArray()
-            .map((el) => $(el).text())
 
           const activities = $('tr:contains("Pickleball")')
             .toArray()
             .map((element) => {
+              const table = $(element).parents('table')
+              const days = $('thead tr th', table)
+                .toArray()
+                .map((el) => $(el).text().trim())
+              let caption = table.find('caption').text()
+              caption = caption.includes('starting') ? caption.slice(caption.indexOf('starting')) : null
               const headName = $('th', element).text().replace(/\s+/g, ' ')
               const activityIsHead = !!headName
               const activity =
@@ -80,7 +94,7 @@ async function main() {
                   }
                   return result
                 }, {})
-              return { location, activity, schedules }
+              return { location: [location, caption].filter(x => x).join(' '), activity, schedules }
             })
             .filter((x) => JSON.stringify(x.schedules) !== '{}')
           return activities
@@ -94,7 +108,7 @@ async function main() {
         const daySchedule = [
           ...(acc[activitySchedule.location]?.[day] || []),
           ...(activitySchedule.schedules[day] || []).map(
-            (time) => `${time} (${activitySchedule.activity})`
+            (time) => `${time} (${activitySchedule.activity.trim()})`
           ),
         ].sort((a, b) => {
           const getTime = (x) =>
