@@ -1,8 +1,10 @@
 import axios from 'axios'
 import cheerio from 'cheerio'
 import moment from 'moment'
+import YAML from 'yaml'
 
-const returnOnlyEveningsAndWeekends = true
+const returnOnlyEveningsAndWeekends = false
+const getCoordinates = true
 const defaultDays = [
   'Monday',
   'Tuesday',
@@ -23,6 +25,25 @@ const eveningsAndWeekends = (day) => (time) => {
   return startTime !== 12 && startTime >= 5 && startTime < 10
 }
 
+function timeout(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+const fetchCoordinates = async (address) => {
+  const addressQuery = encodeURI(address.replace(/\s/g, '+'))
+  console.log(address, addressQuery)
+
+  const [lat, lon] = JSON.parse(
+    await axios.get(
+      `https://nominatim.openstreetmap.org/search?q=${addressQuery}&format=json`
+    )
+  )[0]
+  await timeout(1000)
+
+  console.log(lat, lon)
+  return { lat, lon }
+}
+
 const facilityUrl =
   'https://ottawa.ca/en/recreation-and-parks/recreation-facilities/place-listing'
 const ottawaCa = 'https://ottawa.ca'
@@ -41,9 +62,7 @@ async function main() {
         ...$('td.views-field.views-field-title a')
           .toArray()
           .map((el) => $(el).attr('href'))
-          .map((link) =>
-            link.startsWith('/') ? `${ottawaCa}${link}` : link
-          )
+          .map((link) => (link.startsWith('/') ? `${ottawaCa}${link}` : link))
           .filter((link) => link.includes('recreation-facilities'))
       )
     }
@@ -54,6 +73,16 @@ async function main() {
           const centreResponse = await axios.get(centre)
           const $ = cheerio.load(centreResponse.data)
           const location = $('h1').text().trim()
+          const link = $('a:contains("Reserve")').attr('href')
+          const streetAddress = $('.address-link.address-details').text().trim()
+          const addressDetails = $(
+            '.address-link.address-details + .address-details'
+          )
+            .text()
+            .trim()
+          const address = `${streetAddress} ${addressDetails}`
+            .split(/\s+/g)
+            .join(' ')
 
           const activities = $('tr:contains("Pickleball")')
             .toArray()
@@ -63,7 +92,9 @@ async function main() {
                 .toArray()
                 .map((el) => $(el).text().trim())
               let caption = table.find('caption').text()
-              caption = caption.includes('starting') ? caption.slice(caption.indexOf('starting')) : null
+              caption = caption.includes('starting')
+                ? caption.slice(caption.indexOf('starting'))
+                : null
               const headName = $('th', element).text().replace(/\s+/g, ' ')
               const activityIsHead = !!headName
               const activity =
@@ -94,7 +125,13 @@ async function main() {
                   }
                   return result
                 }, {})
-              return { location: [location, caption].filter(x => x).join(' '), activity, schedules }
+              return {
+                location: [location, caption].filter((x) => x).join(' '),
+                link,
+                address,
+                activity,
+                schedules,
+              }
             })
             .filter((x) => JSON.stringify(x.schedules) !== '{}')
           return activities
@@ -102,13 +139,29 @@ async function main() {
       )
     ).flatMap((x) => x)
 
+    if (getCoordinates) {
+      for (const activitySchedule of results) {
+        const coordinates = await fetchCoordinates(activitySchedule.address)
+        activitySchedule.coordinates = coordinates
+      }
+    }
+
     const resultsByLocation = results.reduce((acc, activitySchedule) => {
-      const location = {}
+      const location = {
+        link: activitySchedule.link,
+        address: activitySchedule.address,
+        coordinates: activitySchedule.coordinates,
+      }
       defaultDays.forEach((day) => {
         const daySchedule = [
           ...(acc[activitySchedule.location]?.[day] || []),
           ...(activitySchedule.schedules[day] || []).map(
-            (time) => `${time} (${activitySchedule.activity.trim()})`
+            // Fix `2: 45 pm` --> `2:45 pm`
+            (time) =>
+              `${time.replace(
+                / ?: ?/g,
+                ':'
+              )} (${activitySchedule.activity.trim()})`
           ),
         ].sort((a, b) => {
           const getTime = (x) =>
@@ -129,7 +182,7 @@ async function main() {
       return acc
     }, {})
 
-    console.log(JSON.stringify(resultsByLocation, null, 2))
+    console.log(YAML.stringify(resultsByLocation))
   } catch (e) {
     console.error(e.message)
   }
