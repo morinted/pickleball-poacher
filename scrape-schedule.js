@@ -2,9 +2,28 @@ import axios from 'axios'
 import cheerio from 'cheerio'
 import moment from 'moment'
 import YAML from 'yaml'
+import args from 'args'
 
-const returnOnlyEveningsAndWeekends = false
-const getCoordinates = true
+args
+  .option('coordinates', 'Fetch coordinates of locations.', false)
+  .option(
+    'evenings-and-weekends',
+    'Only return schedule of times in the evenings and weekends.',
+    false
+  )
+  .option('debug', 'Log debug information.', false)
+  .option('format', 'Output final list in JSON or YAML.', 'yaml', (value) => {
+    if (value.startsWith('y')) return 'yaml'
+    return 'json'
+  })
+
+const flags = args.parse(process.argv)
+
+const log = (...messages) => {
+  if (!flags.debug) return
+  console.log(...messages)
+}
+
 const defaultDays = [
   'Monday',
   'Tuesday',
@@ -30,17 +49,22 @@ function timeout(ms) {
 }
 
 const fetchCoordinates = async (address) => {
-  const addressQuery = encodeURI(address.replace(/\s/g, '+'))
-  console.log(address, addressQuery)
+  // Remove postal code as OSM has many disagreements with the source.
+  address = address.split(/\s+/).slice(0, -2).join(' ')
 
-  const [lat, lon] = JSON.parse(
+  const addressQuery = encodeURI(address.replace(/\s+/g, '+'))
+
+  const addressDetails = (
     await axios.get(
       `https://nominatim.openstreetmap.org/search?q=${addressQuery}&format=json`
     )
-  )[0]
+  ).data
+
+  const { lat, lon } = addressDetails[0]
+
+  // Rate limit is once per second.
   await timeout(1000)
 
-  console.log(lat, lon)
   return { lat, lon }
 }
 
@@ -66,7 +90,7 @@ async function main() {
           .filter((link) => link.includes('recreation-facilities'))
       )
     }
-    console.log('About to scrape', centres.length, 'centres.')
+    log('About to scrape', centres.length, 'centres.')
     const results = (
       await Promise.all(
         centres.map(async (centre) => {
@@ -91,6 +115,7 @@ async function main() {
               const days = $('thead tr th', table)
                 .toArray()
                 .map((el) => $(el).text().trim())
+                .filter((x) => x)
               let caption = table.find('caption').text()
               caption = caption.includes('starting')
                 ? caption.slice(caption.indexOf('starting'))
@@ -113,7 +138,7 @@ async function main() {
                     .map((time) => time.trim())
                     .filter((time) => !isNaN(parseInt(time)))
                     .filter(
-                      returnOnlyEveningsAndWeekends
+                      flags.e
                         ? eveningsAndWeekends(days[actualIndex])
                         : () => true
                     )
@@ -139,7 +164,7 @@ async function main() {
       )
     ).flatMap((x) => x)
 
-    if (getCoordinates) {
+    if (flags.coordinates) {
       for (const activitySchedule of results) {
         const coordinates = await fetchCoordinates(activitySchedule.address)
         activitySchedule.coordinates = coordinates
@@ -182,9 +207,10 @@ async function main() {
       return acc
     }, {})
 
-    console.log(YAML.stringify(resultsByLocation))
+    const  { stringify } = flags.format === 'json' ? JSON : YAML
+    console.log(stringify(resultsByLocation))
   } catch (e) {
-    console.error(e.message)
+    console.error(e)
   }
 }
 
