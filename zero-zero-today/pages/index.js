@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Today from '../components/ScheduleForDay'
 import ScheduleForDay from '../components/ScheduleForDay'
 import { daysStartingWithToday } from '../components/schedule'
 
@@ -24,7 +23,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          {daysStartingWithToday.map((day, index) => <ScheduleForDay day={day} daysAway={index} />)}
+          {daysStartingWithToday.map((day, index) => <ScheduleForDay key={day} day={day} daysAway={index} />)}
         </div>
       </main>
 
