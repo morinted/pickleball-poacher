@@ -134,6 +134,7 @@ async function main() {
                     .text()
                     .toLowerCase()
                     .replace(/noon/g, '12 pm')
+                    .replace(/–/g, '–') // Remove endash.
                     .split(',')
                     .map((time) => time.trim())
                     .filter((time) => !isNaN(parseInt(time)))

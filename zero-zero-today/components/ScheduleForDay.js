@@ -1,8 +1,13 @@
 import React from 'react'
-import { addDistance, locationsThatHaveDay } from './schedule'
+import { addDistance, locationsThatHaveDay, today } from './schedule'
 import styles from './ScheduleForDay.module.css'
+import dayjs from 'dayjs'
+import customParseFormat  from 'dayjs/plugin/customParseFormat'
+dayjs.extend(customParseFormat)
 
 export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
+  const isToday = day === today
+  const now = dayjs()
   const locationsWithDistance = addDistance(locationsThatHaveDay(day), latitude, longitude, true)
   const warnRegistration = daysAway >= 2
   return (
@@ -18,9 +23,14 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
               {location.distance && <p className={styles.distance}>{location.distance.toFixed(1)} km</p>}
               {startDate && <note className={styles.caption}>Starting {startDate}</note>}
               <ul>
-                {location[day].map((time) => (
-                  <li key={time}>{time.replace('(Pickleball)', '')}</li>
-                ))}
+                {location[day].map((time) => {
+                  const endTimeString = isToday && time.split(/-/)?.[1]?.trim().replace(/\(.*\)/, '')
+                  const endTime = isToday && dayjs(endTimeString, ['h:mm a', 'h a'])
+                  const past = isToday && endTime.isBefore(now)
+                  const inProgress = isToday && !past && endTime.isBefore(now.add(1, 'hour'))
+                  return(
+                  <li key={time} className={inProgress ? styles.inprogress : past ? styles.past : ''}>{time.replace('(Pickleball)', '')}</li>
+                )})}
               </ul>
               <a className={styles.button} href={location.link} rel='noreferrer noopener' target='_blank'>Register{warnRegistration && '*'}</a>
               <a className={styles.button} href={`https://google.com/maps?q=${location.address.replace(/\s+/g, '+')}`} rel='noreferrer noopener' target='_blank'>Directions</a>
