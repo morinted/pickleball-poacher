@@ -63,11 +63,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                   return (
                     <li
                       key={time + className}
-                      style={inProgress ? {
-                        fontWeight: 'bold'
-                      } : past ? {
-                        textDecoration: 'line-through'
-                      } : {}}
+                      className={className}
                     >
                       {time.replace('(Pickleball)', '')}
                     </li>

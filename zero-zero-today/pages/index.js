@@ -5,6 +5,10 @@ import ScheduleForDay from '../components/ScheduleForDay'
 import { daysStartingWithToday } from '../components/schedule'
 import { usePosition } from 'use-position'
 
+export function getServerSideProps() {
+  return { props: {} }
+}
+
 export default function Home() {
   const { latitude, longitude, error } = usePosition()
   const locationStatus = latitude ? 'success' : error ? 'error' : 'loading'
