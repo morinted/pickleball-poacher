@@ -3,6 +3,10 @@ import { addDistance, locationsThatHaveDay, today } from './schedule'
 import styles from './ScheduleForDay.module.css'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
+import utc from 'dayjs/plugin/utc'
+import timezone from 'dayjs/plugin/timezone'
+dayjs.extend(utc)
+dayjs.extend(timezone)
 dayjs.extend(customParseFormat)
 
 export function getServerSideProps() {
@@ -10,8 +14,9 @@ export function getServerSideProps() {
 }
 
 export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
+  const timezone = dayjs.tz.guess()
   const isToday = day === today
-  const now = dayjs()
+  const now = dayjs().tz(timezone)
   const locationsWithDistance = addDistance(
     locationsThatHaveDay(day),
     latitude,
@@ -50,7 +55,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                       ?.trim()
                       .replace(/\(.*\)/, '')
                   const endTime =
-                    isToday && dayjs(endTimeString, ['h:mm a', 'h a'])
+                    isToday && dayjs(endTimeString, ['h:mm a', 'h a']).tz('America/New_York')
                   const past = isToday && endTime.isBefore(now)
                   const inProgress =
                     isToday && !past && endTime.isBefore(now.add(1, 'hour'))
