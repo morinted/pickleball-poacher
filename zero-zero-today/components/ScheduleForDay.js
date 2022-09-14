@@ -30,7 +30,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                   const inProgress = isToday && !past && endTime.isBefore(now.add(1, 'hour'))
                   if (isToday) console.log({ endTime, past, inProgress, now })
                   return(
-                  <li key={time} className={inProgress ? styles.inprogress : past ? styles.past : ''}>{time.replace('(Pickleball)', '')}</li>
+                  <li key={time} className={`${inProgress ? styles.inprogress : past ? styles.past : ''}`}>{time.replace('(Pickleball)', '')}</li>
                 )})}
               </ul>
               <a className={styles.button} href={location.link} rel='noreferrer noopener' target='_blank'>Register{warnRegistration && '*'}</a>
