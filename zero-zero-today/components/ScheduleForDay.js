@@ -51,12 +51,14 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                   const inProgress =
                     isToday && !past && endTime.isBefore(now.add(1, 'hour'))
                   if (isToday) console.log({ endTime, past, inProgress, now })
+                  const className = `${inProgress ? styles.inprogress : ''} ${
+                    past ? styles.past : ''
+                  }`
+                  console.log(className)
                   return (
                     <li
                       key={time}
-                      className={`${inProgress ? styles.inprogress : ''} ${
-                        past ? styles.past : ''
-                      }`}
+                      className={className}
                     >
                       {time.replace('(Pickleball)', '')}
                     </li>
