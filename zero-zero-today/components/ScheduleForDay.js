@@ -6,7 +6,7 @@ import customParseFormat from 'dayjs/plugin/customParseFormat'
 dayjs.extend(customParseFormat)
 
 export function getServerSideProps() {
-  return {}
+  return { props: {} }
 }
 
 export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
