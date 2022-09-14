@@ -28,6 +28,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                   const endTime = isToday && dayjs(endTimeString, ['h:mm a', 'h a'])
                   const past = isToday && endTime.isBefore(now)
                   const inProgress = isToday && !past && endTime.isBefore(now.add(1, 'hour'))
+                  if (isToday) console.log({ endTime, past, inProgress, now })
                   return(
                   <li key={time} className={inProgress ? styles.inprogress : past ? styles.past : ''}>{time.replace('(Pickleball)', '')}</li>
                 )})}
