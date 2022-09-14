@@ -9,10 +9,6 @@ dayjs.extend(utc)
 dayjs.extend(timezone)
 dayjs.extend(customParseFormat)
 
-export function getServerSideProps() {
-  return { props: {} }
-}
-
 export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
   const timezone = dayjs.tz.guess()
   const isToday = day === today
