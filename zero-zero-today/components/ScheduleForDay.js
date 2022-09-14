@@ -5,6 +5,10 @@ import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 dayjs.extend(customParseFormat)
 
+export function getServerSideProps() {
+  return {}
+}
+
 export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
   const isToday = day === today
   const now = dayjs()
