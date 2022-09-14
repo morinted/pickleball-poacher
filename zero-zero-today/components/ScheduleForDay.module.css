@@ -64,14 +64,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
+  .card {
+    background-color: #2a556f;
+    border-color: #1d394b;
   }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
+  .location {
+    border-color: #28495f;
+    background-color: #10202b;
+    color: #eee;
   }
 }
