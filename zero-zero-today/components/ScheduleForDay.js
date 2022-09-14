@@ -65,7 +65,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                       key={time + className}
                       className={className}
                     >
-                      {time.replace('(Pickleball)', '')}
+                      {time.replace('(Pickleball)', '')}{className}
                     </li>
                   )
                 })}
