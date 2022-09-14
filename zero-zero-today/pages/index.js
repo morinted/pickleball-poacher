@@ -3,8 +3,11 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import ScheduleForDay from '../components/ScheduleForDay'
 import { daysStartingWithToday } from '../components/schedule'
+import { usePosition } from 'use-position'
 
 export default function Home() {
+  const { latitude, longitude, error } = usePosition()
+  const locationStatus = latitude ? 'success' : error ? 'error' : 'loading'
   return (
     <div className={styles.container}>
       <Head>
@@ -22,8 +25,11 @@ export default function Home() {
           Find a game of pickleball in Ottawa, today.
         </p>
 
+        {locationStatus === 'error' && <p><strong>Note:</strong> If you enable location, locations will be listed in order closest to you.</p>}
+        {locationStatus === 'loading' && <p><i>📍 Loading your location&hellip;</i></p>}
+
         <div className={styles.grid}>
-          {daysStartingWithToday.map((day, index) => <ScheduleForDay key={day} day={day} daysAway={index} />)}
+          {daysStartingWithToday.map((day, index) => <ScheduleForDay latitude={latitude} longitude={longitude} key={day} day={day} daysAway={index} />)}
         </div>
       </main>
 

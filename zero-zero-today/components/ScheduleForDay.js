@@ -1,19 +1,21 @@
 import React from 'react'
-import { locationsThatHaveDay } from './schedule'
+import { addDistance, locationsThatHaveDay } from './schedule'
 import styles from './ScheduleForDay.module.css'
 
-export default function ScheduleForDay({ day, daysAway }) {
+export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
+  const locationsWithDistance = addDistance(locationsThatHaveDay(day), latitude, longitude, true)
   const warnRegistration = daysAway >= 2
   return (
     <div className={styles.card}>
       <h2>{day} in Ottawa</h2>
       {warnRegistration && <div>*Registration only opens up 2 days before the event, at 6 p.m.</div>}
       <div className={styles.container}>
-        {locationsThatHaveDay(day).map((location) => {
+        {locationsWithDistance.map((location) => {
           const [name, startDate] = location.name.split('starting')
           return (
             <div key={location.name} className={styles.location}>
               <h3>{name}</h3>
+              {location.distance && <p className={styles.distance}>{location.distance.toFixed(1)} km</p>}
               {startDate && <note className={styles.caption}>Starting {startDate}</note>}
               <ul>
                 {location[day].map((time) => (

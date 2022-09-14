@@ -29,6 +29,7 @@
 }
 
 .location {
+  position: relative;
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -41,6 +42,21 @@
   flex-basis: 45%;
   max-width: 800px;
   background-color: #fefefe;
+}
+
+.location h3 {
+  margin: 0 4rem 0.5rem 0;
+}
+
+.distance {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  background-color: #2f947c47;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 5px;
 }
 
 .button {
@@ -72,5 +88,8 @@
     border-color: #28495f;
     background-color: #10202b;
     color: #eee;
+  }
+  .distance {
+    background-color: #2f947c;
   }
 }
