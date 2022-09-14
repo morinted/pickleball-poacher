@@ -57,7 +57,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                   console.log(className)
                   return (
                     <li
-                      key={time}
+                      key={time + className}
                       className={className}
                     >
                       {time.replace('(Pickleball)', '')}
