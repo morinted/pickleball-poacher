@@ -135,7 +135,7 @@ async function main() {
                     .toLowerCase()
                     .replace(/noon/g, '12 pm')
                     .replace(/–/g, '–') // Remove endash.
-                    .split(',')
+                    .split(/(,|\n+)/)
                     .map((time) => time.trim())
                     .filter((time) => !isNaN(parseInt(time)))
                     .filter(
@@ -208,7 +208,7 @@ async function main() {
       return acc
     }, {})
 
-    const  { stringify } = flags.format === 'json' ? JSON : YAML
+    const { stringify } = flags.format === 'json' ? JSON : YAML
     console.log(stringify(resultsByLocation))
   } catch (e) {
     console.error(e)
