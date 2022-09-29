@@ -1,15 +1,12 @@
 import React from 'react'
-import { addDistance, locationsThatHaveDay, today } from './schedule'
+import { addDistance, days, locationsThatHaveDay, today } from './schedule'
 import styles from './ScheduleForDay.module.css'
-import dayjs from 'dayjs'
-import customParseFormat from 'dayjs/plugin/customParseFormat'
-import utc from 'dayjs/plugin/utc'
-import timezone from 'dayjs/plugin/timezone'
-dayjs.extend(utc)
-dayjs.extend(timezone)
-dayjs.extend(customParseFormat)
+import { getEndTime, dayjs } from './time'
+import { TimeFormatter } from './TimeFormatter'
+import { useRefresh } from './useRefresh'
 
 export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
+  useRefresh()
   const timezone = dayjs.tz.guess()
   const isToday = day === today
   const now = dayjs().tz(timezone)
@@ -19,9 +16,11 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
     longitude,
     true
   )
-  const warnRegistration = daysAway >= 2
+  const warnRegistration = daysAway > 2 || daysAway === 2 && now.hour() < 18
+  const registrationDay = days[(days.indexOf(day) + 7 - 2) % 7]
+  const isWeekend = day === 'Saturday' || day === 'Sunday'
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${isWeekend ? styles.weekend : ''}`}>
       <h2>{day} in Ottawa</h2>
       {warnRegistration && (
         <div>
@@ -44,26 +43,24 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
               )}
               <ul>
                 {location[day].map((time) => {
-                  const endTimeString =
-                    isToday &&
-                    time
-                      .split(/-/)?.[1]
-                      ?.trim()
-                      .replace(/\(.*\)/, '')
-                  const endTime =
-                    isToday && dayjs(endTimeString, ['h:mm a', 'h a']).tz('America/New_York')
-                  const past = isToday && endTime.isBefore(now)
-                  const inProgress =
-                    isToday && !past && endTime.isBefore(now.add(1, 'hour'))
+                  const { past, inProgress } = (() => {
+                    if (!isToday) return { past: false, inProgress: false }
+                    const endTime = getEndTime(time)
+                    const past = endTime.isBefore(now)
+                    const inProgress =
+                      !past && endTime.isBefore(now.add(1, 'hour'))
+                    return {
+                      past,
+                      inProgress,
+                    }
+                  })()
                   const className = `${inProgress ? styles.inprogress : ''} ${
                     past ? styles.past : ''
                   }`
                   return (
-                    <li
-                      key={time + className}
-                      className={className}
-                    >
-                      {time.replace('(Pickleball)', '')}
+                    <li key={time + className} className={className}>
+                      <TimeFormatter time={time} day={day} />
+                      {/* This div forces an update which fixes a bug with SSR where time styles are no longer dynamic. */}
                       <div style={{ display: 'none' }}>{className}</div>
                     </li>
                   )
@@ -75,7 +72,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                Register{warnRegistration && '*'}
+                Register {warnRegistration && <>at 6 pm {registrationDay === today ? 'today' : registrationDay}*</>}
               </a>
               <a
                 className={styles.button}
