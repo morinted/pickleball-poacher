@@ -74,7 +74,7 @@ const ottawaCa = 'https://ottawa.ca'
 async function main() {
   try {
     const centres = []
-    let link = `${facilityUrl}?place_facets%5B0%5D=place_type%3A4210`
+    let link = `${facilityUrl}?place_facets%5B0%5D=place_type%3A4208&place_facets%5B1%5D=place_type%3A4210`
     while (link) {
       const response = (await axios.get(link)).data
       const $ = cheerio.load(response)
