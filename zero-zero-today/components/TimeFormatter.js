@@ -1,4 +1,5 @@
 import { EveningIcon } from "./EveningIcon"
+import { NewIcon } from "./NewIcon"
 import { getEndTime } from "./time"
 
 /**
@@ -13,6 +14,7 @@ import { getEndTime } from "./time"
 export const TimeFormatter = ({ time }) => {
   const endTime = getEndTime(time)
   const isEvening = endTime.hour() >= 17
-  const displayTime = time.replace('(Pickleball)', '').replace(/\(Pickleball[ -]+/, '(')
-  return <span>{displayTime}{(isEvening) && <EveningIcon />}</span>
+  const isNew = time.includes('*')
+  const displayTime = time.replace('(Pickleball)', '').replace(/\(Pickleball[ -]+/, '(').replace('*', '')
+  return <span>{isNew && <NewIcon />}{displayTime}{(isEvening) && <EveningIcon />}</span>
 }

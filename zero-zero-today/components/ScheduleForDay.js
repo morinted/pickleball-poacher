@@ -38,9 +38,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                   {location.distance.toFixed(1)} km
                 </p>
               )}
-              {startDate && (
-                <note className={styles.caption}>Starting {startDate}</note>
-              )}
+              <note className={styles.caption}>{day}{startDate && ` (Starting ${startDate.trim()})`}</note>
               <ul>
                 {location[day].map((time) => {
                   const { past, inProgress } = (() => {

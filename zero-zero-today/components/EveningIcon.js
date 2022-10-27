@@ -1,8 +1,21 @@
 export const EveningIcon = () => (
-  <span
-    style={{ padding: '0 0.5rem' }}
-    title="Time slot is in evening"
+  <div
+    style={{
+      padding: '0 0.5rem',
+      display: 'inline-block',
+      width: '2rem',
+      verticalAlign: 'middle',
+    }}
+    title='Event is in the evening'
   >
-    ☾
-  </span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 455 455"
+      xmlSpace="preserve"
+      fill='currentColor'
+    >
+      <path d="m320.18 162.705-39.55 8.347 27.09 30-4.283 40.193 36.903-16.494 36.903 16.494-4.283-40.193 27.09-30-39.55-8.347-20.16-35.035zM440 325.677l-25.909-5.469-13.208-22.955-13.208 22.955-25.909 5.469 17.747 19.653-2.805 26.331 24.176-10.806 24.179 10.806-2.809-26.332z" />
+      <path d="M218 227.5c0-89.167 51.306-166.338 126-203.64C313.443 8.6 278.978 0 242.5 0 116.855 0 15 101.855 15 227.5S116.855 455 242.5 455c36.478 0 70.943-8.6 101.5-23.86-74.694-37.302-126-114.473-126-203.64z" />
+    </svg>
+  </div>
 )
