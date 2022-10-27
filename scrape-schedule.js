@@ -3,6 +3,31 @@ import cheerio from 'cheerio'
 import moment from 'moment'
 import YAML from 'yaml'
 import args from 'args'
+import { readFile, writeFile } from 'fs'
+
+
+const defaultDays = [
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
+]
+
+const getPreviousTimes = async () => {
+  return new Promise((resolve, reject) => {
+    readFile('./cache/date-scraped.json', (err, data) => {
+      if (err) reject(err)
+      try {
+        resolve(JSON.parse(data || '{}'))
+      } catch (e) {
+        resolve({})
+      }
+    })
+  })
+}
 
 args
   .option('coordinates', 'Fetch coordinates of locations.', false)
@@ -24,15 +49,6 @@ const log = (...messages) => {
   console.log(...messages)
 }
 
-const defaultDays = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday',
-]
 
 const eveningsAndWeekends = (day) => (time) => {
   if (/sat|sun/i.test(day)) return true
@@ -135,6 +151,7 @@ async function main() {
                     .toLowerCase()
                     .replace(/noon/g, '12 pm')
                     .replace(/–/g, '-') // Remove endash.
+                    .replace(/([^ ])-([^ ])/g, '$1 - $2') // Ensure spaces around time.
                     .split(/(,|\n+)/)
                     .map((time) => time.trim())
                     .filter((time) => !isNaN(parseInt(time)))
@@ -209,10 +226,42 @@ async function main() {
     }, {})
 
     const { stringify } = flags.format === 'json' ? JSON : YAML
+    const newTimes = buildDateTable(await getPreviousTimes(), resultsByLocation)
+    for (const key in newTimes) {
+      if ((Date.now() - newTimes[key]) < 7 * 60 * 60 * 24) {
+        const [location, day, time] = key.split('|')
+        resultsByLocation[location][day] = resultsByLocation[location][day].map(startEnd => {
+          if (startEnd === time) return `${time}*`
+          return startEnd
+        })
+      }
+    }
+    writeFile('./cache/date-scraped.json', JSON.stringify(newTimes, null, 2), () => {})
     console.log(stringify(resultsByLocation))
+
   } catch (e) {
     console.error(e)
   }
+}
+
+/**
+ * Store the time and location pair along with the date it was first scraped. This will make highlighting new entries possible.
+ */
+export function buildDateTable(previous, current) {
+  const result = {}
+  for (const locationName in current) {
+    const location = current[locationName]
+    for (const day of defaultDays) {
+      const times = location[day]
+      if (!times) continue
+      for (const time of times) {
+        const key = `${locationName}|${day}|${time}`
+        const olderDate = previous[key] || Date.now()
+        result[key] = olderDate
+      }
+    }
+  }
+  return result
 }
 
 main()
