@@ -5,7 +5,8 @@ import YAML from 'yaml'
 import args from 'args'
 import { readFile, writeFile } from 'fs'
 
-
+// One week          day hr   min  sec  ms
+const NEW_TIMESLOT = 7 * 24 * 60 * 60 * 1000
 const defaultDays = [
   'Monday',
   'Tuesday',
@@ -228,7 +229,7 @@ async function main() {
     const { stringify } = flags.format === 'json' ? JSON : YAML
     const newTimes = buildDateTable(await getPreviousTimes(), resultsByLocation)
     for (const key in newTimes) {
-      if ((Date.now() - newTimes[key]) < 7 * 60 * 60 * 24) {
+      if ((Date.now() - newTimes[key]) < NEW_TIMESLOT) {
         const [location, day, time] = key.split('|')
         resultsByLocation[location][day] = resultsByLocation[location][day].map(startEnd => {
           if (startEnd === time) return `${time}*`
