@@ -226,7 +226,7 @@ async function main() {
       return acc
     }, {})
 
-    const { stringify } = flags.format === 'json' ? JSON : YAML
+    const { stringify } = flags.format === 'json' ? { stringify: value => JSON.stringify(value, null, 2) } : YAML
     const newTimes = buildDateTable(await getPreviousTimes(), resultsByLocation)
     for (const key in newTimes) {
       if ((Date.now() - newTimes[key]) < NEW_TIMESLOT) {
