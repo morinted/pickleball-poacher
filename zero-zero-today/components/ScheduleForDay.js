@@ -30,7 +30,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
       <div className={styles.container}>
         {locationsWithDistance.map((location) => {
           const hasStartDate = location.name.includes('starting')
-          const [name, caption] = location.name.split(/starting|\|/)
+          const [name, caption] = location.name.split(/starting|#/)
           const fullCaption = caption ? ` (${hasStartDate ? 'Starting ' : ''}${caption.trim()})` : null
           return (
             <div key={location.name} className={styles.location}>
