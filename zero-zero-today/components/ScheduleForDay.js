@@ -29,7 +29,9 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
       )}
       <div className={styles.container}>
         {locationsWithDistance.map((location) => {
-          const [name, startDate] = location.name.split('starting')
+          const hasStartDate = location.name.includes('starting')
+          const [name, caption] = location.name.split(/starting|\|/)
+          const fullCaption = caption ? ` (${hasStartDate ? 'Starting ' : ''}${caption.trim()})` : null
           return (
             <div key={location.name} className={styles.location}>
               <h3>{name}</h3>
@@ -38,7 +40,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                   {location.distance.toFixed(1)} km
                 </p>
               )}
-              <note className={styles.caption}>{day}{startDate && ` (Starting ${startDate.trim()})`}</note>
+              <note className={styles.caption}>{day}{fullCaption}</note>
               <ul>
                 {location[day].map((time) => {
                   const { past, inProgress } = (() => {

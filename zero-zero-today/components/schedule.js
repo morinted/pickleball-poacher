@@ -1,4 +1,7 @@
-import schedule from '../../cache/schedule.json'
+import autoSchedule from '../../cache/schedule.json'
+import manualSchedule from '../../cache/manual-schedule.json'
+
+const schedule = { ...autoSchedule, ...manualSchedule }
 
 export const days = [
   'Sunday',
