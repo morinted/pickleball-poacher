@@ -307,7 +307,7 @@
       "1:30 - 2:30 pm (Pickleball)"
     ]
   },
-  "Hunt Club-Riverside Park Community Centre starting September 12": {
+  "Hunt Club-Riverside Park Community Centre": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
     "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
     "coordinates": {
@@ -315,16 +315,25 @@
       "lon": "-75.67274397046596"
     },
     "Monday": [
-      "12 pm - 1 pm (Pickleball)"
+      "10:30 - 11:30 am (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
     ],
     "Tuesday": [
-      "12 pm - 1 pm (Pickleball)"
+      "10:30 - 11:30 am (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
     ],
     "Thursday": [
-      "12 pm - 1 pm (Pickleball - Intermediate)"
+      "10:30 - 11:30 am (Pickleball)*",
+      "12 pm - 1 pm (Pickleball - Intermediate)*",
+      "12 pm - 1 pm (Pickleball - Intermediate)*",
+      "12 pm - 1 pm (Pickleball - Intermediate)*"
     ]
   },
-  "Minto Recreation Complex - Barrhaven starting September 7": {
+  "Minto Recreation Complex - Barrhaven": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
     "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
     "coordinates": {
@@ -332,30 +341,42 @@
       "lon": "-75.7348081"
     },
     "Monday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
     ],
     "Tuesday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*"
     ],
     "Wednesday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
     ],
     "Thursday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*"
     ],
     "Friday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
     ]
   },
   "Nepean Sportsplex": {
