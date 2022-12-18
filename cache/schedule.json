@@ -263,7 +263,7 @@
       "12:50 - 1:50 pm (Pickleball 16+)*"
     ]
   },
-  "Greenboro Community Centre starting October 3 ": {
+  "Greenboro Community Centre": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
     "address": "363 Lorry Greenberg Drive Ottawa ON K1T 3P8",
     "coordinates": {
@@ -271,19 +271,19 @@
       "lon": "-75.6355798"
     },
     "Tuesday": [
-      "12:30 - 1:30 pm (Pickleball)",
-      "8:30 - 10 pm (Pickleball)"
+      "12:30 - 1:30 pm (Pickleball)*",
+      "8:30 - 10 pm (Pickleball)*"
     ],
     "Wednesday": [
-      "11 am - 12 pm (Pickleball)",
-      "12:30 pm - 1:30 pm (Pickleball)"
+      "11 am - 12 pm (Pickleball)*",
+      "12:30 pm - 1:30 pm (Pickleball)*"
     ],
     "Thursday": [
-      "12:30 - 1:30 pm (Pickleball)"
+      "12:30 - 1:30 pm (Pickleball)*"
     ],
     "Friday": [
-      "11 am - 12 pm (Pickleball)",
-      "12:45 pm - 1:45 pm (Pickleball)"
+      "11 am - 12 pm (Pickleball)*",
+      "12:45 pm - 1:45 pm (Pickleball)*"
     ]
   },
   "Hintonburg Community Centre starting September 6": {
