@@ -7,11 +7,10 @@ import { useRefresh } from './useRefresh'
 
 const CAPTION_REGEX = /(starting|until|January|February|March|April|May|June|July|August|September|October|November|December|#)/i
 
-export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
+export default function ScheduleForDay({ day, daysAway, latitude, longitude, now }) {
   useRefresh()
-  const timezone = dayjs.tz.guess()
   const isToday = day === today
-  const now = dayjs().tz(timezone)
+  const then = dayjs(now).add(daysAway, 'day')
   const locationsWithDistance = addDistance(
     locationsThatHaveDay(day),
     latitude,
@@ -23,7 +22,7 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
   const isWeekend = day === 'Saturday' || day === 'Sunday'
   return (
     <div className={`${styles.card} ${isWeekend ? styles.weekend : ''}`}>
-      <h2>{day} in Ottawa</h2>
+      <h2>{then.format('dddd, MMMM DD')} in Ottawa</h2>
       {warnRegistration && (
         <div>
           *Registration only opens up 2 days before the event, at 6 p.m.
@@ -87,6 +86,14 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
                 target="_blank"
               >
                 Directions
+              </a>
+              <a
+                className={styles.button}
+                href={location.home}
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                Homepage
               </a>
             </div>
           )

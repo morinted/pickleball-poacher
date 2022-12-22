@@ -4,10 +4,14 @@ import styles from '../styles/Home.module.css'
 import ScheduleForDay from '../components/ScheduleForDay'
 import { daysStartingWithToday } from '../components/schedule'
 import { usePosition } from 'use-position'
+import { dayjs } from '../components/time'
+
 
 export default function Home() {
   const { latitude, longitude, error } = usePosition()
   const locationStatus = latitude ? 'success' : error ? 'error' : 'loading'
+  const timezone = dayjs.tz.guess()
+  const now = dayjs().tz(timezone)
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +33,7 @@ export default function Home() {
         {locationStatus === 'loading' && <p><i>📍 Loading your location&hellip;</i></p>}
 
         <div className={styles.grid}>
-          {daysStartingWithToday.map((day, index) => <ScheduleForDay latitude={latitude} longitude={longitude} key={day} day={day} daysAway={index} />)}
+          {daysStartingWithToday.map((day, index) => <ScheduleForDay latitude={latitude} longitude={longitude} key={day} day={day} daysAway={index} now={now} />)}
         </div>
       </main>
 
