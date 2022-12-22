@@ -16,4 +16,17 @@ const getEndTime = (time) => {
   return dayjs(endTimeString, ['h:mm a', 'h a']).tz('America/New_York')
 }
 
-export { dayjs, getEndTime }
+// Given "December 12", return the closest December 12 (looking at last year, this year, and next year).
+const parseDay = (dateString) => {
+  const now = dayjs()
+  const date = dayjs(dateString, 'MMMM D')
+  const years = [dayjs(date).subtract(1, 'year'), date, dayjs(date).add(1, 'year')]
+  return years.reduce((nearest, candidate) => {
+    const timeSinceNearest = Math.abs(now.diff(nearest))
+    const timeSinceCandidate = Math.abs(now.diff(candidate))
+    if (timeSinceCandidate < timeSinceNearest) return candidate
+    return nearest
+  })
+}
+
+export { dayjs, getEndTime, parseDay }

@@ -33,7 +33,7 @@ export default function Home() {
         {locationStatus === 'loading' && <p><i>📍 Loading your location&hellip;</i></p>}
 
         <div className={styles.grid}>
-          {daysStartingWithToday.map((day, index) => <ScheduleForDay latitude={latitude} longitude={longitude} key={day} day={day} daysAway={index} now={now} />)}
+          {[...daysStartingWithToday, ...daysStartingWithToday].map((day, index) => <ScheduleForDay latitude={latitude} longitude={longitude} key={day} day={day} daysAway={index} now={now} />)}
         </div>
       </main>
 

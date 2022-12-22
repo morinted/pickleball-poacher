@@ -1,13 +1,51 @@
 import React from 'react'
 import { addDistance, days, locationsThatHaveDay, today } from './schedule'
 import styles from './ScheduleForDay.module.css'
-import { getEndTime, dayjs } from './time'
+import { getEndTime, dayjs, parseDay } from './time'
 import { TimeFormatter } from './TimeFormatter'
 import { useRefresh } from './useRefresh'
 
-const CAPTION_REGEX = /(starting|until|January|February|March|April|May|June|July|August|September|October|November|December|#)/i
+const CAPTION_REGEX =
+  /(starting|until|January|February|March|April|May|June|July|August|September|October|November|December|#)/i
 
-export default function ScheduleForDay({ day, daysAway, latitude, longitude, now }) {
+const getCaptionDateRange = (caption = '') => {
+  // After: starting December 12
+  // Before: until December 12
+  // Range: December 12 to January 2
+  const variant = caption.includes(' to ')
+    ? 'range'
+    : caption.includes('starting')
+    ? 'from'
+    : caption.includes('until')
+    ? 'to'
+    : 'none'
+
+  if (variant === 'from') {
+    const date = caption.split('starting')[1].trim()
+    return { from: parseDay(date), to: null }
+  }
+  if (variant === 'to') {
+    const date = caption.split('until')[1].trim()
+    return { from: null, to: parseDay(date) }
+  }
+  if (variant === 'range') {
+    let [fromDate, toDate] = caption.split(' to ').map((x) => x.trim())
+    // Handle "December 1 to 10" format.
+    if (toDate.length <= 2) {
+      toDate = `${fromDate.split(' ')[0]} ${toDate}`
+    }
+    return { from: parseDay(fromDate), to: parseDay(toDate) }
+  }
+  return { from: null, to: null }
+}
+
+export default function ScheduleForDay({
+  day,
+  daysAway,
+  latitude,
+  longitude,
+  now,
+}) {
   useRefresh()
   const isToday = day === today
   const then = dayjs(now).add(daysAway, 'day')
@@ -17,12 +55,12 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude, now
     longitude,
     true
   )
-  const warnRegistration = daysAway > 2 || daysAway === 2 && now.hour() < 18
+  const warnRegistration = daysAway > 2 || (daysAway === 2 && now.hour() < 18)
   const registrationDay = days[(days.indexOf(day) + 7 - 2) % 7]
   const isWeekend = day === 'Saturday' || day === 'Sunday'
   return (
     <div className={`${styles.card} ${isWeekend ? styles.weekend : ''}`}>
-      <h2>{then.format('dddd, MMMM DD')} in Ottawa</h2>
+      <h2>{then.format('dddd, MMMM D')} in Ottawa</h2>
       {warnRegistration && (
         <div>
           *Registration only opens up 2 days before the event, at 6 p.m.
@@ -33,6 +71,12 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude, now
           const captionIndex = location.name.search(CAPTION_REGEX)
           const name = location.name.slice(0, captionIndex)
           const caption = location.name.slice(captionIndex).replace('#', '')
+          const { from, to } = getCaptionDateRange(caption)
+
+          // Exclude dates that aren't inclusive.
+          if (from && then.isBefore(from)) return null
+          if (to && then.isAfter(to)) return null
+
           const fullCaption = caption ? ` (${caption.trim()})` : null
           return (
             <div key={location.name} className={styles.location}>
@@ -42,7 +86,10 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude, now
                   {location.distance.toFixed(1)} km
                 </p>
               )}
-              <note className={styles.caption}>{day}{fullCaption}</note>
+              <note className={styles.caption}>
+                {day}
+                {fullCaption}
+              </note>
               <ul>
                 {location[day].map((time) => {
                   const { past, inProgress } = (() => {
@@ -74,7 +121,13 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude, now
                 rel="noreferrer noopener"
                 target="_blank"
               >
-                Register {warnRegistration && <>at 6 pm {registrationDay === today ? 'today' : registrationDay}*</>}
+                Register{' '}
+                {warnRegistration && (
+                  <>
+                    at 6 pm{' '}
+                    {registrationDay === today ? 'today' : registrationDay}*
+                  </>
+                )}
               </a>
               <a
                 className={styles.button}
