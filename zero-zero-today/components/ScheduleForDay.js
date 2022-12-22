@@ -5,6 +5,8 @@ import { getEndTime, dayjs } from './time'
 import { TimeFormatter } from './TimeFormatter'
 import { useRefresh } from './useRefresh'
 
+const CAPTION_REGEX = /(starting|until|January|February|March|April|May|June|July|August|September|October|November|December|#)/i
+
 export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
   useRefresh()
   const timezone = dayjs.tz.guess()
@@ -29,9 +31,10 @@ export default function ScheduleForDay({ day, daysAway, latitude, longitude }) {
       )}
       <div className={styles.container}>
         {locationsWithDistance.map((location) => {
-          const hasStartDate = location.name.includes('starting')
-          const [name, caption] = location.name.split(/starting|#/)
-          const fullCaption = caption ? ` (${hasStartDate ? 'Starting ' : ''}${caption.trim()})` : null
+          const captionIndex = location.name.search(CAPTION_REGEX)
+          const name = location.name.slice(0, captionIndex)
+          const caption = location.name.slice(captionIndex).replace('#', '')
+          const fullCaption = caption ? ` (${caption.trim()})` : null
           return (
             <div key={location.name} className={styles.location}>
               <h3>{name}</h3>

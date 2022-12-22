@@ -1,6 +1,7 @@
 {
-  "CARDELREC Recreation Complex Goulbourn": {
+  "CARDELREC Recreation Complex Goulbourn December 19 to 25": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
     "address": "1500 Shea Road Ottawa ON K2S 0B2",
     "coordinates": {
       "lat": "45.2633546",
@@ -8,43 +9,78 @@
     },
     "Monday": [
       "12:45 - 1:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*",
       "1:45 - 2:45 pm (Pickleball)*"
     ],
     "Tuesday": [
       "12:45 - 1:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*",
       "1:45 - 2:45 pm (Pickleball)*"
     ],
     "Wednesday": [
       "12:45 - 1:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*",
       "1:45 - 2:45 pm (Pickleball)*"
     ],
     "Thursday": [
       "12:45 - 1:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*",
       "1:45 - 2:45 pm (Pickleball)*"
     ],
     "Friday": [
       "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ]
+  },
+  "CARDELREC Recreation Complex Goulbourn December 26 to January 1": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
+    "address": "1500 Shea Road Ottawa ON K2S 0B2",
+    "coordinates": {
+      "lat": "45.2633546",
+      "lon": "-75.9076604"
+    },
+    "Tuesday": [
       "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ],
+    "Thursday": [
       "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ]
+  },
+  "CARDELREC Recreation Complex Goulbourn January 2 to 8": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
+    "address": "1500 Shea Road Ottawa ON K2S 0B2",
+    "coordinates": {
+      "lat": "45.2633546",
+      "lon": "-75.9076604"
+    },
+    "Monday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "12:45 - 1:45 pm (Pickleball)*",
       "1:45 - 2:45 pm (Pickleball)*"
     ]
   },
   "CARDELREC Recreation Complex Goulbourn starting January 9": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
     "address": "1500 Shea Road Ottawa ON K2S 0B2",
     "coordinates": {
       "lat": "45.2633546",
@@ -71,213 +107,313 @@
       "1:45 - 2:45 pm (Pickleball)*"
     ]
   },
-  "Eva James Memorial Community Centre": {
+  "Eva James Memorial Community Centre until December 18": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
     "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
     "coordinates": {
       "lat": "45.2905465",
       "lon": "-75.85787897927462"
     },
     "Monday": [
-      "11:15 am - 12:15 pm (Pickleball)",
-      "11:15 am - 12:15 pm (Pickleball)",
-      "12:15 - 1:15 pm (Pickleball)",
-      "2:30 - 3:30 pm (Pickleball)",
-      "3:30 - 4:30 pm (Pickleball)"
+      "11:15 am - 12:15 pm (Pickleball)*"
     ],
     "Tuesday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "1:15 - 2:15 pm (Pickleball)",
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "9:15 - 10:15 am (Pickleball)",
-      "10:15 - 11:15 am (Pickleball)",
-      "10:30 - 11:30 am (Pickleball)",
-      "11:30 am - 12:30 pm (Pickleball)"
+      "1:15 - 2:15 pm (Pickleball)*",
+      "2:15 - 3:15 pm (Pickleball)*"
     ],
     "Thursday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "1:15 - 2:15 pm (Pickleball)",
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Friday": [
-      "9:15 - 10:15 am (Pickleball)",
-      "10:15 - 11:15 am (Pickleball)"
+      "1:15 - 2:15 pm (Pickleball)*",
+      "2:15 - 3:15 pm (Pickleball)*"
     ],
     "Saturday": [
-      "10:30 - 11:30 am (Pickleball)",
-      "11:30 am - 12:30 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
+      "2 - 3 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
     ]
   },
-  "François Dupuis Recreation Centre": {
+  "Eva James Memorial Community Centre December 19 to 23": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
+    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
+    "coordinates": {
+      "lat": "45.2905465",
+      "lon": "-75.85787897927462"
+    },
+    "Monday": [
+      "11:15 am - 12:15 pm (Pickleball)*",
+      "12:15 - 1:15 pm (Pickleball)*",
+      "2:30 - 3:30 pm (Pickleball)*",
+      "3:30 - 4:30 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "1:15 - 2:15 pm (Pickleball)*",
+      "2:15 - 3:15 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "10:30 - 11:30 am (Pickleball)*",
+      "11:30 am - 12:30 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "1:15 - 2:15 pm (Pickleball)*",
+      "2:15 - 3:15 pm (Pickleball)*"
+    ]
+  },
+  "Eva James Memorial Community Centre January 3 to 8": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
+    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
+    "coordinates": {
+      "lat": "45.2905465",
+      "lon": "-75.85787897927462"
+    },
+    "Tuesday": [
+      "1:15 - 2:15 pm (Pickleball)*",
+      "2:15 - 3:15 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "9:15 - 10:15 am (Pickleball)*",
+      "10:15 - 11:15 am (Pickleball)*"
+    ],
+    "Thursday": [
+      "1:15 - 2:15 pm (Pickleball)*",
+      "2:15 - 3:15 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "9:15 - 10:15 am (Pickleball)*",
+      "10:15 - 11:15 am (Pickleball)*"
+    ],
+    "Saturday": [
+      "10:30 - 11:30 am (Pickleball)*",
+      "11:30 am - 12:30 pm (Pickleball)*"
+    ]
+  },
+  "François Dupuis Recreation Centre until December 18": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
     "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
     "coordinates": {
       "lat": "45.45448785",
       "lon": "-75.46332711436"
     },
     "Monday": [
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*",
+      "2:30 - 3:30 pm (Pickleball 50+)*",
+      "6:40 - 7:40 pm (Pickleball 16+)*",
+      "7:50 - 8:50 pm (Pickleball 16+)*"
+    ],
+    "Tuesday": [
+      "7:30 - 8:30 am (Pickleball 50+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball Intermediate 16+)*",
+      "2:30 - 3:30 pm (Pickleball Intermediate 16+)*"
+    ],
+    "Wednesday": [
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*",
+      "2:30 - 3:30 pm (Pickleball 50+)*"
+    ],
+    "Thursday": [
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "6:40 - 7:40 pm (Pickleball 16+)*"
+    ],
+    "Friday": [
+      "7:30 - 8:30 am (Pickleball 50+)*",
+      "8:40 - 9:40 am (Pickleball 50+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball Intermediate 16+)*",
+      "1:20 - 2:20 pm (Pickleball Intermediate 16+)*"
+    ],
+    "Saturday": [
+      "2 - 3 pm (Pickleball 16+)*"
+    ],
+    "Sunday": [
+      "11:40 am - 12:40 pm (Pickleball 16+)*",
+      "12:50 - 1:50 pm (Pickleball 16+)*"
+    ]
+  },
+  "François Dupuis Recreation Centre December 19 to 25": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
+    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
+    "coordinates": {
+      "lat": "45.45448785",
+      "lon": "-75.46332711436"
+    },
+    "Monday": [
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*",
+      "2:30 - 3:30 pm (Pickleball 50+)*",
+      "6:40 - 7:40 pm (Pickleball 16+)*",
+      "7:50 - 8:50 pm (Pickleball 16+)*"
+    ],
+    "Tuesday": [
+      "7:30 - 8:30 am (Pickleball 50+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball Intermediate 16+)*",
+      "2:30 - 3:30 pm (Pickleball Intermediate 16+)*"
+    ],
+    "Wednesday": [
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*",
+      "2:30 - 3:30 pm (Pickleball 50+)*"
+    ],
+    "Thursday": [
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "6:40 - 7:40 pm (Pickleball 16+)*"
+    ],
+    "Friday": [
+      "7:30 - 8:30 am (Pickleball 50+)*",
+      "8:40 - 9:40 am (Pickleball 50+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball Intermediate 16+)*",
+      "1:20 - 2:20 pm (Pickleball Intermediate 16+)*"
+    ],
+    "Saturday": [
+      "10 - 11 am (Pickleball 50+)*",
+      "11:10 am - 12:10 pm (Pickleball 16+)*",
+      "12:20 - 1:30 pm (Pickleball 16+)*"
+    ]
+  },
+  "François Dupuis Recreation Centre December 26 to January 1": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
+    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
+    "coordinates": {
+      "lat": "45.45448785",
+      "lon": "-75.46332711436"
+    },
+    "Monday": [
+      "10 - 11 am (Pickleball 50+)*",
+      "11:10 am - 12:10 pm (Pickleball 16+)*",
+      "12:20 - 1:20 pm (Pickleball 16+)*"
+    ],
+    "Tuesday": [
       "7:30 - 8:30 am (Pickleball 16+)*",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
       "8:40 - 9:40 am (Pickleball 16+)*",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
       "9:50 - 10:50 am (Pickleball 16+)*",
-      "10 - 11 am (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11:10 am - 12:10 pm (Pickleball 16+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
+      "11 am - 12 pm (Pickleball 50+)*",
       "12:10 - 1:10 pm (Pickleball 50+)*",
-      "12:20 - 1:20 pm (Pickleball 16+)",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "2:30 - 3:30 pm (Pickleball 50+)",
-      "2:30 - 3:30 pm (Pickleball 50+)",
-      "6:40 - 7:40 pm (Pickleball 16+)",
-      "6:40 - 7:40 pm (Pickleball 16+)",
+      "1:20 - 2:20 pm (Pickleball 50+)*"
+    ],
+    "Wednesday": [
+      "7:30 - 8:30 am (Pickleball 16+)*",
+      "8:40 - 9:40 am (Pickleball 16+)*",
+      "9:50 - 10:50 am (Pickleball 16+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*"
+    ],
+    "Thursday": [
+      "7:30 - 8:30 am (Pickleball 16+)*",
+      "8:40 - 9:40 am (Pickleball 16+)*",
+      "9:50 - 10:50 am (Pickleball 16+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*"
+    ],
+    "Friday": [
+      "7:30 - 8:30 am (Pickleball 16+)*",
+      "8:40 - 9:40 am (Pickleball 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*"
+    ],
+    "Saturday": [
+      "10 - 11 am (Pickleball 50+)*",
+      "11:10 am - 12:10 pm (Pickleball 16+)*",
+      "12:20 - 1:20 pm (Pickleball 16+)*"
+    ]
+  },
+  "François Dupuis Recreation Centre January 2 to 8": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
+    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
+    "coordinates": {
+      "lat": "45.45448785",
+      "lon": "-75.46332711436"
+    },
+    "Monday": [
+      "7:30 - 8:30 am (Pickleball 16+)*",
+      "8:40 - 9:40 am (Pickleball 16+)*",
+      "9:50 - 10:50 am (Pickleball 16+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*",
       "6:40 - 7:40 pm (Pickleball 16+)*",
-      "7:50 - 8:50 pm (Pickleball 16+)",
-      "7:50 - 8:50 pm (Pickleball 16+)",
       "7:50 - 8:50 pm (Pickleball 16+)*"
     ],
     "Tuesday": [
-      "7:30 - 8:30 am (Pickleball 50+)",
-      "7:30 - 8:30 am (Pickleball 50+)",
-      "7:30 - 8:30 am (Pickleball 16+)*",
       "7:30 - 8:30 am (Pickleball 16+)*",
       "8:40 - 9:40 am (Pickleball 16+)*",
-      "8:40 - 9:40 am (Pickleball 16+)*",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
       "9:50 - 10:50 am (Pickleball 16+)*",
-      "9:50 - 10:50 am (Pickleball 16+)*",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)",
-      "1:20 - 2:20 pm (Pickleball 50+)*",
-      "1:20 - 2:20 pm (Pickleball 50+)*",
-      "2:30 - 3:30 pm (Pickleball Intermediate 16+)",
-      "2:30 - 3:30 pm (Pickleball Intermediate 16+)"
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*"
     ],
     "Wednesday": [
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
       "7:30 - 8:30 am (Pickleball 16+)*",
-      "7:30 - 8:30 am (Pickleball 16+)*",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
       "8:40 - 9:40 am (Pickleball 16+)*",
-      "8:40 - 9:40 am (Pickleball 16+)*",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
       "9:50 - 10:50 am (Pickleball 16+)*",
-      "9:50 - 10:50 am (Pickleball 16+)*",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "2:30 - 3:30 pm (Pickleball 50+)",
-      "2:30 - 3:30 pm (Pickleball 50+)"
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*"
     ],
     "Thursday": [
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
       "7:30 - 8:30 am (Pickleball 16+)*",
-      "7:30 - 8:30 am (Pickleball 16+)*",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
       "8:40 - 9:40 am (Pickleball 16+)*",
-      "8:40 - 9:40 am (Pickleball 16+)*",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
       "9:50 - 10:50 am (Pickleball 16+)*",
-      "9:50 - 10:50 am (Pickleball 16+)*",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "6:40 - 7:40 pm (Pickleball 16+)",
-      "6:40 - 7:40 pm (Pickleball 16+)"
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*"
     ],
     "Friday": [
-      "7:30 - 8:30 am (Pickleball 50+)",
-      "7:30 - 8:30 am (Pickleball 50+)",
       "7:30 - 8:30 am (Pickleball 16+)*",
-      "7:30 - 8:30 am (Pickleball 16+)*",
-      "8:40 - 9:40 am (Pickleball 50+)",
-      "8:40 - 9:40 am (Pickleball 50+)",
       "8:40 - 9:40 am (Pickleball 16+)*",
-      "8:40 - 9:40 am (Pickleball 16+)*",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
       "9:50 - 10:50 am (Pickleball 50+)*",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball Intermediate 16+)",
-      "12:10 - 1:10 pm (Pickleball Intermediate 16+)",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)"
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*"
     ],
     "Saturday": [
-      "10 - 11 am (Pickleball 50+)",
-      "10 - 11 am (Pickleball 50+)",
-      "11:10 am - 12:10 pm (Pickleball 16+)",
-      "11:10 am - 12:10 pm (Pickleball 16+)",
-      "12:20 - 1:20 pm (Pickleball 16+)*",
-      "12:20 - 1:30 pm (Pickleball 16+)",
-      "12:50 - 1:50 pm (Pickleball 16+)",
-      "2 - 3 pm (Pickleball 16+)",
-      "2 - 3 pm (Pickleball 16+)"
+      "12:50 - 1:50 pm (Pickleball 16+)*",
+      "2 - 3 pm (Pickleball 16+)*"
     ],
     "Sunday": [
-      "11:40 am - 12:40 pm (Pickleball 16+)",
-      "11:40 am - 12:40 pm (Pickleball 16+)",
-      "12:50 - 1:50 pm (Pickleball 16+)",
-      "12:50 - 1:50 pm (Pickleball 16+)"
+      "11:40 am - 12:40 pm (Pickleball 16+)*",
+      "12:50 - 1:50 pm (Pickleball 16+)*"
     ]
   },
-  "Greenboro Community Centre": {
+  "Greenboro Community Centre until December 25": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/greenboro-community-centre",
     "address": "363 Lorry Greenberg Drive Ottawa ON K1T 3P8",
     "coordinates": {
       "lat": "45.3635167",
@@ -301,6 +437,7 @@
   },
   "Hintonburg Community Centre starting January 8": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/hintonburgcc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hintonburg-community-centre",
     "address": "1064 Wellington Street West Ottawa ON K1Y 2Y3",
     "coordinates": {
       "lat": "45.4036315",
@@ -320,8 +457,27 @@
       "1:30 - 2:30 pm (Pickleball)*"
     ]
   },
-  "Hunt Club-Riverside Park Community Centre": {
+  "Hunt Club-Riverside Park Community Centre December 19 to 25": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
+    "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
+    "coordinates": {
+      "lat": "45.352061500000005",
+      "lon": "-75.67274397046596"
+    },
+    "Monday": [
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "12 pm - 1 pm (Pickleball - Intermediate)*"
+    ]
+  },
+  "Hunt Club-Riverside Park Community Centre December 26 to January 8": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
     "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
     "coordinates": {
       "lat": "45.352061500000005",
@@ -329,22 +485,20 @@
     },
     "Monday": [
       "10:30 - 11:30 am (Pickleball)*",
-      "12 pm - 1 pm (Pickleball)*",
       "12 pm - 1 pm (Pickleball)*"
     ],
     "Tuesday": [
       "10:30 - 11:30 am (Pickleball)*",
-      "12 pm - 1 pm (Pickleball)*",
       "12 pm - 1 pm (Pickleball)*"
     ],
     "Thursday": [
       "10:30 - 11:30 am (Pickleball)*",
-      "12 pm - 1 pm (Pickleball - Intermediate)*",
       "12 pm - 1 pm (Pickleball - Intermediate)*"
     ]
   },
   "Hunt Club-Riverside Park Community Centre starting January 9": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
     "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
     "coordinates": {
       "lat": "45.352061500000005",
@@ -361,8 +515,9 @@
       "12 pm - 1 pm (Pickleball - Intermediate)*"
     ]
   },
-  "Minto Recreation Complex - Barrhaven": {
+  "Minto Recreation Complex - Barrhaven until December 25": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
     "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
     "coordinates": {
       "lat": "45.2528722",
@@ -370,40 +525,84 @@
     },
     "Monday": [
       "11:45 am - 12:45 pm (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "1:55 - 12:55 pm (Pickleball)*",
-      "12:50 - 1:50 pm (Pickleball)*",
       "12:50 - 1:50 pm (Pickleball)*",
       "1:55 - 2:55 pm (Pickleball)*",
-      "3 - 4 pm (Pickleball)*",
       "3 - 4 pm (Pickleball)*"
     ],
     "Tuesday": [
       "11:45 am - 12:45 pm (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "12:50 - 1:50 pm (Pickleball)*",
-      "12:50 - 1:50 pm (Pickleball)*",
-      "12:50 -1:50 pm (Pickleball)*"
+      "12:50 - 1:50 pm (Pickleball)*"
     ],
     "Wednesday": [
       "11:45 am - 12:45 pm (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
       "12:50 - 1:50 pm (Pickleball)*",
-      "12:50 - 1:50 pm (Pickleball)*",
-      "12:50 -1:50 pm (Pickleball)*",
       "1:55 - 2:55 pm (Pickleball)*",
-      "1:55 - 2:55 pm (Pickleball)*",
-      "3 - 4 pm (Pickleball)*",
       "3 - 4 pm (Pickleball)*"
     ],
     "Thursday": [
       "11:45 am - 12:45 pm (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*"
+    ],
+    "Friday": [
       "11:45 am - 12:45 pm (Pickleball)*",
       "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
+    ]
+  },
+  "Minto Recreation Complex - Barrhaven December 26 to January 1": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
+    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
+    "coordinates": {
+      "lat": "45.2528722",
+      "lon": "-75.7348081"
+    },
+    "Tuesday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
       "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
+    ]
+  },
+  "Minto Recreation Complex - Barrhaven January 9 to 15, 2023": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
+    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
+    "coordinates": {
+      "lat": "45.2528722",
+      "lon": "-75.7348081"
+    },
+    "Monday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "1:55 - 12:55 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 -1:50 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 -1:50 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
       "12:50 -1:50 pm (Pickleball)*",
       "1:55 - 2:55 pm (Pickleball)*",
       "4 - 5 pm (Pickleball)*",
@@ -412,16 +611,8 @@
     ],
     "Friday": [
       "11:45 am - 12:45 pm (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "12:50 - 1:50 pm (Pickleball)*",
-      "12:50 - 1:50 pm (Pickleball)*",
       "12:50 pm -1:50 pm (Pickleball)*",
-      "1:55 - 2:55 pm (Pickleball)*",
-      "1:55 - 2:55 pm (Pickleball)*",
       "1:55 pm - 2:55 pm (Pickleball)*",
-      "3 - 4 pm (Pickleball)*",
-      "3 - 4 pm (Pickleball)*",
       "3 pm -4 pm (Pickleball)*"
     ],
     "Saturday": [
@@ -435,8 +626,9 @@
       "2:05 pm - 3:05 pm (Pickleball)*"
     ]
   },
-  "Nepean Sportsplex": {
+  "Nepean Sportsplex until December 26": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/nepean-sportsplex",
     "address": "1701 Woodroffe Avenue Ottawa ON K2G 1W2",
     "coordinates": {
       "lat": "45.3271242",
@@ -450,25 +642,39 @@
     ],
     "Wednesday": [
       "11:30 am - 12:30 pm (Pickleball)*",
-      "11:30 am - 12:30 pm (Pickleball)*",
       "12:45 - 1:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball)*",
-      "2 - 3 pm (Pickleball)*",
       "2 - 3 pm (Pickleball)*"
     ],
     "Friday": [
       "11:30 am - 12:30 pm (Pickleball)*",
+      "12:45 - 1:45 pm (Pickleball)*",
+      "2 - 3 pm (Pickleball)*",
+      "3:15 - 4:15 pm (Pickleball)*"
+    ]
+  },
+  "Nepean Sportsplex December 26 to January 1": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/nepean-sportsplex",
+    "address": "1701 Woodroffe Avenue Ottawa ON K2G 1W2",
+    "coordinates": {
+      "lat": "45.3271242",
+      "lon": "-75.7452920352786"
+    },
+    "Wednesday": [
       "11:30 am - 12:30 pm (Pickleball)*",
       "12:45 - 1:45 pm (Pickleball)*",
+      "2 - 3 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "11:30 am - 12:30 pm (Pickleball)*",
       "12:45 - 1:45 pm (Pickleball)*",
       "2 - 3 pm (Pickleball)*",
-      "2 - 3 pm (Pickleball)*",
-      "3:15 - 4:15 pm (Pickleball)*",
       "3:30 - 4:30 pm (Pickleball)*"
     ]
   },
-  "Richcraft Recreation Complex-Kanata": {
+  "Richcraft Recreation Complex-Kanata until December 18": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
     "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
     "coordinates": {
       "lat": "45.3404295",
@@ -476,49 +682,93 @@
     },
     "Monday": [
       "1:30 - 2:30 pm (Pickleball - adult)*",
-      "1:30 - 2:30 pm (Pickleball - adult)*",
-      "2:30 - 3:30 pm (Pickleball - adult)*",
       "2:30 - 3:30 pm (Pickleball - adult)*"
     ],
     "Tuesday": [
       "1:30 - 2:30 pm (Pickleball - adult)*",
-      "1:30 - 2:30 pm (Pickleball - adult)*",
-      "2:30 - 3:30 pm (Pickleball - adult)*",
-      "2:30 - 3:30 pm (Pickleball - adult)*",
-      "2:45 - 3:45 pm (Pickleball - adult)*",
-      "3:45 - 4:45 pm (Pickleball - adult)*"
+      "2:30 - 3:30 pm (Pickleball - adult)*"
     ],
     "Thursday": [
       "1:30 - 2:30 pm (Pickleball - adult)*",
-      "1:30 - 2:30 pm (Pickleball - adult)*",
-      "2:30 - 3:30 pm (Pickleball - adult)*",
-      "2:30 - 3:30 pm (Pickleball - adult)*",
-      "2:45 - 3:45 pm (Pickleball - adult)*",
-      "3:45 - 4:45 pm (Pickleball - adult)*",
-      "6:30 - 7:30 pm (Pickleball - adult)*",
-      "6:30 - 7:30 pm (Pickleball - adult)*",
-      "7:30 - 8:30 pm (Pickleball - adult)*",
-      "7:30 - 8:30 pm (Pickleball - adult)*"
+      "2:30 - 3:30 pm (Pickleball - adult)*"
     ],
     "Friday": [
       "8:30 - 9:30 am (Pickleball - adult)*",
-      "8:30 - 9:30 am (Pickleball - adult)*",
-      "9:30 - 10:30 am (Pickleball - adult)*",
-      "9:30 - 10:30 am (Pickleball - adult)*",
-      "2:45 - 3:45 pm (Pickleball - adult)*",
-      "3:45 - 4:45 pm (Pickleball - adult)*",
-      "6:30 - 7:30 pm (Pickleball - adult)*",
-      "7:30 - 8:30 pm (Pickleball - adult)*"
-    ],
-    "Saturday": [
-      "12:30 - 1:30 pm (Pickleball - adult)*"
+      "9:30 - 10:30 am (Pickleball - adult)*"
     ],
     "Sunday": [
       "10:45 - 11:45 am (Pickleball - adult)*"
     ]
   },
+  "Richcraft Recreation Complex-Kanata December 19 to 25": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
+    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
+    "coordinates": {
+      "lat": "45.3404295",
+      "lon": "-75.93050079076487"
+    },
+    "Monday": [
+      "1:30 - 2:30 pm (Pickleball - adult)*",
+      "2:30 - 3:30 pm (Pickleball - adult)*"
+    ],
+    "Tuesday": [
+      "1:30 - 2:30 pm (Pickleball - adult)*",
+      "2:30 - 3:30 pm (Pickleball - adult)*"
+    ],
+    "Thursday": [
+      "1:30 - 2:30 pm (Pickleball - adult)*",
+      "2:30 - 3:30 pm (Pickleball - adult)*"
+    ],
+    "Friday": [
+      "8:30 - 9:30 am (Pickleball - adult)*",
+      "9:30 - 10:30 am (Pickleball - adult)*"
+    ]
+  },
+  "Richcraft Recreation Complex-Kanata December 26 to January 1": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
+    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
+    "coordinates": {
+      "lat": "45.3404295",
+      "lon": "-75.93050079076487"
+    },
+    "Tuesday": [
+      "2:45 - 3:45 pm (Pickleball - adult)*",
+      "3:45 - 4:45 pm (Pickleball - adult)*"
+    ],
+    "Thursday": [
+      "2:45 - 3:45 pm (Pickleball - adult)*",
+      "3:45 - 4:45 pm (Pickleball - adult)*",
+      "6:30 - 7:30 pm (Pickleball - adult)*",
+      "7:30 - 8:30 pm (Pickleball - adult)*"
+    ],
+    "Friday": [
+      "2:45 - 3:45 pm (Pickleball - adult)*",
+      "3:45 - 4:45 pm (Pickleball - adult)*",
+      "6:30 - 7:30 pm (Pickleball - adult)*",
+      "7:30 - 8:30 pm (Pickleball - adult)*"
+    ]
+  },
+  "Richcraft Recreation Complex-Kanata January 2 to 8": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
+    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
+    "coordinates": {
+      "lat": "45.3404295",
+      "lon": "-75.93050079076487"
+    },
+    "Thursday": [
+      "6:30 - 7:30 pm (Pickleball - adult)*",
+      "7:30 - 8:30 pm (Pickleball - adult)*"
+    ],
+    "Saturday": [
+      "12:30 - 1:30 pm (Pickleball - adult)*"
+    ]
+  },
   "Rideauview Community Centre starting October 3": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/rideauviewcc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/rideauview-community-centre",
     "address": "4310 Shoreline Drive Ottawa ON K1V 1N4",
     "coordinates": {
       "lat": "45.277362499999995",

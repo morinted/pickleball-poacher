@@ -17,6 +17,8 @@ const defaultDays = [
   'Sunday',
 ]
 
+const CAPTION_REGEX = /(starting|until|January|February|March|April|May|June|July|August|September|October|November|December)/i
+
 const getPreviousTimes = async () => {
   return new Promise((resolve, reject) => {
     readFile('./cache/date-scraped.json', (err, data) => {
@@ -115,6 +117,7 @@ async function main() {
           const $ = cheerio.load(centreResponse.data)
           const location = $('h1').text().trim()
           const link = $('a:contains("Reserve")').attr('href')
+          const home = centre
           const streetAddress = $('.address-link.address-details').text().trim()
           const addressDetails = $(
             '.address-link.address-details + .address-details'
@@ -134,8 +137,9 @@ async function main() {
                 .map((el) => $(el).text().trim())
                 .filter((x) => x)
               let caption = table.find('caption').text()
-              caption = caption.includes('starting')
-                ? caption.slice(caption.indexOf('starting'))
+
+              caption = CAPTION_REGEX.test(caption)
+                ? caption.slice(caption.search(CAPTION_REGEX))
                 : null
               const headName = $('th', element).text().replace(/\s+/g, ' ')
               const activityIsHead = !!headName
@@ -172,6 +176,7 @@ async function main() {
               return {
                 location: [location, caption].filter((x) => x).join(' '),
                 link,
+                home,
                 address,
                 activity,
                 schedules,
@@ -193,6 +198,7 @@ async function main() {
     const resultsByLocation = results.reduce((acc, activitySchedule) => {
       const location = {
         link: activitySchedule.link,
+        home: activitySchedule.home,
         address: activitySchedule.address,
         coordinates: activitySchedule.coordinates,
       }
