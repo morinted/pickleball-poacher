@@ -116,20 +116,20 @@
       "lon": "-75.85787897927462"
     },
     "Monday": [
-      "11:15 am - 12:15 pm (Pickleball)*",
-      "12:15 - 1:15 pm (Pickleball)*"
+      "11:15 am - 12:15 pm (Pickleball)",
+      "12:15 - 1:15 pm (Pickleball)"
     ],
     "Tuesday": [
-      "1:15 - 2:15 pm (Pickleball)*",
-      "2:15 - 3:15 pm (Pickleball)*"
+      "1:15 - 2:15 pm (Pickleball)",
+      "2:15 - 3:15 pm (Pickleball)"
     ],
     "Thursday": [
-      "1:15 - 2:15 pm (Pickleball)*",
-      "2:15 - 3:15 pm (Pickleball)*"
+      "1:15 - 2:15 pm (Pickleball)",
+      "2:15 - 3:15 pm (Pickleball)"
     ],
     "Sunday": [
-      "9:15 - 10:15 am (Pickleball)*",
-      "10:15 - 11:15 am (Pickleball)*"
+      "9:15 - 10:15 am (Pickleball)",
+      "10:15 - 11:15 am (Pickleball)"
     ]
   },
   "François Dupuis Recreation Centre December 26 to January 1": {
@@ -247,53 +247,53 @@
       "lon": "-75.46332711436"
     },
     "Monday": [
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
-      "9:50 - 10:50 am (Pickleball 50+)*",
-      "11 am - 12 pm (Pickleball 50+)*",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "1:20 - 2:20 pm (Pickleball 50+)*",
-      "2:30 - 3:30 pm (Pickleball 50+)*",
-      "6:40 - 7:40 pm (Pickleball 16+)*",
-      "7:50 - 8:50 pm (Pickleball 16+)*"
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
+      "9:50 - 10:50 am (Pickleball 50+)",
+      "11 am - 12 pm (Pickleball 50+)",
+      "12:10 - 1:10 pm (Pickleball 50+)",
+      "1:20 - 2:20 pm (Pickleball 50+)",
+      "2:30 - 3:30 pm (Pickleball 50+)",
+      "6:40 - 7:40 pm (Pickleball 16+)",
+      "7:50 - 8:50 pm (Pickleball 16+)"
     ],
     "Tuesday": [
-      "7:30 - 8:30 am (Pickleball 50+)*",
-      "9:50 - 10:50 am (Pickleball 50+)*",
-      "11 am - 12 pm (Pickleball 50+)*",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)*",
-      "2:30 - 3:30 pm (Pickleball Intermediate 16+)*"
+      "7:30 - 8:30 am (Pickleball 50+)",
+      "9:50 - 10:50 am (Pickleball 50+)",
+      "11 am - 12 pm (Pickleball 50+)",
+      "12:10 - 1:10 pm (Pickleball 50+)",
+      "1:20 - 2:20 pm (Pickleball Intermediate 16+)",
+      "2:30 - 3:30 pm (Pickleball Intermediate 16+)"
     ],
     "Wednesday": [
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
-      "9:50 - 10:50 am (Pickleball 50+)*",
-      "11 am - 12 pm (Pickleball 50+)*",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "1:20 - 2:20 pm (Pickleball 50+)*",
-      "2:30 - 3:30 pm (Pickleball 50+)*"
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
+      "9:50 - 10:50 am (Pickleball 50+)",
+      "11 am - 12 pm (Pickleball 50+)",
+      "12:10 - 1:10 pm (Pickleball 50+)",
+      "1:20 - 2:20 pm (Pickleball 50+)",
+      "2:30 - 3:30 pm (Pickleball 50+)"
     ],
     "Thursday": [
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
-      "9:50 - 10:50 am (Pickleball 50+)*",
-      "11 am - 12 pm (Pickleball 50+)*",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "6:40 - 7:40 pm (Pickleball 16+)*"
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
+      "9:50 - 10:50 am (Pickleball 50+)",
+      "11 am - 12 pm (Pickleball 50+)",
+      "12:10 - 1:10 pm (Pickleball 50+)",
+      "6:40 - 7:40 pm (Pickleball 16+)"
     ],
     "Friday": [
-      "8:40 - 9:40 am (Pickleball 50+)*",
-      "9:50 - 10:50 am (Pickleball 50+)*",
-      "11 am - 12 pm (Pickleball 50+)*",
-      "12:10 - 1:10 pm (Pickleball Intermediate 16+)*",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)*"
+      "8:40 - 9:40 am (Pickleball 50+)",
+      "9:50 - 10:50 am (Pickleball 50+)",
+      "11 am - 12 pm (Pickleball 50+)",
+      "12:10 - 1:10 pm (Pickleball Intermediate 16+)",
+      "1:20 - 2:20 pm (Pickleball Intermediate 16+)"
     ],
     "Saturday": [
-      "2 - 3 pm (Pickleball 16+)*"
+      "2 - 3 pm (Pickleball 16+)"
     ],
     "Sunday": [
-      "12:50 - 1:50 pm (Pickleball 16+)*"
+      "12:50 - 1:50 pm (Pickleball 16+)"
     ]
   },
   "Greenboro Community Centre starting January 16": {
@@ -305,17 +305,17 @@
       "lon": "-75.6355798"
     },
     "Tuesday": [
-      "12:30 - 1:30 pm (Pickleball)*"
+      "12:30 - 1:30 pm (Pickleball)"
     ],
     "Wednesday": [
-      "12:45 - 1:45 pm (Pickleball)*"
+      "12:45 - 1:45 pm (Pickleball)"
     ],
     "Thursday": [
-      "12 pm - 1 pm (Pickleball)*",
-      "1:30 - 2:30 pm (Pickleball)*"
+      "12 pm - 1 pm (Pickleball)",
+      "1:30 - 2:30 pm (Pickleball)"
     ],
     "Friday": [
-      "12:45 - 1:45 pm (Pickleball)*"
+      "12:45 - 1:45 pm (Pickleball)"
     ]
   },
   "Hintonburg Community Centre starting January 8": {
