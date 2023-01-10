@@ -57,35 +57,6 @@
       "1:45 - 2:45 pm (Pickleball)"
     ]
   },
-  "Eva James Memorial Community Centre January 3 to 8": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
-    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
-    "coordinates": {
-      "lat": "45.2905465",
-      "lon": "-75.85787897927462"
-    },
-    "Tuesday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "9:15 - 10:15 am (Pickleball)",
-      "10:15 - 11:15 am (Pickleball)"
-    ],
-    "Thursday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Friday": [
-      "9:15 - 10:15 am (Pickleball)",
-      "10:15 - 11:15 am (Pickleball)"
-    ],
-    "Saturday": [
-      "10:30 - 11:30 am (Pickleball)",
-      "11:30 am - 12:30 pm (Pickleball)"
-    ]
-  },
   "Eva James Memorial Community Centre January 9 to March 12": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
@@ -409,22 +380,6 @@
       "3:15 - 4:15 pm (Pickleball)"
     ]
   },
-  "Richcraft Recreation Complex-Kanata January 2 to 8": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
-    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
-    "coordinates": {
-      "lat": "45.3404295",
-      "lon": "-75.93050079076487"
-    },
-    "Thursday": [
-      "6:30 - 7:30 pm (Pickleball - adult)",
-      "7:30 - 8:30 pm (Pickleball - adult)"
-    ],
-    "Saturday": [
-      "12:30 - 1:30 pm (Pickleball - adult)"
-    ]
-  },
   "Richcraft Recreation Complex-Kanata January 9 to March 12": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
@@ -433,10 +388,6 @@
       "lat": "45.3404295",
       "lon": "-75.93050079076487"
     },
-    "Monday": [
-      "1:30 - 2:30 pm (Pickleball - adult)",
-      "2:30 - 3:30 pm (Pickleball - adult)"
-    ],
     "Tuesday": [
       "1:30 - 2:30 pm (Pickleball - adult)",
       "2:30 - 3:30 pm (Pickleball - adult)",
