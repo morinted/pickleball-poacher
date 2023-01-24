@@ -49,8 +49,8 @@
       "2:15 - 3:15 pm (Pickleball)"
     ],
     "Saturday": [
-      "11 - 12 pm (Pickleball)*",
-      "12 pm -1 pm (Pickleball)*"
+      "11 - 12 pm (Pickleball)",
+      "12 pm -1 pm (Pickleball)"
     ],
     "Sunday": [
       "9:15 - 10:15 am (Pickleball)",
@@ -305,16 +305,16 @@
       "lon": "-75.68745448214287"
     },
     "Tuesday": [
-      "10 - 11 am (Pickleball)*",
-      "11 - 12 pm (Pickleball)*",
-      "12 pm - 1 pm (Pickleball)*",
-      "1 - 2 pm (Pickleball)*"
+      "10 - 11 am (Pickleball)",
+      "11 - 12 pm (Pickleball)",
+      "12 pm - 1 pm (Pickleball)",
+      "1 - 2 pm (Pickleball)"
     ],
     "Thursday": [
-      "10 - 11 am (Pickleball)*",
-      "11 - 12 pm (Pickleball)*",
-      "12 pm - 1 pm (Pickleball)*",
-      "1 - 2 pm (Pickleball)*"
+      "10 - 11 am (Pickleball)",
+      "11 - 12 pm (Pickleball)",
+      "12 pm - 1 pm (Pickleball)",
+      "1 - 2 pm (Pickleball)"
     ]
   },
   "South Fallingbrook Community Centre starting January 27": {
@@ -325,9 +325,6 @@
       "lat": "45.4711395",
       "lon": "-75.4619464"
     },
-    "Thursday": [
-      "8:30 - 9:30 pm (Pickleball 16+)*"
-    ],
     "Saturday": [
       "5 - 6 pm (Pickleball 16+)*",
       "6 - 7 pm (Pickleball 16+)*"
