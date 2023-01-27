@@ -146,18 +146,18 @@
     },
     "Monday": [
       "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)*",
-      "2 - 3 pm (Pickleball)*"
+      "1 - 2 pm (Pickleball)",
+      "2 - 3 pm (Pickleball)"
     ],
     "Tuesday": [
       "1:30 - 2:30 pm (Pickleball)"
     ],
     "Thursday": [
-      "10 - 11 am (Pickleball)*",
+      "10 - 11 am (Pickleball)",
       "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)*",
-      "1 - 2 pm (Pickleball)*",
-      "2 - 3 pm (Pickleball)*"
+      "12 pm - 1 pm (Pickleball)",
+      "1 - 2 pm (Pickleball)",
+      "2 - 3 pm (Pickleball)"
     ]
   },
   "Hunt Club-Riverside Park Community Centre starting January 9": {
@@ -188,29 +188,29 @@
       "lon": "-75.7348081"
     },
     "Monday": [
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "12:50 pm - 1:50 pm (Pickleball)*",
-      "1:55 pm - 2:55 pm (Pickleball)*",
-      "3 pm - 4 pm (Pickleball)*"
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 pm - 1:50 pm (Pickleball)",
+      "1:55 pm - 2:55 pm (Pickleball)",
+      "3 pm - 4 pm (Pickleball)"
     ],
     "Tuesday": [
-      "11:45am - 12:45 pm (Pickleball)*",
-      "12:50 pm - 1:50 pm (Pickleball)*"
+      "11:45am - 12:45 pm (Pickleball)",
+      "12:50 pm - 1:50 pm (Pickleball)"
     ],
     "Wednesday": [
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "12:50 pm - 1:50 pm (Pickleball)*"
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 pm - 1:50 pm (Pickleball)"
     ],
     "Thursday": [
-      "11:45am - 12:45 pm (Pickleball)*",
-      "12:50 pm - 1:50 pm (Pickleball)*",
-      "1:55 pm - 2:55 pm (Pickleball)*"
+      "11:45am - 12:45 pm (Pickleball)",
+      "12:50 pm - 1:50 pm (Pickleball)",
+      "1:55 pm - 2:55 pm (Pickleball)"
     ],
     "Friday": [
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "12:50 pm - 1:50 pm (Pickleball)*",
-      "1:55 pm - 2:55 pm (Pickleball)*",
-      "3 pm - 4 pm (Pickleball)*"
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 pm - 1:50 pm (Pickleball)",
+      "1:55 pm - 2:55 pm (Pickleball)",
+      "3 pm - 4 pm (Pickleball)"
     ]
   },
   "Nepean Sportsplex January 2 to March 14": {
