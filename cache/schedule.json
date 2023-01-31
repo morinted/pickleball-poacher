@@ -4,8 +4,8 @@
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
     "address": "1500 Shea Road Ottawa ON K2S 0B2",
     "coordinates": {
-      "lat": "45.2633546",
-      "lon": "-75.9076604"
+      "lat": "45.263135000000005",
+      "lon": "-75.90787332212767"
     },
     "Monday": [
       "12:45 - 1:45 pm (Pickleball)",
@@ -184,8 +184,8 @@
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
     "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
     "coordinates": {
-      "lat": "45.2528722",
-      "lon": "-75.7348081"
+      "lat": "45.2529628",
+      "lon": "-75.7345681"
     },
     "Monday": [
       "11:45 am - 12:45 pm (Pickleball)",
@@ -260,10 +260,6 @@
       "1:30 - 2:30 pm (Pickleball - adult)",
       "2:30 - 3:30 pm (Pickleball - adult)"
     ],
-    "Thursday": [
-      "1:30 - 2:30 pm (Pickleball - adult)",
-      "2:30 - 3:30 pm (Pickleball - adult)"
-    ],
     "Friday": [
       "8:30 - 9:30 am (Pickleball - adult)",
       "9:30 - 10:30 am (Pickleball - adult)",
@@ -332,7 +328,7 @@
     "Sunday": [
       "2 - 3 pm (Pickleball - adult)",
       "3 - 4 pm (Pickleball - adult)",
-      "5 - 6 pm (Pickleball - adult)"
+      "4 - 5 pm (Pickleball - adult)*"
     ]
   }
 }
