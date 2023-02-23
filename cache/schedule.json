@@ -35,27 +35,7 @@
     "coordinates": {
       "lat": "45.2905465",
       "lon": "-75.85787897927462"
-    },
-    "Monday": [
-      "11:15 am - 12:15 pm (Pickleball)",
-      "12:15 - 1:15 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Saturday": [
-      "11 - 12 pm (Pickleball)",
-      "12 pm -1 pm (Pickleball)"
-    ],
-    "Sunday": [
-      "9:15 - 10:15 am (Pickleball)",
-      "10:15 - 11:15 am (Pickleball)"
-    ]
+    }
   },
   "François Dupuis Recreation Centre starting January 9": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
@@ -143,22 +123,7 @@
     "coordinates": {
       "lat": "45.4036315",
       "lon": "-75.72428267352942"
-    },
-    "Monday": [
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "1:30 - 2:30 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)"
-    ]
+    }
   },
   "Hunt Club-Riverside Park Community Centre starting January 9": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
