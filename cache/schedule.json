@@ -207,6 +207,45 @@
       "3:15 - 4:15 pm (Pickleball)"
     ]
   },
+  "Overbrook Community Centre starting January 9": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/overbrook-community-centre",
+    "address": "33 Quill Street Ottawa ON K1K 4E7",
+    "coordinates": {
+      "lat": "45.4254727",
+      "lon": "-75.65684704689782"
+    },
+    "Monday": [
+      "9 - 10 am (Pickleball)*",
+      "10 - 11 am (Pickleball)*",
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "9 - 10 am (Pickleball)*",
+      "10 - 11 am (Pickleball)*",
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "9 - 10 am (Pickleball)*",
+      "10 - 11 am (Pickleball)*",
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "9 - 10 am (Pickleball)*",
+      "10 - 11 am (Pickleball)*",
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "9 - 10 am (Pickleball)*",
+      "10 - 11 am (Pickleball)*",
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ]
+  },
   "Richcraft Recreation Complex-Kanata January 9 to March 12": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
