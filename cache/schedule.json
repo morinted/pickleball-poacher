@@ -62,7 +62,7 @@
       "lon": "-75.85787897927462"
     }
   },
-  "François Dupuis Recreation Centre starting January 9": {
+  "François Dupuis Recreation Centre January 9 to March 12": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
     "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
@@ -71,52 +71,71 @@
       "lon": "-75.46332711436"
     },
     "Monday": [
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "2:30 - 3:30 pm (Pickleball 50+)",
-      "6:40 - 7:40 pm (Pickleball 16+)",
-      "7:50 - 8:50 pm (Pickleball 16+)"
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*",
+      "2:30 - 3:30 pm (Pickleball 50+)*",
+      "6:40 - 7:40 pm (Pickleball 16+)*",
+      "7:50 - 8:50 pm (Pickleball 16+)*"
     ],
     "Tuesday": [
-      "7:30 - 8:30 am (Pickleball 50+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)",
-      "2:30 - 3:30 pm (Pickleball Intermediate 16+)"
+      "7:30 - 8:30 am (Pickleball 50+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball Intermediate 16+)*",
+      "2:30 - 3:30 pm (Pickleball Intermediate 16+)*"
     ],
     "Wednesday": [
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "2:30 - 3:30 pm (Pickleball 50+)"
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)*",
+      "2:30 - 3:30 pm (Pickleball 50+)*"
     ],
     "Thursday": [
-      "7:30 - 8:30 am (Pickleball Intermediate 16+)",
-      "8:40 - 9:40 am (Pickleball Intermediate 16+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)"
+      "7:30 - 8:30 am (Pickleball Intermediate 16+)*",
+      "8:40 - 9:40 am (Pickleball Intermediate 16+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*"
     ],
     "Friday": [
-      "8:40 - 9:40 am (Pickleball 50+)",
-      "9:50 - 10:50 am (Pickleball 50+)",
-      "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball Intermediate 16+)",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)"
+      "8:40 - 9:40 am (Pickleball 50+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball Intermediate 16+)*",
+      "1:20 - 2:20 pm (Pickleball Intermediate 16+)*"
     ],
     "Saturday": [
-      "2 - 3 pm (Pickleball 16+)"
+      "2 - 3 pm (Pickleball 16+)*"
     ],
     "Sunday": [
-      "12:50 - 1:50 pm (Pickleball 16+)"
+      "12:50 - 1:50 pm (Pickleball 16+)*"
+    ]
+  },
+  "François Dupuis Recreation Centre March 13 to 19": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
+    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
+    "coordinates": {
+      "lat": "45.45448785",
+      "lon": "-75.46332711436"
+    },
+    "Monday": [
+      "6:40 - 7:40 pm (Pickleball 16+)*",
+      "7:50 - 8:50 pm (Pickleball 16+)*"
+    ],
+    "Saturday": [
+      "2 - 3 pm (Pickleball 16+)*"
+    ],
+    "Sunday": [
+      "12:50 - 1:50 pm (Pickleball 16+)*"
     ]
   },
   "Greenboro Community Centre January 16 to March 12": {
