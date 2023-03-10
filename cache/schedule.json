@@ -62,6 +62,24 @@
       "lon": "-75.85787897927462"
     }
   },
+  "Eva James Memorial Community Centre March 13 to 19": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
+    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
+    "coordinates": {
+      "lat": "45.2905465",
+      "lon": "-75.85787897927462"
+    }
+  },
+  "Eva James Memorial Community Centre March 20 to June 17": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
+    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
+    "coordinates": {
+      "lat": "45.2905465",
+      "lon": "-75.85787897927462"
+    }
+  },
   "François Dupuis Recreation Centre January 9 to March 12": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
@@ -169,7 +187,7 @@
       "lon": "-75.72428267352942"
     }
   },
-  "Hunt Club-Riverside Park Community Centre starting January 9": {
+  "Hunt Club-Riverside Park Community Centre January 9 to March 12": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
     "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
@@ -178,17 +196,36 @@
       "lon": "-75.67274397046596"
     },
     "Monday": [
-      "12 pm - 1 pm (Pickleball)",
-      "1:30 - 2:30 pm (Pickleball)"
+      "12 pm - 1 pm (Pickleball)*",
+      "1:30 - 2:30 pm (Pickleball)*"
     ],
     "Tuesday": [
-      "12 pm - 1 pm (Pickleball)"
+      "12 pm - 1 pm (Pickleball)*"
     ],
     "Thursday": [
-      "12 pm - 1 pm (Pickleball - Intermediate)"
+      "12 pm - 1 pm (Pickleball - Intermediate)*"
     ]
   },
-  "Minto Recreation Complex - Barrhaven January 16": {
+  "Hunt Club-Riverside Park Community Centre March 20 to June 18": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
+    "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
+    "coordinates": {
+      "lat": "45.352061500000005",
+      "lon": "-75.67274397046596"
+    },
+    "Monday": [
+      "12 pm - 1 pm (Pickleball)*",
+      "1:30 - 3 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "12 pm - 1 pm (Pickleball - Intermediate)*"
+    ]
+  },
+  "Minto Recreation Complex - Barrhaven January 16 to March 12": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
     "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
@@ -197,29 +234,108 @@
       "lon": "-75.7345681"
     },
     "Monday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 pm - 1:50 pm (Pickleball)",
-      "1:55 pm - 2:55 pm (Pickleball)",
-      "3 pm - 4 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 pm - 1:50 pm (Pickleball)*",
+      "1:55 pm - 2:55 pm (Pickleball)*",
+      "3 pm - 4 pm (Pickleball)*"
     ],
     "Tuesday": [
-      "11:45am - 12:45 pm (Pickleball)",
-      "12:50 pm - 1:50 pm (Pickleball)"
+      "11:45am - 12:45 pm (Pickleball)*",
+      "12:50 pm - 1:50 pm (Pickleball)*"
     ],
     "Wednesday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 pm - 1:50 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 pm - 1:50 pm (Pickleball)*"
     ],
     "Thursday": [
-      "11:45am - 12:45 pm (Pickleball)",
-      "12:50 pm - 1:50 pm (Pickleball)",
-      "1:55 pm - 2:55 pm (Pickleball)"
+      "11:45am - 12:45 pm (Pickleball)*",
+      "12:50 pm - 1:50 pm (Pickleball)*",
+      "1:55 pm - 2:55 pm (Pickleball)*"
     ],
     "Friday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 pm - 1:50 pm (Pickleball)",
-      "1:55 pm - 2:55 pm (Pickleball)",
-      "3 pm - 4 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 pm - 1:50 pm (Pickleball)*",
+      "1:55 pm - 2:55 pm (Pickleball)*",
+      "3 pm - 4 pm (Pickleball)*"
+    ]
+  },
+  "Minto Recreation Complex - Barrhaven March 18 to April 10": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
+    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
+    "coordinates": {
+      "lat": "45.2529628",
+      "lon": "-75.7345681"
+    },
+    "Monday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "9:30 - 10:30 am (Pickleball)*",
+      "10:35 - 11:35 am (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "5:40 - 6:40 pm (Pickleball)*",
+      "6:45 - 7:45 pm (Pickleball)*",
+      "7:50 - 8:50 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
+    ]
+  },
+  "Minto Recreation Complex - Barrhaven April 11 to June 25": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
+    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
+    "coordinates": {
+      "lat": "45.2529628",
+      "lon": "-75.7345681"
+    },
+    "Monday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "9:30 - 10:30 am (Pickleball)*",
+      "10:35 - 11:35 am (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "3 - 4 pm (Pickleball)*"
     ]
   },
   "Nepean Sportsplex January 2 to March 14": {
@@ -231,7 +347,7 @@
       "lon": "-75.7452920352786"
     },
     "Monday": [
-      "10:15 -11:15 am (Pickleball)",
+      "10:15 - 11:15 am (Pickleball)*",
       "11:30 - 12:30 pm (Pickleball)",
       "12:45 - 1:45 pm (Pickleball)",
       "2 - 3 pm (Pickleball)",
@@ -244,11 +360,35 @@
       "2 - 3 pm (Pickleball)"
     ],
     "Friday": [
-      "10:15 -11:15 am (Pickleball)",
+      "10:15 - 11:15 am (Pickleball)*",
       "11:30 - 12:30 pm (Pickleball)",
       "12:45 - 1:45 pm (Pickleball)",
       "2 - 3 pm (Pickleball)",
       "3:15 - 4:15 pm (Pickleball)"
+    ],
+    "Saturday": [
+      "8:30 - 9:30 am (Pickleball)*",
+      "9:45 - 10:45 am (Pickleball)*"
+    ]
+  },
+  "Nepean Sportsplex March 11 to March 19": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/nepean-sportsplex",
+    "address": "1701 Woodroffe Avenue Ottawa ON K2G 1W2",
+    "coordinates": {
+      "lat": "45.3271242",
+      "lon": "-75.7452920352786"
+    },
+    "Tuesday": [
+      "7:15 - 8:15 pm (Pickleball)*",
+      "8:30 - 9:30 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "7:15 - 8:15 pm (Pickleball)*"
+    ],
+    "Saturday": [
+      "8:30 - 9:30 am (Pickleball)*",
+      "9:45 - 10:45 am (Pickleball)*"
     ]
   },
   "Overbrook Community Centre starting January 9": {
