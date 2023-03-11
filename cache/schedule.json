@@ -274,12 +274,12 @@
       "3 - 4 pm (Pickleball)*"
     ],
     "Tuesday": [
-      "9:30 - 10:30 am (Pickleball)*",
-      "10:35 - 11:35 am (Pickleball)*",
       "11:45 am - 12:45 pm (Pickleball)*",
       "12:50 - 1:50 pm (Pickleball)*"
     ],
     "Wednesday": [
+      "9:30 - 10:30 am (Pickleball)*",
+      "10:35 - 11:35 am (Pickleball)*",
       "11:45 am - 12:45 pm (Pickleball)*",
       "12:50 - 1:50 pm (Pickleball)*",
       "1:55 - 2:55 pm (Pickleball)*",
@@ -298,6 +298,16 @@
       "12:50 - 1:50 pm (Pickleball)*",
       "1:55 - 2:55 pm (Pickleball)*",
       "3 - 4 pm (Pickleball)*"
+    ],
+    "Saturday": [
+      "11:30 am - 12:30 pm (Pickleball)*",
+      "12:35 - 1:35 pm (Pickleball)*",
+      "1:40 - 2:40pm (Pickleball)*"
+    ],
+    "Sunday": [
+      "9:30 - 10:30 am (Pickleball)*",
+      "10:35 - 11:35 am (Pickleball)*",
+      "11:40 am - 12:40 pm (Pickleball)*"
     ]
   },
   "Minto Recreation Complex - Barrhaven April 11 to June 25": {
@@ -315,15 +325,18 @@
       "3 - 4 pm (Pickleball)*"
     ],
     "Tuesday": [
-      "9:30 - 10:30 am (Pickleball)*",
-      "10:35 - 11:35 am (Pickleball)*",
       "11:45 am - 12:45 pm (Pickleball)*",
       "12:50 - 1:50 pm (Pickleball)*"
     ],
     "Wednesday": [
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "12:50 - 1:50 pm (Pickleball)*",
-      "1:55 - 2:55 pm (Pickleball)*"
+      "9:30 - 10:30 am (Pickleball)*",
+      "10:35 - 11:35 am (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:50 - 1:50 pm (Pickleball)*",
+      "1:55 - 2:55 pm (Pickleball)*",
+      "5:40 - 6:40 pm (Pickleball)*",
+      "6:45 - 7:45 pm (Pickleball)*",
+      "7:50 - 8:50 pm (Pickleball)*"
     ],
     "Thursday": [
       "11:45 am - 12:45 pm (Pickleball)*",
