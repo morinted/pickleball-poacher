@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cache-schedule": "node ./scrape-schedule.js -c -f json > ./cache/schedule.json"
+    "cache-schedule": "node ./scrape-schedule.js -c -f json -o ./cache/schedule.json"
   },
   "repository": {
     "type": "git",

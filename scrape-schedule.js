@@ -22,7 +22,19 @@ const CAPTION_REGEX =
 
 const getPreviousTimes = async () => {
   return new Promise((resolve, reject) => {
-    readFile('./cache/date-scraped.json', (err, data) => {
+    readFile('./cache/date-scraped.json', 'utf8', (err, data) => {
+      if (err) reject(err)
+      try {
+        resolve(JSON.parse(data || '{}'))
+      } catch (e) {
+        resolve({})
+      }
+    })
+  })
+}
+const getPreviousSchedule = async () => {
+  return new Promise((resolve, reject) => {
+    readFile('./cache/schedule.json', 'utf8', (err, data) => {
       if (err) reject(err)
       try {
         resolve(JSON.parse(data || '{}'))
@@ -45,6 +57,7 @@ args
     if (value.startsWith('y')) return 'yaml'
     return 'json'
   })
+  .option('outfile', 'File to write to, if not provided, log to console', '')
 
 const flags = args.parse(process.argv)
 
@@ -67,10 +80,27 @@ function timeout(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
+const coordinatesCache = {}
+const addressWithoutPostalCode = (address) =>
+  address.split(/\s+/).slice(0, -2).join(' ')
+const cacheOldCoordinates = async () => {
+  const schedule = await getPreviousSchedule()
+  Object.keys(schedule).forEach((location) => {
+    let { address, coordinates } = schedule[location]
+    address = addressWithoutPostalCode(address)
+    if (coordinates?.lat) {
+      coordinatesCache[address] = coordinates
+    }
+  })
+}
 const fetchCoordinates = async (address) => {
   // Remove postal code as OSM has many disagreements with the source.
-  address = address.split(/\s+/).slice(0, -2).join(' ')
-
+  address = addressWithoutPostalCode(address)
+  if (coordinatesCache[address]) {
+    log('using coordinates cache')
+    return coordinatesCache[address]
+  }
+  log('not using coordinates cache')
   const addressQuery = encodeURI(address.replace(/\s+/g, '+'))
 
   const addressDetails = (
@@ -83,7 +113,7 @@ const fetchCoordinates = async (address) => {
 
   // Rate limit is once per second.
   await timeout(1000)
-
+  coordinatesCache[address] = { lat, lon }
   return { lat, lon }
 }
 
@@ -92,6 +122,7 @@ const facilityUrl =
 const ottawaCa = 'https://ottawa.ca'
 async function main() {
   try {
+    await cacheOldCoordinates()
     const centres = []
     let link = `${facilityUrl}?place_facets%5B0%5D=place_type%3A4208&place_facets%5B1%5D=place_type%3A4210`
     while (link) {
@@ -250,21 +281,32 @@ async function main() {
     const newTimes = buildDateTable(await getPreviousTimes(), resultsByLocation)
     for (const key in newTimes) {
       if (Date.now() - newTimes[key] < NEW_TIMESLOT) {
-        const [location, day, time] = key.split('|')
-        resultsByLocation[location][day] = resultsByLocation[location][day].map(
-          (startEnd) => {
-            if (startEnd === time) return `${time}*`
+        log('new!')
+        const [shortLocation, day, time] = key.split('|')
+        Object.keys(resultsByLocation).forEach((location) => {
+          if (!location.includes(shortLocation))
+            return log('does not include short')
+          if (!resultsByLocation[location]?.[day]) return log('no day...')
+          resultsByLocation[location][day] = resultsByLocation[location][
+            day
+          ].map((startEnd) => {
+            if (startEnd.startsWith(time)) return `${startEnd}*`
             return startEnd
-          }
-        )
+          })
+        })
       }
     }
     writeFile(
       './cache/date-scraped.json',
       JSON.stringify(newTimes, null, 2),
+      'utf8',
       () => {}
     )
-    console.log(stringify(resultsByLocation))
+    if (flags.outfile) {
+      writeFile(flags.outfile, stringify(resultsByLocation), 'utf8', () => {})
+    } else {
+      console.log(stringify(resultsByLocation))
+    }
   } catch (e) {
     console.error(e)
   }
@@ -276,12 +318,15 @@ async function main() {
 export function buildDateTable(previous, current) {
   const result = {}
   for (const locationName in current) {
+    const captionIndex = locationName.search(CAPTION_REGEX)
+    const name = locationName.slice(0, captionIndex).trim()
     const location = current[locationName]
     for (const day of defaultDays) {
       const times = location[day]
       if (!times) continue
       for (const time of times) {
-        const key = `${locationName}|${day}|${time}`
+        const timeWithoutActivity = time.split(' (')[0]
+        const key = `${name}|${day}|${timeWithoutActivity}`
         const olderDate = previous[key] || Date.now()
         result[key] = olderDate
       }
