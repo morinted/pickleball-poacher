@@ -8,24 +8,24 @@
       "lon": "-75.90787332212767"
     },
     "Monday": [
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*"
+      "12:45 - 1:45 pm (Pickleball)",
+      "1:45 - 2:45 pm (Pickleball)"
     ],
     "Tuesday": [
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*"
+      "12:45 - 1:45 pm (Pickleball)",
+      "1:45 - 2:45 pm (Pickleball)"
     ],
     "Wednesday": [
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*"
+      "12:45 - 1:45 pm (Pickleball)",
+      "1:45 - 2:45 pm (Pickleball)"
     ],
     "Thursday": [
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*"
+      "12:45 - 1:45 pm (Pickleball)",
+      "1:45 - 2:45 pm (Pickleball)"
     ],
     "Friday": [
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*"
+      "12:45 - 1:45 pm (Pickleball)",
+      "1:45 - 2:45 pm (Pickleball)"
     ]
   },
   "CARDELREC Recreation Complex Goulbourn March 11 to 19": {
@@ -37,20 +37,20 @@
       "lon": "-75.90787332212767"
     },
     "Monday": [
-      "1:45 - 2:45 pm (Pickleball)*"
+      "1:45 - 2:45 pm (Pickleball)"
     ],
     "Tuesday": [
-      "1:45 - 2:45 pm (Pickleball)*"
+      "1:45 - 2:45 pm (Pickleball)"
     ],
     "Wednesday": [
-      "1:45 - 2:45 pm (Pickleball)*"
+      "1:45 - 2:45 pm (Pickleball)"
     ],
     "Thursday": [
-      "12:45 - 1:45 pm (Pickleball)*",
-      "1:45 - 2:45 pm (Pickleball)*"
+      "12:45 - 1:45 pm (Pickleball)",
+      "1:45 - 2:45 pm (Pickleball)"
     ],
     "Friday": [
-      "1:45 - 2:45 pm (Pickleball)*"
+      "1:45 - 2:45 pm (Pickleball)"
     ]
   },
   "Eva James Memorial Community Centre January 9 to March 12": {
@@ -443,6 +443,35 @@
       "12 pm - 1 pm (Pickleball)"
     ]
   },
+  "Overbrook Community Centre March 13 to 17": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/overbrook-community-centre",
+    "address": "33 Quill Street Ottawa ON K1K 4E7",
+    "coordinates": {
+      "lat": "45.4254727",
+      "lon": "-75.65684704689782"
+    },
+    "Monday": [
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "11 am - 12 pm (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*"
+    ]
+  },
   "Richcraft Recreation Complex-Kanata January 9 to March 12": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
@@ -469,6 +498,22 @@
     ],
     "Sunday": [
       "10:45 - 11:45 am (Pickleball - adult)"
+    ]
+  },
+  "Richcraft Recreation Complex-Kanata March 13 to 19": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
+    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
+    "coordinates": {
+      "lat": "45.3404295",
+      "lon": "-75.93050079076487"
+    },
+    "Tuesday": [
+      "7 - 8 pm (Pickleball - adult)*",
+      "8 - 9 pm (Pickleball - adult)*"
+    ],
+    "Sunday": [
+      "10:45 - 11:45 am (Pickleball - adult)*"
     ]
   },
   "Richelieu Vanier Community Centre starting January 9": {
