@@ -17,7 +17,8 @@ const defaultDays = [
   'Sunday',
 ]
 
-const CAPTION_REGEX = /(starting|until|January|February|March|April|May|June|July|August|September|October|November|December)/i
+const CAPTION_REGEX =
+  /(starting|until|January|February|March|April|May|June|July|August|September|October|November|December)/i
 
 const getPreviousTimes = async () => {
   return new Promise((resolve, reject) => {
@@ -51,7 +52,6 @@ const log = (...messages) => {
   if (!flags.debug) return
   console.log(...messages)
 }
-
 
 const eveningsAndWeekends = (day) => (time) => {
   if (/sat|sun/i.test(day)) return true
@@ -132,10 +132,21 @@ async function main() {
             .toArray()
             .map((element) => {
               const table = $(element).parents('table')
-              const days = $('thead tr th', table)
-                .toArray()
-                .map((el) => $(el).text().trim())
-                .filter((x) => x)
+              const getDays = () => {
+                const thead = $('thead tr th', table)
+                const firstRow = $('tbody tr:first-of-type td', table)
+                const dayRow = thead.text().includes('Monday')
+                  ? thead
+                  : firstRow.text().includes('Monday')
+                  ? firstRow
+                  : null
+                if (!dayRow) return defaultDays
+                return dayRow
+                  .toArray()
+                  .map((el) => $(el).text().trim())
+                  .filter((x) => x)
+              }
+              const days = getDays()
               let caption = table.find('caption').text()
 
               caption = CAPTION_REGEX.test(caption)
@@ -157,7 +168,7 @@ async function main() {
                     .replace(/noon/g, '12 pm')
                     .replace(/–/g, '-') // Remove endash.
                     .replace(/([^ ])-([^ ])/g, '$1 - $2') // Ensure spaces around time.
-                    .split(/(,|\n+)/)
+                    .split(/(,|\n+|,)/)
                     .map((time) => time.trim())
                     .filter((time) => !isNaN(parseInt(time)))
                     .filter(
@@ -232,20 +243,28 @@ async function main() {
       return acc
     }, {})
 
-    const { stringify } = flags.format === 'json' ? { stringify: value => JSON.stringify(value, null, 2) } : YAML
+    const { stringify } =
+      flags.format === 'json'
+        ? { stringify: (value) => JSON.stringify(value, null, 2) }
+        : YAML
     const newTimes = buildDateTable(await getPreviousTimes(), resultsByLocation)
     for (const key in newTimes) {
-      if ((Date.now() - newTimes[key]) < NEW_TIMESLOT) {
+      if (Date.now() - newTimes[key] < NEW_TIMESLOT) {
         const [location, day, time] = key.split('|')
-        resultsByLocation[location][day] = resultsByLocation[location][day].map(startEnd => {
-          if (startEnd === time) return `${time}*`
-          return startEnd
-        })
+        resultsByLocation[location][day] = resultsByLocation[location][day].map(
+          (startEnd) => {
+            if (startEnd === time) return `${time}*`
+            return startEnd
+          }
+        )
       }
     }
-    writeFile('./cache/date-scraped.json', JSON.stringify(newTimes, null, 2), () => {})
+    writeFile(
+      './cache/date-scraped.json',
+      JSON.stringify(newTimes, null, 2),
+      () => {}
+    )
     console.log(stringify(resultsByLocation))
-
   } catch (e) {
     console.error(e)
   }
