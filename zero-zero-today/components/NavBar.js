@@ -39,7 +39,6 @@ export const NavBar = () => {
       if (entries[0].intersectionRatio <= 0) return
       const day = entries[0].target.getAttribute('id')
       setActiveDay(day)
-      location.hash = day
     }
 
     // Use the observer to observe an element
