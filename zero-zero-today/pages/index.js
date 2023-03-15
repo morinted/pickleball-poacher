@@ -5,7 +5,7 @@ import ScheduleForDay from '../components/ScheduleForDay'
 import { daysStartingWithToday } from '../components/schedule'
 import { usePosition } from 'use-position'
 import { dayjs } from '../components/time'
-
+import { NavBar } from '../components/NavBar'
 
 export default function Home() {
   const { latitude, longitude, error } = usePosition()
@@ -16,24 +16,42 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>0-0-2day</title>
-        <meta name="description" content="Find City of Ottawa drop-in pickleball near me." />
+        <meta
+          name="description"
+          content="Find City of Ottawa drop-in pickleball near me."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <NavBar />
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Zero zero today
-        </h1>
-
         <p className={styles.description}>
           Find a game of pickleball in Ottawa, today.
         </p>
 
-        {locationStatus === 'error' && <p><strong>Note:</strong> If you enable location, locations will be listed in order closest to you.</p>}
-        {locationStatus === 'loading' && <p><i>📍 Loading your location&hellip;</i></p>}
+        {locationStatus === 'error' && (
+          <p>
+            <strong>Note:</strong> If you enable location, locations will be
+            listed in order closest to you.
+          </p>
+        )}
+        {locationStatus === 'loading' && (
+          <p>
+            <i>📍 Loading your location&hellip;</i>
+          </p>
+        )}
 
         <div className={styles.grid}>
-          {[...daysStartingWithToday, ...daysStartingWithToday].map((day, index) => <ScheduleForDay latitude={latitude} longitude={longitude} key={day} day={day} daysAway={index} now={now} />)}
+          {daysStartingWithToday.map((day, index) => (
+            <ScheduleForDay
+              latitude={latitude}
+              longitude={longitude}
+              key={day}
+              day={day}
+              daysAway={index}
+              now={now}
+            />
+          ))}
         </div>
       </main>
 

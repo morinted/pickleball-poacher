@@ -59,7 +59,10 @@ export default function ScheduleForDay({
   const registrationDay = days[(days.indexOf(day) + 7 - 2) % 7]
   const isWeekend = day === 'Saturday' || day === 'Sunday'
   return (
-    <div className={`${styles.card} ${isWeekend ? styles.weekend : ''}`}>
+    <div
+      id={day}
+      className={`day-card ${styles.card} ${isWeekend ? styles.weekend : ''}`}
+    >
       <h2>{then.format('dddd, MMMM D')} in Ottawa</h2>
       {warnRegistration && (
         <div>
@@ -122,7 +125,7 @@ export default function ScheduleForDay({
                 target="_blank"
               >
                 Register{' '}
-                {warnRegistration && (
+                {warnRegistration && !location.name.includes('RA Centre') && (
                   <>
                     at 6 pm{' '}
                     {registrationDay === today ? 'today' : registrationDay}*

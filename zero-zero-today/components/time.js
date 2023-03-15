@@ -8,11 +8,8 @@ dayjs.extend(customParseFormat)
 
 // 11:15 am - 12:15 pm (Pickleball 50+) → dayjs('12:15 pm')
 const getEndTime = (time) => {
-  const endTimeString =
-    time
-      .split(/-/)?.[1]
-      ?.trim()
-      .replace(/\(.*\)/, '')
+  const endTimeString = time.split(/-/)?.[1]?.trim()?.split('(')[0]
+
   return dayjs(endTimeString, ['h:mm a', 'h a']).tz('America/New_York')
 }
 
@@ -20,7 +17,11 @@ const getEndTime = (time) => {
 const parseDay = (dateString) => {
   const now = dayjs()
   const date = dayjs(dateString, 'MMMM D')
-  const years = [dayjs(date).subtract(1, 'year'), date, dayjs(date).add(1, 'year')]
+  const years = [
+    dayjs(date).subtract(1, 'year'),
+    date,
+    dayjs(date).add(1, 'year'),
+  ]
   return years.reduce((nearest, candidate) => {
     const timeSinceNearest = Math.abs(now.diff(nearest))
     const timeSinceCandidate = Math.abs(now.diff(candidate))
