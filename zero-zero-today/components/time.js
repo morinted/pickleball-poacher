@@ -14,7 +14,7 @@ const getEndTime = (time) => {
 }
 
 // Given "December 12", return the closest December 12 (looking at last year, this year, and next year).
-const parseDay = (dateString) => {
+const parseDay = (dateString, endOfDay) => {
   const now = dayjs()
   const date = dayjs(dateString, 'MMMM D')
   const years = [
@@ -22,12 +22,14 @@ const parseDay = (dateString) => {
     date,
     dayjs(date).add(1, 'year'),
   ]
-  return years.reduce((nearest, candidate) => {
+  const nearest = years.reduce((nearest, candidate) => {
     const timeSinceNearest = Math.abs(now.diff(nearest))
     const timeSinceCandidate = Math.abs(now.diff(candidate))
     if (timeSinceCandidate < timeSinceNearest) return candidate
     return nearest
   })
+  if (!endOfDay) return nearest
+  return nearest.hour(23).minute(59)
 }
 
 export { dayjs, getEndTime, parseDay }

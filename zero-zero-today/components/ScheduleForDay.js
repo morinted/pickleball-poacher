@@ -22,11 +22,11 @@ const getCaptionDateRange = (caption = '') => {
 
   if (variant === 'from') {
     const date = caption.split('starting')[1].trim()
-    return { from: parseDay(date), to: null }
+    return { from: parseDay(date, false), to: null }
   }
   if (variant === 'to') {
     const date = caption.split('until')[1].trim()
-    return { from: null, to: parseDay(date) }
+    return { from: null, to: parseDay(date, true) }
   }
   if (variant === 'range') {
     let [fromDate, toDate] = caption.split(' to ').map((x) => x.trim())
@@ -34,7 +34,7 @@ const getCaptionDateRange = (caption = '') => {
     if (toDate.length <= 2) {
       toDate = `${fromDate.split(' ')[0]} ${toDate}`
     }
-    return { from: parseDay(fromDate), to: parseDay(toDate) }
+    return { from: parseDay(fromDate, false), to: parseDay(toDate, true) }
   }
   return { from: null, to: null }
 }
