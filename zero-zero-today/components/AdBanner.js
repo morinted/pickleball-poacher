@@ -6,7 +6,7 @@ export function AdBanner() {
       <h2>News</h2>
       <p>Do you organize social pickleball play?</p>
       <p>
-        I've made another <em>completely free</em> site to fairly shuffle
+        I&apos;ve made another <em>completely free</em> site to fairly shuffle
         players between games.
       </p>
       <p>
