@@ -84,12 +84,15 @@
 .inprogress {
   font-weight: bold;
 }
-
+.button + .button {
+  margin-left: 0.1rem;
+}
 .button {
   display: inline-block;
   margin: 0.1rem 0.5rem;
   padding: 0.25rem 0.5rem;
-  border: 1px solid #094971;
+  margin-left: 0;
+  border: 2px solid #fefefe;
   border-radius: 5px;
   color: white;
   background-color: #094971;
@@ -110,6 +113,9 @@
   .card {
     background-color: #2a556f;
     border-color: #1d394b;
+  }
+  .button {
+    border-color: #10202b;
   }
   .weekend {
     background-color: #54295b;

@@ -6,6 +6,7 @@ import { daysStartingWithToday } from '../components/schedule'
 import { usePosition } from 'use-position'
 import { dayjs } from '../components/time'
 import { NavBar } from '../components/NavBar'
+import { AdBanner } from '../components/AdBanner'
 
 export default function Home() {
   const { latitude, longitude, error } = usePosition()
@@ -42,6 +43,7 @@ export default function Home() {
         )}
 
         <div className={styles.grid}>
+          <AdBanner />
           {daysStartingWithToday.map((day, index) => (
             <ScheduleForDay
               latitude={latitude}
