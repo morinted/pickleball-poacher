@@ -511,6 +511,47 @@
       "10:45 - 11:45 am (Pickleball - adult - no rotations)"
     ]
   },
+  "Richcraft Recreation Complex-Kanata March 20 to June 25": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
+    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
+    "coordinates": {
+      "lat": "45.3404295",
+      "lon": "-75.93050079076487"
+    },
+    "Tuesday": [
+      "1:30 - 2:30 pm (Pickleball - adult - rotations)*",
+      "1:30 - 2:30 pm (Pickleball - adult - no rotations)*",
+      "2:30 - 3:30 pm (Pickleball - adult - rotations)*",
+      "2:30 - 3:30 pm (Pickleball - adult - no rotations)*",
+      "7 - 8 pm (Pickleball - adult - no rotations)*",
+      "8 - 9 pm (Pickleball - adult - no rotations)*"
+    ],
+    "Wednesday": [
+      "1:30 - 2:30 pm (Pickleball - adult - rotations)*",
+      "1:30 - 2:30 pm (Pickleball - adult - no rotations)*",
+      "2:30 - 3:30 pm (Pickleball - adult - rotations)*",
+      "2:30 - 3:30 pm (Pickleball - adult - no rotations)*"
+    ],
+    "Thursday": [
+      "1:30 - 2:30 pm (Pickleball - adult - rotations)*",
+      "1:30 - 2:30 pm (Pickleball - adult - no rotations)*",
+      "2:30 - 3:30 pm (Pickleball - adult - rotations)*",
+      "2:30 - 3:30 pm (Pickleball - adult - no rotations)*"
+    ],
+    "Friday": [
+      "8:30 - 9:30 am (Pickleball - adult - rotations)*",
+      "8:30 - 9:30 am (Pickleball - adult - no rotations)*",
+      "9:30 - 10:30 am (Pickleball - adult - rotations)*",
+      "9:30 - 10:30 am (Pickleball - adult - no rotations)*",
+      "7:15 - 8:15 pm (Pickleball - adult - rotations)*",
+      "8:15 - 9:15 pm (Pickleball - adult - rotations)*"
+    ],
+    "Saturday": [
+      "10:45 - 11:45 am (Pickleball - adult - rotations)*",
+      "10:45 - 11:45 am (Pickleball - adult - no rotations)*"
+    ]
+  },
   "Richelieu Vanier Community Centre starting January 9": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richelieuvanier",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richelieu-vanier-community-centre",
