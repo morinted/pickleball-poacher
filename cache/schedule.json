@@ -28,72 +28,6 @@
       "1:45 - 2:45 pm (Pickleball)"
     ]
   },
-  "Eva James Memorial Community Centre January 9 to March 12": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
-    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
-    "coordinates": {
-      "lat": "45.2905465",
-      "lon": "-75.85787897927462"
-    },
-    "Monday": [
-      "11:15 am - 12:15 pm (Pickleball)",
-      "12:15 - 1:15 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Saturday": [
-      "11 - 12 pm (Pickleball)",
-      "12 pm -1 pm (Pickleball)"
-    ],
-    "Sunday": [
-      "9:15 - 10:15 am (Pickleball)",
-      "10:15 - 11:15 am (Pickleball)"
-    ]
-  },
-  "Eva James Memorial Community Centre March 13 to 19": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
-    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
-    "coordinates": {
-      "lat": "45.2905465",
-      "lon": "-75.85787897927462"
-    },
-    "Monday": [
-      "11:15 am - 12:15 pm (Pickleball)",
-      "12:15 - 1:15 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "9:15 - 10:15am (Pickleball)",
-      "10:15 - 11:15am (Pickleball)"
-    ],
-    "Thursday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Friday": [
-      "9:15 - 10:15am (Pickleball)",
-      "10:15 - 11:15am (Pickleball)"
-    ],
-    "Saturday": [
-      "11 - 12 pm (Pickleball)",
-      "12 pm -1 pm (Pickleball)"
-    ],
-    "Sunday": [
-      "9:15 - 10:15 am (Pickleball)",
-      "10:15 - 11:15 am (Pickleball)"
-    ]
-  },
   "Eva James Memorial Community Centre March 20 to June 17": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
@@ -123,7 +57,7 @@
       "10:15 - 11:15 am (Pickleball)"
     ]
   },
-  "François Dupuis Recreation Centre January 9 to March 12": {
+  "François Dupuis Recreation Centre March 18 to June 25": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
     "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
@@ -180,26 +114,7 @@
       "12:50 - 1:50 pm (Pickleball 16+)"
     ]
   },
-  "François Dupuis Recreation Centre March 13 to 19": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
-    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
-    "coordinates": {
-      "lat": "45.45448785",
-      "lon": "-75.46332711436"
-    },
-    "Monday": [
-      "6:40 - 7:40 pm (Pickleball 16+)",
-      "7:50 - 8:50 pm (Pickleball 16+)"
-    ],
-    "Saturday": [
-      "2 - 3 pm (Pickleball 16+)"
-    ],
-    "Sunday": [
-      "12:50 - 1:50 pm (Pickleball 16+)"
-    ]
-  },
-  "Greenboro Community Centre January 16 to March 12": {
+  "Greenboro Community Centre": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/greenboro-community-centre",
     "address": "363 Lorry Greenberg Drive Ottawa ON K1T 3P8",
@@ -208,17 +123,17 @@
       "lon": "-75.6355798"
     },
     "Tuesday": [
-      "12:30 - 1:30 pm (Pickleball)"
+      "12:30 - 1:30 pm (Pickleball)*"
     ],
     "Wednesday": [
-      "12:45 - 1:45 pm (Pickleball)"
+      "12:45 - 1:45 pm (Pickleball)*"
     ],
     "Thursday": [
-      "12 pm - 1 pm (Pickleball)",
-      "1:30 - 2:30 pm (Pickleball)"
+      "12 pm - 1 pm (Pickleball)*",
+      "1:30 - 2:30 pm (Pickleball)*"
     ],
     "Friday": [
-      "12:45 - 1:45 pm (Pickleball)"
+      "12:45 - 1:45 pm (Pickleball)*"
     ]
   },
   "Hintonburg Community Centre starting January 8": {
@@ -375,26 +290,6 @@
       "3 - 4 pm (Pickleball)"
     ]
   },
-  "Nepean Sportsplex March 11 to March 19": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/nepean-sportsplex",
-    "address": "1701 Woodroffe Avenue Ottawa ON K2G 1W2",
-    "coordinates": {
-      "lat": "45.3271242",
-      "lon": "-75.7452920352786"
-    },
-    "Tuesday": [
-      "7:15 - 8:15 pm (Pickleball)",
-      "8:30 - 9:30 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "7:15 - 8:15 pm (Pickleball)"
-    ],
-    "Saturday": [
-      "8:30 - 9:30 am (Pickleball)",
-      "9:45 - 10:45 am (Pickleball)"
-    ]
-  },
   "Nepean Sportsplex March 20 to June 30": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/nepean-sportsplex",
@@ -461,54 +356,6 @@
       "10 - 11 am (Pickleball)",
       "11 am - 12 pm (Pickleball)",
       "12 pm - 1 pm (Pickleball)"
-    ]
-  },
-  "Overbrook Community Centre March 13 to 17": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/overbrook-community-centre",
-    "address": "33 Quill Street Ottawa ON K1K 4E7",
-    "coordinates": {
-      "lat": "45.4254727",
-      "lon": "-75.65684704689782"
-    },
-    "Monday": [
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Friday": [
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ]
-  },
-  "Richcraft Recreation Complex-Kanata March 13 to 19": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
-    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
-    "coordinates": {
-      "lat": "45.3404295",
-      "lon": "-75.93050079076487"
-    },
-    "Wednesday": [
-      "7 - 8 pm (Pickleball - adult - rotations)*",
-      "7 - 8 pm (Pickleball - adult - no rotations)*",
-      "8 - 9 pm (Pickleball - adult - rotations)*",
-      "8 - 9 pm (Pickleball - adult - no rotations)*"
-    ],
-    "Sunday": [
-      "10:45 - 11:45 am (Pickleball - adult - rotations)",
-      "10:45 - 11:45 am (Pickleball - adult - no rotations)"
     ]
   },
   "Richcraft Recreation Complex-Kanata March 20 to June 25": {
