@@ -52,11 +52,13 @@ yargs(hideBin(process.argv))
         spots: 1,
       },
     ])
-    config.set('identity', {
-      email: 'email@example.com',
-      phone: '6131231234',
-      name: 'Your name',
-    })
+    config.set('identities', [
+      {
+        email: 'email@example.com',
+        phone: '6131231234',
+        name: 'Your name',
+      },
+    ])
     config.set('registrations', [])
     config.set('2captcha-token', '')
     config.set('telegram-bot', '')
@@ -105,7 +107,7 @@ yargs(hideBin(process.argv))
         console.log('Time:', now.format('YYYY-MM-DD hh:mm:ss a'))
 
         const events = config.get('events')
-        const identity = config.get('identity')
+        const identities = config.get('identities')
         const registrations = config.get('registrations', [])
         const telegramBotKey = config.get('telegram-bot')
         const telegramChannel = config.get('telegram-channel')
@@ -115,10 +117,11 @@ yargs(hideBin(process.argv))
           now.clone().add(CLOSE_MINUTES, 'minutes').hour() === ROLLOVER_TIME &&
           now.hour() === ROLLOVER_TIME - 1
 
-        const timeSinceSix = now.diff(moment().hour(ROLLOVER_TIME).minute(0).second(0), 'minutes')
-        const justAfterSix =
-           0 <= timeSinceSix && timeSinceSix <= 5
-
+        const timeSinceSix = now.diff(
+          moment().hour(ROLLOVER_TIME).minute(0).second(0),
+          'minutes'
+        )
+        const justAfterSix = 0 <= timeSinceSix && timeSinceSix <= 5
 
         const day = now.day()
         const registerableDays = [
@@ -130,7 +133,9 @@ yargs(hideBin(process.argv))
         const telegramQueue = []
         const sendToTelegram = _.debounce(() => {
           // Clear the queue and get the removed elements to send.
-          const message = telegramQueue.splice(0, telegramQueue.length).join('\n')
+          const message = telegramQueue
+            .splice(0, telegramQueue.length)
+            .join('\n')
 
           fetch(
             `https://api.telegram.org/bot${telegramBotKey}/sendMessage?chat_id=${encodeURIComponent(
@@ -263,18 +268,22 @@ yargs(hideBin(process.argv))
               await activityLink.click()
               await page.waitForNavigation({ waitUntil: 'networkidle0' })
 
-              // When the input is missing, it means there are no remaining times.
-              const inputPresent = !!(await page.$(
-                'input#reservationCount[type="number"]'
-              ))
+              // maxSpots of 1 means that we won't be asked for group size, so skip this page.
+              if (targetEvent.maxSpots !== 1) {
+                // When the input is missing, it means there are no remaining times.
+                const inputPresent = !!(await page.$(
+                  'input#reservationCount[type="number"]'
+                ))
 
-              if (!inputPresent) {
-                throw new Error('No time left')
+                if (!inputPresent) {
+                  throw new Error('No time left')
+                }
+
+                log('Setting group size')
+                await setValue('input#reservationCount', targetEvent.spots)
+                await page.click('#submit-btn')
               }
 
-              log('Setting group size')
-              await setValue('input#reservationCount', targetEvent.spots)
-              await page.click('#submit-btn')
               await page.waitForSelector('.date')
               log('Clicking date time')
 
@@ -285,7 +294,9 @@ yargs(hideBin(process.argv))
                   ].find((daySection) => daySection.textContent.includes(day))
                   const targetTime = [
                     ...targetDay.querySelectorAll('.times-list li'),
-                  ].find((timeLink) => timeLink.textContent.includes(time))
+                  ]
+                    .reverse()
+                    .find((timeLink) => timeLink.textContent.includes(time))
 
                   if (!targetTime) {
                     throw new Error(
@@ -331,7 +342,7 @@ yargs(hideBin(process.argv))
                 await page.waitForNavigation({ waitUntil: 'networkidle0' })
               }
 
-              await inputForm(identity)
+              await inputForm(identities[index % identities.length])
 
               const url = await page.url()
 
