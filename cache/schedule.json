@@ -365,6 +365,30 @@
       "11 - 12 pm (Pickleball)"
     ]
   },
+  "Routhier Community Centre May 1 to June 25": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/routhiercc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/routhier-community-centre",
+    "address": "172 Guigues Avenue Ottawa ON K1N 5H9",
+    "coordinates": {
+      "lat": "45.432056849999995",
+      "lon": "-75.6916058563353"
+    },
+    "Tuesday": [
+      "9 - 10 am (Pickleball)*",
+      "10:10 - 11:10 am (Pickleball)*",
+      "11:20 am - 12:20 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "11:30 am - 12:30 pm (Pickleball)*",
+      "12:40 - 1:40 pm (Pickleball)*",
+      "1:50 - 2:50 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "9 - 10 am (Pickleball)*",
+      "10:10 - 11:10 am (Pickleball)*",
+      "11:20 am - 12:20 pm (Pickleball)*"
+    ]
+  },
   "South Fallingbrook Community Centre starting January 27": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/southfallingbrook",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/south-fallingbrook-community-centre",
