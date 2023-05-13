@@ -66,7 +66,7 @@
       "10:15 - 11:15 am (Pickleball)"
     ]
   },
-  "François Dupuis Recreation Centre March 18 to June 25": {
+  "François Dupuis Recreation Centre March 15 to June 25": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
     "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
@@ -80,27 +80,20 @@
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
       "12:10 - 1:10 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "2:30 - 3:30 pm (Pickleball 50+)",
       "6:40 - 7:40 pm (Pickleball 16+)",
       "7:50 - 8:50 pm (Pickleball 16+)"
     ],
     "Tuesday": [
-      "7:30 - 8:30 am (Pickleball 50+)",
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)",
-      "2:30 - 3:30 pm (Pickleball Intermediate 16+)"
+      "12:10 - 1:10 pm (Pickleball 50+)"
     ],
     "Wednesday": [
       "7:30 - 8:30 am (Pickleball Intermediate 16+)",
       "8:40 - 9:40 am (Pickleball Intermediate 16+)",
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball 50+)",
-      "2:30 - 3:30 pm (Pickleball 50+)"
+      "12:10 - 1:10 pm (Pickleball 50+)"
     ],
     "Thursday": [
       "7:30 - 8:30 am (Pickleball Intermediate 16+)",
@@ -113,8 +106,7 @@
       "8:40 - 9:40 am (Pickleball 50+)",
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball Intermediate 16+)",
-      "1:20 - 2:20 pm (Pickleball Intermediate 16+)"
+      "12:10 - 1:10 pm (Pickleball Intermediate 16+)"
     ],
     "Saturday": [
       "2 - 3 pm (Pickleball 16+)"
