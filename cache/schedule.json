@@ -203,6 +203,19 @@
       "3 - 4 pm (Pickleball)"
     ]
   },
+  "Minto Recreation Complex - Barrhaven June 29 to September 3": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
+    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
+    "coordinates": {
+      "lat": "45.2529628",
+      "lon": "-75.7345681"
+    },
+    "Saturday": [
+      "6 - 7 pm (Pickleball)*",
+      "7:05 - 8:05 pm (Pickleball)*"
+    ]
+  },
   "Nepean Sportsplex March 20 to June 30": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/nepean-sportsplex",
