@@ -1,5 +1,5 @@
 {
-  "Hintonburg Community Centre starting January 8": {
+  "Hintonburg Community Centre August 2 to 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/hintonburgcc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hintonburg-community-centre",
     "address": "1064 Wellington Street West Ottawa ON K1Y 2Y3",
@@ -7,77 +7,10 @@
       "lat": "45.4036315",
       "lon": "-75.72428267352942"
     },
-    "Monday": [
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)"
-    ]
-  },
-  "Hunt Club-Riverside Park Community Centre March 20 to June 18": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
-    "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
-    "coordinates": {
-      "lat": "45.352061500000005",
-      "lon": "-75.67274397046596"
-    },
-    "Monday": [
-      "12 pm - 1 pm (Pickleball)",
-      "1:30 - 3 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "12 pm - 1 pm (Pickleball - Intermediate)"
-    ]
-  },
-  "Minto Recreation Complex - Barrhaven April 11 to June 25": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
-    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
-    "coordinates": {
-      "lat": "45.2529628",
-      "lon": "-75.7345681"
-    },
-    "Monday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)"
-    ],
     "Wednesday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
-    ],
-    "Friday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
+      "6 pm - 7 pm (Pickleball)*",
+      "7 pm - 8 pm (Pickleball)*",
+      "8 pm - 9 pm (Pickleball)*"
     ]
   },
   "Minto Recreation Complex - Barrhaven June 29 to September 3": {
@@ -181,23 +114,6 @@
       "11:30 am - 12:30 pm (Pickleball 16+ - game play (regulation size court))",
       "12:45 - 1:45 pm (Pickleball 16+ - game play (regulation size court))",
       "2 - 3 pm (Pickleball 16+ - game play (regulation size court))"
-    ]
-  },
-  "Rideauview Community Centre April 17 to June 30": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/rideauviewcc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/rideauview-community-centre",
-    "address": "4310 Shoreline Drive Ottawa ON K1V 1N4",
-    "coordinates": {
-      "lat": "45.277362499999995",
-      "lon": "-75.68745448214287"
-    },
-    "Tuesday": [
-      "10 - 11 am (Pickleball)",
-      "11 - 12 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "10 - 11 am (Pickleball)",
-      "11 - 12 pm (Pickleball)"
     ]
   }
 }
