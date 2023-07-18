@@ -1,4 +1,16 @@
 {
+  "Greenboro Community Centre July 18 to August 29": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/greenboro-community-centre",
+    "address": "363 Lorry Greenberg Drive Ottawa ON K1T 3P8",
+    "coordinates": {
+      "lat": "45.3635167",
+      "lon": "-75.6355798"
+    },
+    "Tuesday": [
+      "5:30 - 6:30 pm pm (Pickleball)*"
+    ]
+  },
   "Hintonburg Community Centre August 2 to 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/hintonburgcc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hintonburg-community-centre",
