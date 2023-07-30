@@ -37,5 +37,23 @@
       "6 - 7 pm (Pickleball)",
       "7:05 - 8:05 pm (Pickleball)"
     ]
+  },
+  "Ray Friel Recreation Complex August 1 to 24": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/rayfrielrec",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/ray-friel-recreation-complex",
+    "address": "1585 Tenth Line Road Ottawa ON K1E 3E8",
+    "coordinates": {
+      "lat": "45.4720493",
+      "lon": "-75.492397"
+    },
+    "Tuesday": [
+      "7 pm (Pickleball - adult)*"
+    ],
+    "Wednesday": [
+      "7 pm (Pickleball - adult)*"
+    ],
+    "Thursday": [
+      "7 pm (Pickleball - adult)*"
+    ]
   }
 }
