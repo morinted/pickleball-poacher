@@ -1,4 +1,33 @@
 {
+  "Eva James Memorial Community Centre October 1 to December 21": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
+    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
+    "coordinates": {
+      "lat": "45.290782300000004",
+      "lon": "-75.85701913843408"
+    },
+    "Monday": [
+      "11:15 am - 12:15 pm (Pickleball)*",
+      "12:15 - 1:15 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "1:15 - 2:15 pm (Pickleball)*",
+      "2:15 - 3:15 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "10:30 - 11:30 am (Pickleball)*",
+      "11:30 am - 12:30 pm (Pickleball)*"
+    ],
+    "Saturday": [
+      "12 pm - 1 pm (Pickleball)*",
+      "1 - 2 pm (Pickleball)*"
+    ],
+    "Sunday": [
+      "9:15 - 10:15 am (Pickleball)*",
+      "10:15 - 11:15 am (Pickleball)*"
+    ]
+  },
   "Greenboro Community Centre July 18 to August 29": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/greenboro-community-centre",
@@ -11,7 +40,7 @@
       "5:30 - 6:30 pm pm (Pickleball)"
     ]
   },
-  "Hintonburg Community Centre August 2 to 23": {
+  "Hintonburg Community Centre July 4 to August 24": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/hintonburgcc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hintonburg-community-centre",
     "address": "1064 Wellington Street West Ottawa ON K1Y 2Y3",
@@ -20,9 +49,9 @@
       "lon": "-75.72428267352942"
     },
     "Wednesday": [
-      "6 pm - 7 pm (Pickleball)",
-      "7 pm - 8 pm (Pickleball)",
-      "8 pm - 9 pm (Pickleball)"
+      "6 - 7 pm (Pickleball)*",
+      "7 - 8 pm (Pickleball)*",
+      "8 - 9 pm (Pickleball)*"
     ]
   },
   "Minto Recreation Complex - Barrhaven June 29 to September 3": {
