@@ -28,6 +28,48 @@
       "10:15 - 11:15 am (Pickleball)"
     ]
   },
+  "François Dupuis Recreation Centre September 5 to December 23": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/francois-dupuis-recreation-centre",
+    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
+    "coordinates": {
+      "lat": "45.45448785",
+      "lon": "-75.46332711436"
+    },
+    "Monday": [
+      "8:40 - 9:40 am (Pickleball 50+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "6:40 - 7:40 pm (Pickleball 16+)*",
+      "7:50 - 8:50 pm (Pickleball 16+)*"
+    ],
+    "Tuesday": [
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*"
+    ],
+    "Wednesday": [
+      "8:40 - 9:40 am (Pickleball 50+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*"
+    ],
+    "Thursday": [
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*",
+      "12:10 - 1:10 pm (Pickleball 50+)*"
+    ],
+    "Friday": [
+      "8:40 - 9:40 am (Pickleball 50+)*",
+      "9:50 - 10:50 am (Pickleball 50+)*",
+      "11 am - 12 pm (Pickleball 50+)*"
+    ],
+    "Saturday": [
+      "2 - 3 pm (Pickleball 16+)*"
+    ],
+    "Sunday": [
+      "12:50 - 1:50 pm (Pickleball - Family - Parent with child)*"
+    ]
+  },
   "Greenboro Community Centre July 18 to August 29": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/greenboro-community-centre",
@@ -38,6 +80,25 @@
     },
     "Tuesday": [
       "5:30 - 6:30 pm pm (Pickleball)"
+    ]
+  },
+  "Greenboro Community Centre September 5 to December 23": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/greenboro-community-centre",
+    "address": "363 Lorry Greenberg Drive Ottawa ON K1T 3P8",
+    "coordinates": {
+      "lat": "45.3635167",
+      "lon": "-75.6355798"
+    },
+    "Tuesday": [
+      "12:30 - 1:30 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "12:45 - 1:45 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "9:30 - 10:30 am (Pickleball)*",
+      "11:15 am - 12:15 pm (Pickleball)*"
     ]
   },
   "Hintonburg Community Centre July 4 to August 24": {
@@ -52,6 +113,27 @@
       "6 - 7 pm (Pickleball)",
       "7 - 8 pm (Pickleball)",
       "8 - 9 pm (Pickleball)"
+    ]
+  },
+  "Hunt Club-Riverside Park Community Centre September 10 to December 22": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
+    "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
+    "coordinates": {
+      "lat": "45.352061500000005",
+      "lon": "-75.67274397046596"
+    },
+    "Monday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "1 - 2 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "1 - 2 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "11:45 - 12:45 pm (Pickleball - Intermediate)*",
+      "1 - 2 pm (Pickleball - Intermediate)*"
     ]
   },
   "Minto Recreation Complex - Barrhaven June 29 to September 3": {
