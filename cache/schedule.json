@@ -309,6 +309,21 @@
       "7 pm (Pickleball - adult)"
     ]
   },
+  "Rideauview Community Centre September 5 to December 22": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/rideauviewcc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/rideauview-community-centre",
+    "address": "4310 Shoreline Drive Ottawa ON K1V 1N4",
+    "coordinates": {
+      "lat": "45.2773406",
+      "lon": "-75.6874659"
+    },
+    "Monday": [
+      "12 pm - 1 pm (Pickleball – adult)*"
+    ],
+    "Tuesday": [
+      "10:30 - 11:30 am (Pickleball – adult)*"
+    ]
+  },
   "South Fallingbrook Community Centre September 18 to December 22": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/southfallingbrook",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/south-fallingbrook-community-centre",
