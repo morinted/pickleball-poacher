@@ -1,4 +1,13 @@
 {
+  "CARDELREC Recreation Complex Goulbourn October 7 to 9": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
+    "address": "1500 Shea Road Ottawa ON K2S 0B2",
+    "coordinates": {
+      "lat": "45.263135000000005",
+      "lon": "-75.90787332212767"
+    }
+  },
   "CARDELREC Recreation Complex Goulbourn starting September 11 to December 17": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
