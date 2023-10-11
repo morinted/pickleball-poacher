@@ -1,13 +1,4 @@
 {
-  "CARDELREC Recreation Complex Goulbourn October 7 to 9": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
-    "address": "1500 Shea Road Ottawa ON K2S 0B2",
-    "coordinates": {
-      "lat": "45.263135000000005",
-      "lon": "-75.90787332212767"
-    }
-  },
   "CARDELREC Recreation Complex Goulbourn starting September 11 to December 17": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
@@ -39,7 +30,7 @@
       "2:45 - 3:45 pm (Pickleball)"
     ]
   },
-  "Eva James Memorial Community Centre October 1 to December 21": {
+  "Eva James Memorial Community Centre September 18 to December 22": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
     "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
@@ -231,15 +222,6 @@
       "12:50 - 1:50 pm (Pickleball)",
       "1:55 - 2:55 pm (Pickleball)"
     ]
-  },
-  "Nepean Sportsplex October 7 to 9": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/nepean-sportsplex",
-    "address": "1701 Woodroffe Avenue Ottawa ON K2G 1W2",
-    "coordinates": {
-      "lat": "45.3271242",
-      "lon": "-75.7452920352786"
-    }
   },
   "Nepean Sportsplex September 5 to December 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
