@@ -100,7 +100,7 @@
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
       "12:10 - 1:10 pm (Pickleball 50+)",
-      "1:20 - 2:20 pm (Pickleball 50+)*",
+      "1:20 - 2:20 pm (Pickleball 50+)",
       "6:40 - 7:40 pm (Pickleball 16+)",
       "7:50 - 8:50 pm (Pickleball 16+)"
     ],
@@ -113,8 +113,8 @@
       "8:40 - 9:40 am (Pickleball 50+)",
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)*",
-      "1:20 - 2:20 pm (Pickleball 50+)*"
+      "12:10 - 1:10 pm (Pickleball 50+)",
+      "1:20 - 2:20 pm (Pickleball 50+)"
     ],
     "Thursday": [
       "8:40 - 9:40 am (Pickleball 50+)",
@@ -402,8 +402,8 @@
       "1:30 - 2:30 pm (Pickleball – Adult – No rotations)",
       "2:30 - 3:30 pm (Pickleball – Adult – Rotations)",
       "2:30 - 3:30 pm (Pickleball – Adult – No rotations)",
-      "8 - 9 pm (Pickleball – Adult – Rotations)*",
-      "9 - 10 pm (Pickleball – Adult – Rotations)*"
+      "8 - 9 pm (Pickleball – Adult – Rotations)",
+      "9 - 10 pm (Pickleball – Adult – Rotations)"
     ],
     "Thursday": [
       "1:30 - 2:30 pm (Pickleball – Adult – Rotations)",
@@ -416,8 +416,8 @@
       "8:30 - 9:30 am (Pickleball – Adult – No rotations)",
       "9:30 - 10:30 am (Pickleball – Adult – Rotations)",
       "9:30 - 10:30 am (Pickleball – Adult – No rotations)",
-      "7 - 8 pm (Pickleball – Adult – No rotations)*",
-      "8 - 9 pm (Pickleball – Adult – No rotations)*"
+      "7 - 8 pm (Pickleball – Adult – No rotations)",
+      "8 - 9 pm (Pickleball – Adult – No rotations)"
     ]
   },
   "Richelieu Vanier Community Centre October 2 to December 20": {
