@@ -30,35 +30,6 @@
       "2:45 - 3:45 pm (Pickleball)"
     ]
   },
-  "Eva James Memorial Community Centre October 1 to October 31": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
-    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
-    "coordinates": {
-      "lat": "45.290782300000004",
-      "lon": "-75.85701913843408"
-    },
-    "Monday": [
-      "11:15 am - 12:15 pm (Pickleball)",
-      "12:15 - 1:15 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "1:15 - 2:15 pm (Pickleball)",
-      "2:15 - 3:15 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "10:30 - 11:30 am (Pickleball)",
-      "11:30 am - 12:30 pm (Pickleball)"
-    ],
-    "Saturday": [
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)"
-    ],
-    "Sunday": [
-      "9:15 - 10:15 am (Pickleball)",
-      "10:15 - 11:15 am (Pickleball)"
-    ]
-  },
   "Eva James Memorial Community Centre November 1 to December 22": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
@@ -96,18 +67,18 @@
       "lon": "-75.46332711436"
     },
     "Monday": [
-      "7:30 - 8:30 am (Pickleball - intermediate)*",
+      "7:30 - 8:30 am (Pickleball - intermediate)",
       "8:40 - 9:40 am (Pickleball - intermediate)",
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
       "12:10 - 1:10 pm (Pickleball 50+)",
       "1:20 - 2:20 pm (Pickleball 50+)",
-      "2:30 - 3:30 pm (Pickleball 50+)*",
+      "2:30 - 3:30 pm (Pickleball 50+)",
       "6:40 - 7:40 pm (Pickleball 16+)",
       "7:50 - 8:50 pm (Pickleball 16+)"
     ],
     "Tuesday": [
-      "7:30 - 8:30 am (Pickleball 50+)*",
+      "7:30 - 8:30 am (Pickleball 50+)",
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
       "12:10 - 1:10 pm (Pickleball 50+)",
@@ -115,7 +86,7 @@
       "2:30 - 3:30 pm (Pickleball - intermediate)*"
     ],
     "Wednesday": [
-      "7:30 - 8:30 am (Pickleball - intermediate)*",
+      "7:30 - 8:30 am (Pickleball - intermediate)",
       "8:40 - 9:40 am (Pickleball - intermediate)",
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
@@ -123,7 +94,7 @@
       "1:20 - 2:20 pm (Pickleball 50+)"
     ],
     "Thursday": [
-      "7:30 - 8:30 am (Pickleball - intermediate)*",
+      "7:30 - 8:30 am (Pickleball - intermediate)",
       "8:40 - 9:40 am (Pickleball - intermediate)",
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
