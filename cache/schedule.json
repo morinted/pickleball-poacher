@@ -195,6 +195,24 @@
       "1 - 2 pm (Pickleball - rotations)"
     ]
   },
+  "Hunt Club-Riverside Park Community Centre December 23 to 29, 2023": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
+    "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
+    "coordinates": {
+      "lat": "45.352061500000005",
+      "lon": "-75.67274397046596"
+    }
+  },
+  "Hunt Club-Riverside Park Community Centre December 30, 2023, to January 5, 2024": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
+    "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
+    "coordinates": {
+      "lat": "45.352061500000005",
+      "lon": "-75.67274397046596"
+    }
+  },
   "Hunt Club-Riverside Park Community Centre September 10 to December 22": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
@@ -417,24 +435,6 @@
       "12 pm - 1 pm (Pickleball)"
     ]
   },
-  "Ray Friel Recreation Complex August 1 to 24": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/rayfrielrec",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/ray-friel-recreation-complex",
-    "address": "1585 Tenth Line Road Ottawa ON K1E 3E8",
-    "coordinates": {
-      "lat": "45.4720493",
-      "lon": "-75.492397"
-    },
-    "Tuesday": [
-      "7 pm (Pickleball - adult)"
-    ],
-    "Wednesday": [
-      "7 pm (Pickleball - adult)"
-    ],
-    "Thursday": [
-      "7 pm (Pickleball - adult)"
-    ]
-  },
   "Richcraft Recreation Complex-Kanata September 18 to December 22": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
@@ -510,6 +510,30 @@
     ],
     "Tuesday": [
       "10:30 - 11:30 am (Pickleball – adult)"
+    ]
+  },
+  "Routhier Community Centre December 6 to 22, 2023": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/routhiercc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/routhier-community-centre",
+    "address": "172 Guigues Avenue Ottawa ON K1N 5H9",
+    "coordinates": {
+      "lat": "45.432056849999995",
+      "lon": "-75.6916058563353"
+    },
+    "Monday": [
+      "1:30 - 2:30 pm (Pickleball – adult)*",
+      "2:40 - 3:40 pm (Pickleball – adult)*",
+      "4 - 5 pm (Pickleball – adult)*"
+    ],
+    "Thursday": [
+      "10:30 - 11:30 am (Pickleball – adult)*",
+      "11:40 - 12:40 pm (Pickleball – adult)*",
+      "12:50 - 1:50 pm (Pickleball – adult)*"
+    ],
+    "Saturday": [
+      "11:45 - 12:45 pm (Pickleball – adult)*",
+      "12:55 - 1:55 pm (Pickleball – adult)*",
+      "2:15 - 3:15 pm (Pickleball – adult)*"
     ]
   },
   "South Fallingbrook Community Centre September 18 to December 22": {
