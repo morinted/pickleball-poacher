@@ -7,8 +7,10 @@
       "lat": "45.3817513",
       "lon": "-75.6843515"
     },
-    "Tuesday": ["7 - 9 pm (Pickleball)"],
-    "Thursday": ["7 - 9 pm (Pickleball)"],
-    "Friday": ["11 am - 1 pm (Pickleball - Novice)"]
+    "Tuesday": ["6 - 8 pm (Pickleball)"],
+    "Thursday": ["6 - 8 pm (Pickleball)"],
+    "Wednesday": ["12 - 2 pm (Pickleball)"],
+    "Friday": ["11 am - 1 pm (Pickleball - Novice)"],
+    "Sunday": ["11 am - 1 pm (Pickleball - Novice)"]
   }
 }
