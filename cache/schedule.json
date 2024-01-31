@@ -1,4 +1,19 @@
 {
+  "Alexander Community Centre February 12 to March 10": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/alexandercc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/alexander-community-centre",
+    "address": "960 Silver Street Ottawa ON K1Z 6H5",
+    "coordinates": {
+      "lat": "45.38056795",
+      "lon": "-75.73143368094837"
+    },
+    "Monday": [
+      "9:30 - 10:30 am (Pickleball)*",
+      "10:45 - 11:45 am (Pickleball)*",
+      "12 pm - 1 pm (Pickleball)*",
+      "1:15 - 2:15 pm (Pickleball)*"
+    ]
+  },
   "CARDELREC Recreation Complex Goulbourn January 6 to March 8": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/cardelrec-recreation-complex-goulbourn",
