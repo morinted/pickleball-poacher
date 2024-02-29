@@ -45,6 +45,15 @@
       "2:45 - 3:45 pm (Pickleball - adult)"
     ]
   },
+  "Eva James Memorial Community Centre": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
+    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
+    "coordinates": {
+      "lat": "45.290505",
+      "lon": "-75.8577006"
+    }
+  },
   "Eva James Memorial Community Centre January 8 to March 10": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
