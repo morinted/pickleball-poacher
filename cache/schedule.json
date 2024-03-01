@@ -289,6 +289,15 @@
       "4:30 - 5:30 pm (Pickleball)"
     ]
   },
+  "Overbrook Community Centre March 11 to 16": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/overbrook-community-centre",
+    "address": "33 Quill Street Ottawa ON K1K 4E7",
+    "coordinates": {
+      "lat": "45.4254727",
+      "lon": "-75.65684704689782"
+    }
+  },
   "Overbrook Community Centre Starting January 8 to April 26": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/overbrook-community-centre",
@@ -419,15 +428,15 @@
       "lon": "-75.6916058563353"
     },
     "Tuesday": [
-      "9:30 - 10:30 am (Pickleball – adult)*",
+      "9:30 - 10:30 am (Pickleball – adult)",
       "1:30 - 2:30 pm (Pickleball – adult)",
       "2:40 - 3:40 pm (Pickleball – adult)",
       "4 - 5 pm (Pickleball – adult)",
-      "10:30 - 11:30am (Pickleball – adult)*"
+      "10:30 - 11:30am (Pickleball – adult)"
     ],
     "Wednesday": [
-      "9:30 - 10:30 am (Pickleball – adult)*",
-      "10:30 - 11:30am (Pickleball – adult)*"
+      "9:30 - 10:30 am (Pickleball – adult)",
+      "10:30 - 11:30am (Pickleball – adult)"
     ],
     "Thursday": [
       "10:30 - 11:30 am (Pickleball – adult)",
@@ -451,7 +460,7 @@
     "Thursday": [
       "6 - 7 pm (Pickleball - adult)",
       "7 - 8 pm (Pickleball - adult)",
-      "8:15 - 9:15 pm (Pickleball - adult)*"
+      "8:15 - 9:15 pm (Pickleball - adult)"
     ],
     "Saturday": [
       "4:30 - 5:30 pm (Pickleball - adult)",
