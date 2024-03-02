@@ -337,6 +337,22 @@
       "12 pm - 1 pm (Pickleball)"
     ]
   },
+  "Richcraft Recreation Complex-Kanata March 9 to 17": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
+    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
+    "coordinates": {
+      "lat": "45.3404295",
+      "lon": "-75.93050079076487"
+    },
+    "Wednesday": [
+      "8:30 - 9:30 pm (Pickleball - rotations)"
+    ],
+    "Friday": [
+      "7 - 8 pm (Pickleball - rotations)",
+      "8 - 9 pm (Pickleball - rotations)"
+    ]
+  },
   "Richcraft Recreation Complex-Kanata January 8 to March 10": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/richcraft-recreation-complex-kanata",
@@ -429,19 +445,15 @@
     },
     "Tuesday": [
       "9:30 - 10:30 am (Pickleball – adult)",
-      "1:30 - 2:30 pm (Pickleball – adult)",
-      "2:40 - 3:40 pm (Pickleball – adult)",
-      "4 - 5 pm (Pickleball – adult)",
-      "10:30 - 11:30am (Pickleball – adult)"
+      "10:30 - 11:30 am (Pickleball – adult)*"
     ],
     "Wednesday": [
       "9:30 - 10:30 am (Pickleball – adult)",
-      "10:30 - 11:30am (Pickleball – adult)"
+      "10:30 - 11:30 am (Pickleball – adult)*"
     ],
     "Thursday": [
       "10:30 - 11:30 am (Pickleball – adult)",
-      "11:40 - 12:40 pm (Pickleball – adult)",
-      "12:50 - 1:50 pm (Pickleball – adult)"
+      "11:40 - 12:40 pm (Pickleball – adult)"
     ],
     "Friday": [
       "11:45 - 12:45 pm (Pickleball – adult)",
