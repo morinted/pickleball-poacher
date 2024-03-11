@@ -360,6 +360,45 @@
       "3 - 4 pm (Pickleball)"
     ]
   },
+  "Minto Recreation Complex - Barrhaven March 18 to June 23": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
+    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
+    "coordinates": {
+      "lat": "45.252972150000005",
+      "lon": "-75.73453126552369"
+    },
+    "Monday": [
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 - 1:50 pm (Pickleball)",
+      "1:55 - 2:55 pm (Pickleball)",
+      "3 - 4 pm (Pickleball)"
+    ],
+    "Tuesday": [
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 - 1:50 pm (Pickleball)",
+      "1:55 - 2:55 pm (Pickleball)",
+      "3 - 4 pm (Pickleball)",
+      "5:45 - 6:45 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "9 - 10 am (Pickleball)*",
+      "1 - 2 pm (Pickleball)*",
+      "2:05 - 3:05 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 - 1:50 pm (Pickleball)",
+      "1:55 - 2:55 pm (Pickleball)",
+      "3 - 4 pm (Pickleball)"
+    ],
+    "Friday": [
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 - 1:50 pm (Pickleball)",
+      "1:55 - 2:55 pm (Pickleball)",
+      "3 - 4 pm (Pickleball)"
+    ]
+  },
   "Nepean Sportsplex January 2 to March 10": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/nepean-sportsplex",
