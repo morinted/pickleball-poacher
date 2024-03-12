@@ -83,40 +83,6 @@
       "lon": "-75.8577006"
     }
   },
-  "Eva James Memorial Community Centre January 8 to March 10": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
-    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
-    "coordinates": {
-      "lat": "45.290505",
-      "lon": "-75.8577006"
-    },
-    "Monday": [
-      "11:15 am - 12:15 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "2:15 - 3:15 pm (Pickleball)",
-      "3:15 - 4:15 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)"
-    ],
-    "Friday": [
-      "2 - 3 pm (Pickleball)"
-    ],
-    "Saturday": [
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)"
-    ],
-    "Sunday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball - family)"
-    ]
-  },
   "Eva James Memorial Community Centre March 18 to May 17": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/eva-james-memorial-community-centre",
@@ -218,29 +184,6 @@
       "12:50 - 1:50 pm (Pickleball - family (parent with child))"
     ]
   },
-  "Greenboro Community Centre January 6 to March 10": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/greenboro-community-centre",
-    "address": "363 Lorry Greenberg Drive Ottawa ON K1T 3P8",
-    "coordinates": {
-      "lat": "45.36331905",
-      "lon": "-75.63647823186619"
-    },
-    "Tuesday": [
-      "12:30 - 1:30 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "12:45 - 1:45 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "11:30 am - 12:30 pm (Pickleball)",
-      "1:15 - 2:15 pm (Pickleball)"
-    ],
-    "Friday": [
-      "9:30 - 10:30 am (Pickleball)",
-      "11:15 am - 12:15 pm (Pickleball)"
-    ]
-  },
   "Greenboro Community Centre March 16 to 28": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/greenboro-community-centre",
@@ -320,45 +263,6 @@
       "lat": "45.252972150000005",
       "lon": "-75.73453126552369"
     }
-  },
-  "Minto Recreation Complex - Barrhaven January 8 to March 10": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
-    "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/minto-recreation-complex-barrhaven",
-    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
-    "coordinates": {
-      "lat": "45.252972150000005",
-      "lon": "-75.73453126552369"
-    },
-    "Monday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "10:30 - 11:30 am (Pickleball)",
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
-    ],
-    "Friday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:50 - 1:50 pm (Pickleball)",
-      "1:55 - 2:55 pm (Pickleball)",
-      "3 - 4 pm (Pickleball)"
-    ]
   },
   "Minto Recreation Complex - Barrhaven March 18 to June 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
@@ -440,7 +344,7 @@
       "lon": "-75.65684704689782"
     }
   },
-  "Overbrook Community Centre Starting January 8 to April 26": {
+  "Overbrook Community Centre Starting March 18 to April 26": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/overbrook-community-centre",
     "address": "33 Quill Street Ottawa ON K1K 4E7",
