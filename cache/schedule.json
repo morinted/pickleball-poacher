@@ -23,24 +23,24 @@
       "lon": "-75.90787332212767"
     },
     "Monday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*"
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)"
     ],
     "Tuesday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*"
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)"
     ],
     "Wednesday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*"
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)"
     ],
     "Thursday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*"
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)"
     ],
     "Friday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*"
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)"
     ]
   },
   "CARDELREC Recreation Complex Goulbourn March 5 to June 28": {
@@ -52,25 +52,25 @@
       "lon": "-75.90787332212767"
     },
     "Monday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*",
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)",
       "2:45 - 3:45 pm (Pickleball - adult)"
     ],
     "Tuesday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*"
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)"
     ],
     "Wednesday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*"
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)"
     ],
     "Thursday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*"
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)"
     ],
     "Friday": [
-      "12:45 - 1:45 pm (Pickleball - adult)*",
-      "1:45 - 2:45 pm (Pickleball - adult)*",
+      "12:45 - 1:45 pm (Pickleball - adult)",
+      "1:45 - 2:45 pm (Pickleball - adult)",
       "2:45 - 3:45 pm (Pickleball - adult)"
     ]
   },
@@ -234,7 +234,7 @@
       "1 - 2 pm (Pickleball - rotations)"
     ]
   },
-  "Hunt Club-Riverside Park Community Centre January 6 to March 30": {
+  "Hunt Club-Riverside Park Community Centre March 16 to June 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/hunt-club-riverside-park-community-centre",
     "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
@@ -243,16 +243,16 @@
       "lon": "-75.67343990183413"
     },
     "Monday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball - adult)",
+      "1 - 2 pm (Pickleball - adult)"
     ],
     "Tuesday": [
-      "11:45 am - 12:45 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)"
+      "11:45 am - 12:45 pm (Pickleball - adult)",
+      "1 - 2 pm (Pickleball - adult)"
     ],
     "Thursday": [
-      "11:45 - 12:45 pm (Pickleball - Intermediate)",
-      "1 - 2 pm (Pickleball - Intermediate)"
+      "11:45 - 12:45 pm (Pickleball - adult Intermediate)",
+      "1 - 2 pm (Pickleball - adult Intermediate)"
     ]
   },
   "Minto Recreation Complex - Barrhaven": {
@@ -303,7 +303,7 @@
       "3 - 4 pm (Pickleball)"
     ]
   },
-  "Nepean Sportsplex January 2 to March 10": {
+  "Nepean Sportsplex March 18 to June 30": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
     "home": "https://ottawa.ca/en/recreation-and-parks/recreation-facilities/facility-listing/nepean-sportsplex",
     "address": "1701 Woodroffe Avenue Ottawa ON K2G 1W2",
