@@ -105,7 +105,8 @@ const fetchCoordinates = async (address) => {
 
   const addressDetails = (
     await axios.get(
-      `https://nominatim.openstreetmap.org/search?q=${addressQuery}&format=json`
+      `https://nominatim.openstreetmap.org/search?q=${addressQuery}&format=json`,
+      { headers: { 'User-Agent': 'PickleballScheduleScraper/0.1' } }
     )
   ).data
 
@@ -118,7 +119,7 @@ const fetchCoordinates = async (address) => {
 }
 
 const facilityUrl =
-  'https://ottawa.ca/en/recreation-and-parks/recreation-facilities/place-listing'
+  'https://ottawa.ca/en/recreation-and-parks/facilities/place-listing'
 const ottawaCa = 'https://ottawa.ca'
 async function main() {
   try {
@@ -129,18 +130,24 @@ async function main() {
       const response = (await axios.get(link)).data
       const $ = cheerio.load(response)
       link = $('[title="Go to next page"]').attr('href')
+
+      const facilities = $('td.views-field.views-field-title a')
+        .toArray()
+        .map((el) => $(el).attr('href'))
+        .map((link) => (link.startsWith('/') ? `${ottawaCa}${link}` : link))
+        .filter((link) => link.includes('/facilities/'))
+      log(`Found ${facilities.length} facilities on this page`)
+
       if (link) {
         link = `${facilityUrl}${link}`
+        log('Going to next page')
       }
-      centres.push(
-        ...$('td.views-field.views-field-title a')
-          .toArray()
-          .map((el) => $(el).attr('href'))
-          .map((link) => (link.startsWith('/') ? `${ottawaCa}${link}` : link))
-          .filter((link) => link.includes('recreation-facilities'))
-      )
+      centres.push(...facilities)
     }
     log('About to scrape', centres.length, 'centres.')
+    if (!centres.length) {
+      process.exit(1)
+    }
     const results = (
       await Promise.all(
         centres.map(async (centre) => {
