@@ -320,6 +320,27 @@
       "12 pm - 1 pm (Pickleball)"
     ]
   },
+  "Ray Friel Recreation Complex June 11 to August 23": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/rayfriel",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/ray-friel-recreation-complex",
+    "address": "1585 Tenth Line Road Ottawa ON K1E 3E8",
+    "coordinates": {
+      "lat": "45.470786450000006",
+      "lon": "-75.49249082107175"
+    },
+    "Tuesday": [
+      "6:30 - 7:30 pm (Pickleball 18+)*",
+      "7:40 - 8:40 pm (Pickleball 18+)*"
+    ],
+    "Wednesday": [
+      "6:30 - 7:30 pm (Pickleball 18+)*",
+      "7:40 - 8:40 pm (Pickleball 18+)*"
+    ],
+    "Thursday": [
+      "6:30 - 7:30 pm (Pickleball 18+)*",
+      "7:40 - 8:40 pm (Pickleball 18+)*"
+    ]
+  },
   "Richcraft Recreation Complex-Kanata March 18 to June 28": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/richcraft-recreation-complex-kanata",
