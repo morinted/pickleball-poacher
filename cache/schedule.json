@@ -149,7 +149,7 @@
       "11:15 am - 12:15 pm (Pickleball)"
     ]
   },
-  "Hintonburg Community Centre May 9 to June 23": {
+  "Hintonburg Community Centre May 9 to June 26": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/hintonburgcc",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/hintonburg-community-centre",
     "address": "1064 Wellington Street West Ottawa ON K1Y 2Y3",
@@ -339,6 +339,33 @@
     "Thursday": [
       "6:30 - 7:30 pm (Pickleball 18+)*",
       "7:40 - 8:40 pm (Pickleball 18+)*"
+    ]
+  },
+  "Ray Friel Recreation Complex June 17 to August 23": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/rayfriel",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/ray-friel-recreation-complex",
+    "address": "1585 Tenth Line Road Ottawa ON K1E 3E8",
+    "coordinates": {
+      "lat": "45.470786450000006",
+      "lon": "-75.49249082107175"
+    },
+    "Monday": [
+      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*",
+      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)*"
+    ],
+    "Tuesday": [
+      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*",
+      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)*"
+    ],
+    "Wednesday": [
+      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*",
+      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)*"
+    ],
+    "Thursday": [
+      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*"
+    ],
+    "Friday": [
+      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*"
     ]
   },
   "Richcraft Recreation Complex-Kanata March 18 to June 28": {
