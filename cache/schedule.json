@@ -11,33 +11,6 @@
       "7:30 - 8:30 pm (Pickleball)*"
     ]
   },
-  "Hintonburg Community Centre May 9 to June 26": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/hintonburgcc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/hintonburg-community-centre",
-    "address": "1064 Wellington Street West Ottawa ON K1Y 2Y3",
-    "coordinates": {
-      "lat": "45.4036315",
-      "lon": "-75.72428267352942"
-    },
-    "Monday": [
-      "12 pm - 1 pm (Pickleball - rotations)",
-      "1 - 2 pm (Pickleball - rotations)",
-      "2 - 3 pm (Pickleball - rotations)"
-    ],
-    "Tuesday": [
-      "10 - 11 am (Pickleball - rotations)",
-      "11 am - 12 pm (Pickleball - rotations)",
-      "12 pm - 1 pm (Pickleball - rotations)",
-      "1 - 2 pm (Pickleball - rotations)",
-      "2 - 3 pm (Pickleball - rotations)"
-    ],
-    "Thursday": [
-      "10 - 11 am (Pickleball - rotations)",
-      "11 am - 12 pm (Pickleball - rotations)",
-      "12 pm - 1 pm (Pickleball - rotations)",
-      "1 - 2 pm (Pickleball - rotations)"
-    ]
-  },
   "Minto Recreation Complex - Barrhaven June 24 to September 1": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/minto-recreation-complex-barrhaven",
