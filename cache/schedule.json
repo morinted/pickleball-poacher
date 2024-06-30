@@ -1,4 +1,29 @@
 {
+  "Dempsey Community Centre July 8 to December 23": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/dempseycc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/dempsey-community-centre",
+    "address": "1895 Russell Road Ottawa ON K1G 0N1",
+    "coordinates": {
+      "lat": "45.4025758",
+      "lon": "-75.6275774"
+    },
+    "Monday": [
+      "9:30 am - 2:30 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "9:30 am - 2:30 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "9:30 am - 2:30 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "9:30 am - 2:30 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "9:30 am - 2:30 pm (Pickleball)*",
+      "7 - 10 pm (Pickleball)*"
+    ]
+  },
   "Greenboro Community Centre July 2 to August 31": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/greenboro-community-centre",
@@ -65,45 +90,6 @@
       "4:30 - 5:30 pm (Pickleball)"
     ]
   },
-  "Overbrook Community Centre April 2 to June 28": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/overbrook-community-centre",
-    "address": "33 Quill Street Ottawa ON K1K 4E7",
-    "coordinates": {
-      "lat": "45.4254727",
-      "lon": "-75.65684704689782"
-    },
-    "Monday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Friday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ]
-  },
   "Ray Friel Recreation Complex June 11 to August 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/rayfriel",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/ray-friel-recreation-complex",
@@ -150,36 +136,6 @@
     ],
     "Friday": [
       "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)"
-    ]
-  },
-  "Richcraft Recreation Complex-Kanata March 18 to June 28": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/richcraft-recreation-complex-kanata",
-    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
-    "coordinates": {
-      "lat": "45.3404295",
-      "lon": "-75.93050079076487"
-    },
-    "Tuesday": [
-      "1:30 - 2:30 pm (Pickleball – adult – rotations)",
-      "2:30 - 3:30 pm (Pickleball – adult – rotations)"
-    ],
-    "Wednesday": [
-      "1:30 - 2:30 pm (Pickleball – adult – rotations)",
-      "2:30 - 3:30 pm (Pickleball – adult – rotations)",
-      "8:30 - 9:30 pm (Pickleball – adult – rotations)"
-    ],
-    "Thursday": [
-      "1:30 - 2:30 pm (Pickleball – adult – rotations)",
-      "2:30 - 3:30 pm (Pickleball – adult – rotations)"
-    ],
-    "Friday": [
-      "8:30 - 9:30 am (Pickleball – adult – rotations)",
-      "9:30 - 10:30 am (Pickleball – adult – rotations)",
-      "1:30 - 2:30 pm (Pickleball – adult – rotations)",
-      "2:30 - 3:30 pm (Pickleball – adult – rotations)",
-      "7 - 8 pm (Pickleball – adult – rotations)",
-      "8 - 9 pm (Pickleball – adult – rotations)"
     ]
   },
   "Richelieu Vanier Community Centre until June 30": {
