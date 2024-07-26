@@ -66,45 +66,31 @@
       "lat": "45.470786450000006",
       "lon": "-75.49249082107175"
     },
-    "Tuesday": [
-      "6:30 - 7:30 pm (Pickleball 18+)",
-      "7:40 - 8:40 pm (Pickleball 18+)"
-    ],
-    "Wednesday": [
-      "6:30 - 7:30 pm (Pickleball 18+)",
-      "7:40 - 8:40 pm (Pickleball 18+)"
-    ],
-    "Thursday": [
-      "6:30 - 7:30 pm (Pickleball 18+)",
-      "7:40 - 8:40 pm (Pickleball 18+)"
-    ]
-  },
-  "Ray Friel Recreation Complex June 17 to August 16": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/rayfriel",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/ray-friel-recreation-complex",
-    "address": "1585 Tenth Line Road Ottawa ON K1E 3E8",
-    "coordinates": {
-      "lat": "45.470786450000006",
-      "lon": "-75.49249082107175"
-    },
     "Monday": [
       "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)",
       "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)"
     ],
     "Tuesday": [
       "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)",
-      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)"
+      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)",
+      "6:30 - 7:30 pm (Pickleball 18+)",
+      "7:40 - 8:40 pm (Pickleball 18+)"
     ],
     "Wednesday": [
       "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)",
-      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)"
+      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)",
+      "6:30 - 7:30 pm (Pickleball 18+)",
+      "7:40 - 8:40 pm (Pickleball 18+)"
     ],
     "Thursday": [
       "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)",
-      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)"
+      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)",
+      "6:30 - 7:30 pm (Pickleball 18+)",
+      "7:40 - 8:40 pm (Pickleball 18+)"
     ],
     "Friday": [
-      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)"
+      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)",
+      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)*"
     ]
   }
 }
