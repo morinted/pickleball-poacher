@@ -35,53 +35,5 @@
     "Tuesday": [
       "7:30 - 8:30 pm (Pickleball)"
     ]
-  },
-  "Minto Recreation Complex - Barrhaven June 24 to September 1": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/minto-recreation-complex-barrhaven",
-    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
-    "coordinates": {
-      "lat": "45.252972150000005",
-      "lon": "-75.73453126552369"
-    },
-    "Saturday": [
-      "6 - 7 pm (Pickleball)*",
-      "7:05 - 8:05 pm (Pickleball)*"
-    ]
-  },
-  "Ray Friel Recreation Complex June 11 to August 16": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/rayfriel",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/ray-friel-recreation-complex",
-    "address": "1585 Tenth Line Road Ottawa ON K1E 3E8",
-    "coordinates": {
-      "lat": "45.470786450000006",
-      "lon": "-75.49249082107175"
-    },
-    "Monday": [
-      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*",
-      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)*"
-    ],
-    "Tuesday": [
-      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*",
-      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)*",
-      "6:30 - 7:30 pm (Pickleball 18+)*",
-      "7:40 - 8:40 pm (Pickleball 18+)*"
-    ],
-    "Wednesday": [
-      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*",
-      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)*",
-      "6:30 - 7:30 pm (Pickleball 18+)*",
-      "7:40 - 8:40 pm (Pickleball 18+)*"
-    ],
-    "Thursday": [
-      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*",
-      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)*",
-      "6:30 - 7:30 pm (Pickleball 18+)*",
-      "7:40 - 8:40 pm (Pickleball 18+)*"
-    ],
-    "Friday": [
-      "8:30 - 9:30 am (Pickleball - courts 1, 2, 3, and 4)*",
-      "10 - 11 am (Pickleball - courts 1, 2, 3, and 4)*"
-    ]
   }
 }
