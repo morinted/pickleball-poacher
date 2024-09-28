@@ -193,6 +193,15 @@
       "3 - 4 pm (Pickleball)"
     ]
   },
+  "Nepean Sportsplex October 12 to 14": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/nepean-sportsplex",
+    "address": "1701 Woodroffe Avenue Ottawa ON K2G 1W2",
+    "coordinates": {
+      "lat": "45.3271242",
+      "lon": "-75.7452920352786"
+    }
+  },
   "Nepean Sportsplex September 3 to December 31": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/nepean-sportsplex",
