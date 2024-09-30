@@ -82,6 +82,15 @@
       "11 am - 12 pm (Pickleball - family)"
     ]
   },
+  "François Dupuis Recreation Centre October 12 to 14": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/francois-dupuis-recreation-centre",
+    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
+    "coordinates": {
+      "lat": "45.45448785",
+      "lon": "-75.46332711436"
+    }
+  },
   "François Dupuis Recreation Centre September 3 to December 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/francois-dupuis-recreation-centre",
