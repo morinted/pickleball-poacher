@@ -1,4 +1,35 @@
 {
+  "CARDELREC Recreation Complex Goulbourn October 15 to December 22": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/cardelrec-recreation-complex-goulbourn",
+    "address": "1500 Shea Road Ottawa ON K2S 0B2",
+    "coordinates": {
+      "lat": "45.263135000000005",
+      "lon": "-75.90787332212767"
+    },
+    "Monday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*",
+      "2:45 - 3:45 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ],
+    "Wednesday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ],
+    "Thursday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "12:45 - 1:45 pm (Pickleball)*",
+      "1:45 - 2:45 pm (Pickleball)*",
+      "2:45 - 3:45 pm (Pickleball)*"
+    ]
+  },
   "Dempsey Community Centre July 8 to December 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/dempseycc",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/dempsey-community-centre",
