@@ -80,7 +80,7 @@
       "10:30 - 11:30 am (Pickleball)"
     ]
   },
-  "Eva James Memorial Community Centre October 3 to December 20": {
+  "Eva James Memorial Community Centre September 9 to December 20": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/eva-james-memorial-community-centre",
     "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
@@ -113,15 +113,6 @@
       "11 am - 12 pm (Pickleball - family)"
     ]
   },
-  "François Dupuis Recreation Centre October 12 to 14": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/francois-dupuis-recreation-centre",
-    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
-    "coordinates": {
-      "lat": "45.45448785",
-      "lon": "-75.46332711436"
-    }
-  },
   "François Dupuis Recreation Centre September 3 to December 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/francois-dupuis-recreation-centre",
@@ -135,19 +126,22 @@
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
       "12:10 - 1:10 pm (Pickleball 50+)",
+      "1:20 - 2:20 pm (Pickleball 50+)*",
       "6:40 - 7:40 pm (Pickleball 16+)",
       "7:50 - 8:50 pm (Pickleball 16+)"
     ],
     "Tuesday": [
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)"
+      "12:10 - 1:10 pm (Pickleball 50+)",
+      "1:20 - 2:20 pm (Pickleball intermediate)*"
     ],
     "Wednesday": [
       "8:40 - 9:40 am (Pickleball intermediate)",
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
-      "12:10 - 1:10 pm (Pickleball 50+)"
+      "12:10 - 1:10 pm (Pickleball 50+)",
+      "1:20 - 2:20 pm (Pickleball 50+)*"
     ],
     "Thursday": [
       "8:40 - 9:40 am (Pickleball intermediate)",
@@ -160,6 +154,7 @@
       "9:50 - 10:50 am (Pickleball 50+)",
       "11 am - 12 pm (Pickleball 50+)",
       "12:10 - 1:10 pm (Pickleball 50+)",
+      "1:20 - 2:20 pm (Pickleball intermediate)*",
       "8:40 - 9:40 pm (Pickleball 50+)"
     ],
     "Saturday": [
@@ -193,15 +188,6 @@
       "10 - 11 am (Pickleball - rotations)",
       "11 - 12 pm (Pickleball - rotations)"
     ]
-  },
-  "Minto Recreation Complex - Barrhaven October 12 to 14": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/minto-recreation-complex-barrhaven",
-    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
-    "coordinates": {
-      "lat": "45.252972150000005",
-      "lon": "-75.73453126552369"
-    }
   },
   "Minto Recreation Complex - Barrhaven September 3 to December 22": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
@@ -241,15 +227,6 @@
       "1:55 - 2:55 pm (Pickleball)",
       "3 - 4 pm (Pickleball)"
     ]
-  },
-  "Nepean Sportsplex October 12 to 14": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/nepean-sportsplex",
-    "address": "1701 Woodroffe Avenue Ottawa ON K2G 1W2",
-    "coordinates": {
-      "lat": "45.3271242",
-      "lon": "-75.7452920352786"
-    }
   },
   "Nepean Sportsplex September 3 to December 31": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
