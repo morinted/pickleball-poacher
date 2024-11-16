@@ -179,8 +179,7 @@
       "11 am - 12 pm (Pickleball 50+)",
       "12:10 - 1:10 pm (Pickleball 50+)",
       "1:20 - 2:20 pm (Pickleball intermediate 16+)",
-      "2:30 - 3:30 pm (Pickleball intermediate 16+)",
-      "8:40 - 9:40 pm (Pickleball 50+)"
+      "2:30 - 3:30 pm (Pickleball intermediate 16+)"
     ],
     "Saturday": [
       "2 - 3 pm (Pickleball 16+)"
@@ -212,6 +211,27 @@
     "Friday": [
       "10 - 11 am (Pickleball - rotations)",
       "11 - 12 pm (Pickleball - rotations)"
+    ]
+  },
+  "Hunt Club-Riverside Park Community Centre November 16 to December 22": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/hunt-club-riverside-park-community-centre",
+    "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
+    "coordinates": {
+      "lat": "45.352061500000005",
+      "lon": "-75.67274397046596"
+    },
+    "Monday": [
+      "11:45 - 12:45 pm (Pickleball - adult)*",
+      "1 - 2 pm (Pickleball - adult)*"
+    ],
+    "Tuesday": [
+      "11:45 - 12:45 pm (Pickleball - adult)*",
+      "1 - 2 pm (Pickleball - adult)*"
+    ],
+    "Thursday": [
+      "11:45 - 12:45 pm (Pickleball - adult - intermediate)*",
+      "1 - 2 pm (Pickleball - adult - intermediate)*"
     ]
   },
   "Minto Recreation Complex - Barrhaven September 3 to December 22": {
