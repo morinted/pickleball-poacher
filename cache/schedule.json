@@ -67,6 +67,32 @@
       "7 - 10 pm (Pickleball)"
     ]
   },
+  "Diane Deans Greenboro Community Centre December 22 to 28": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/diane-deans-greenboro-community-centre",
+    "address": "363 Lorry Greenberg Drive Ottawa ON K1T 3P8",
+    "coordinates": {
+      "lat": "45.36331905",
+      "lon": "-75.63647823186619"
+    },
+    "Sunday": [
+      "9 - 10 am (Pickleball)",
+      "10:30 - 11:30 am (Pickleball)"
+    ]
+  },
+  "Diane Deans Greenboro Community Centre December 29 to January 4": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/diane-deans-greenboro-community-centre",
+    "address": "363 Lorry Greenberg Drive Ottawa ON K1T 3P8",
+    "coordinates": {
+      "lat": "45.36331905",
+      "lon": "-75.63647823186619"
+    },
+    "Sunday": [
+      "9 - 10 am (Pickleball)",
+      "10:30 - 11:30 am (Pickleball)"
+    ]
+  },
   "Diane Deans Greenboro Community Centre September 16 to December 20": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/diane-deans-greenboro-community-centre",
@@ -94,6 +120,54 @@
     "Sunday": [
       "9 - 10 am (Pickleball)",
       "10:30 - 11:30 am (Pickleball)"
+    ]
+  },
+  "Eva James Memorial Community Centre December 21 to 23": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/eva-james-memorial-community-centre",
+    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
+    "coordinates": {
+      "lat": "45.2898956",
+      "lon": "-75.85628624467708"
+    },
+    "Monday": [
+      "10:45 - 11:45 am (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:45 - 1:45 pm (Pickleball - family)*"
+    ],
+    "Saturday": [
+      "10:45 - 11:45 am (Pickleball)*",
+      "11:45 - 12:45 pm (Pickleball)*"
+    ],
+    "Sunday": [
+      "1 - 2 pm (Pickleball)*",
+      "2 - 3 pm (Pickleball)*"
+    ]
+  },
+  "Eva James Memorial Community Centre January 2 to 5": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/eva-james-memorial-community-centre",
+    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
+    "coordinates": {
+      "lat": "45.2898956",
+      "lon": "-75.85628624467708"
+    },
+    "Thursday": [
+      "10:45 - 11:45 am (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*"
+    ],
+    "Friday": [
+      "1 - 2 pm (Pickleball)",
+      "2 - 3 pm (Pickleball)*"
+    ],
+    "Saturday": [
+      "10:45 - 11:45 am (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:45 - 1:45 pm (Pickleball - family)*"
+    ],
+    "Sunday": [
+      "1 - 2 pm (Pickleball)*",
+      "2 - 3 pm (Pickleball)*"
     ]
   },
   "Eva James Memorial Community Centre September 9 to December 20": {
