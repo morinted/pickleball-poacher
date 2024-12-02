@@ -74,11 +74,7 @@
     "coordinates": {
       "lat": "45.36331905",
       "lon": "-75.63647823186619"
-    },
-    "Sunday": [
-      "9 - 10 am (Pickleball)",
-      "10:30 - 11:30 am (Pickleball)"
-    ]
+    }
   },
   "Diane Deans Greenboro Community Centre December 29 to January 4": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
@@ -87,11 +83,7 @@
     "coordinates": {
       "lat": "45.36331905",
       "lon": "-75.63647823186619"
-    },
-    "Sunday": [
-      "9 - 10 am (Pickleball)",
-      "10:30 - 11:30 am (Pickleball)"
-    ]
+    }
   },
   "Diane Deans Greenboro Community Centre September 16 to December 20": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
@@ -307,6 +299,24 @@
       "11:45 am - 12:45 pm (Pickleball - adult - intermediate)",
       "1 - 2 pm (Pickleball - adult - intermediate)"
     ]
+  },
+  "Minto Recreation Complex - Barrhaven December 23 to 29": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/minto-recreation-complex-barrhaven",
+    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
+    "coordinates": {
+      "lat": "45.252972150000005",
+      "lon": "-75.73453126552369"
+    }
+  },
+  "Minto Recreation Complex - Barrhaven December 30 to January 5": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/minto-recreation-complex-barrhaven",
+    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
+    "coordinates": {
+      "lat": "45.252972150000005",
+      "lon": "-75.73453126552369"
+    }
   },
   "Minto Recreation Complex - Barrhaven September 3 to December 22": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
