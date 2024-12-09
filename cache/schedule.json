@@ -11,6 +11,15 @@
       "9:30 am - 2:15 pm (Pickleball)"
     ]
   },
+  "CARDELREC Recreation Complex Goulbourn December 30 to January 3": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/cardelrec-recreation-complex-goulbourn",
+    "address": "1500 Shea Road Ottawa ON K2S 0B2",
+    "coordinates": {
+      "lat": "45.263135000000005",
+      "lon": "-75.90787332212767"
+    }
+  },
   "CARDELREC Recreation Complex Goulbourn October 15 to December 22": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/cardelrec",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/cardelrec-recreation-complex-goulbourn",
@@ -123,17 +132,17 @@
       "lon": "-75.85628624467708"
     },
     "Monday": [
-      "10:45 - 11:45 am (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball - family)*"
+      "10:45 - 11:45 am (Pickleball)",
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:45 - 1:45 pm (Pickleball - family)"
     ],
     "Saturday": [
-      "10:45 - 11:45 am (Pickleball)*",
-      "11:45 - 12:45 pm (Pickleball)*"
+      "10:45 - 11:45 am (Pickleball)",
+      "11:45 - 12:45 pm (Pickleball)"
     ],
     "Sunday": [
-      "1 - 2 pm (Pickleball)*",
-      "2 - 3 pm (Pickleball)*"
+      "1 - 2 pm (Pickleball)",
+      "2 - 3 pm (Pickleball)"
     ]
   },
   "Eva James Memorial Community Centre January 2 to 5": {
@@ -145,21 +154,21 @@
       "lon": "-75.85628624467708"
     },
     "Thursday": [
-      "10:45 - 11:45 am (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*"
+      "10:45 - 11:45 am (Pickleball)",
+      "11:45 am - 12:45 pm (Pickleball)"
     ],
     "Friday": [
       "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)*"
+      "2 - 3 pm (Pickleball)"
     ],
     "Saturday": [
-      "10:45 - 11:45 am (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball - family)*"
+      "10:45 - 11:45 am (Pickleball)",
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:45 - 1:45 pm (Pickleball - family)"
     ],
     "Sunday": [
-      "1 - 2 pm (Pickleball)*",
-      "2 - 3 pm (Pickleball)*"
+      "1 - 2 pm (Pickleball)",
+      "2 - 3 pm (Pickleball)"
     ]
   },
   "Eva James Memorial Community Centre September 9 to December 20": {
