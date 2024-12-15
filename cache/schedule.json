@@ -204,6 +204,24 @@
       "11 am - 12 pm (Pickleball - family)"
     ]
   },
+  "François Dupuis Recreation Centre December 21 to 29": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/francois-dupuis-recreation-centre",
+    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
+    "coordinates": {
+      "lat": "45.45448785",
+      "lon": "-75.46332711436"
+    }
+  },
+  "François Dupuis Recreation Centre December 30 to January 5": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/francois-dupuis-recreation-centre",
+    "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
+    "coordinates": {
+      "lat": "45.45448785",
+      "lon": "-75.46332711436"
+    }
+  },
   "François Dupuis Recreation Centre September 3 to December 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/francois-dupuis-recreation-centre",
@@ -475,6 +493,24 @@
       "11 am - 12 pm (Pickleball)",
       "12 pm - 1 pm (Pickleball)"
     ]
+  },
+  "Richcraft Recreation Complex-Kanata December 23 to 29": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/richcraft-recreation-complex-kanata",
+    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
+    "coordinates": {
+      "lat": "45.34042705",
+      "lon": "-75.93049740835963"
+    }
+  },
+  "Richcraft Recreation Complex-Kanata December 30 to January 5": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/richcraft-recreation-complex-kanata",
+    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
+    "coordinates": {
+      "lat": "45.34042705",
+      "lon": "-75.93049740835963"
+    }
   },
   "Richcraft Recreation Complex-Kanata September 10 to December 22": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
