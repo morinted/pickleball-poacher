@@ -130,20 +130,7 @@
     "coordinates": {
       "lat": "45.2898956",
       "lon": "-75.85628624467708"
-    },
-    "Monday": [
-      "10:45 - 11:45 am (Pickleball)",
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:45 - 1:45 pm (Pickleball - family)"
-    ],
-    "Saturday": [
-      "10:45 - 11:45 am (Pickleball)",
-      "11:45 - 12:45 pm (Pickleball)"
-    ],
-    "Sunday": [
-      "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)"
-    ]
+    }
   },
   "Eva James Memorial Community Centre January 2 to 5": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
@@ -153,22 +140,22 @@
       "lat": "45.2898956",
       "lon": "-75.85628624467708"
     },
-    "Thursday": [
+    "Monday": [
       "10:45 - 11:45 am (Pickleball)",
       "11:45 am - 12:45 pm (Pickleball)"
     ],
-    "Friday": [
-      "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)"
+    "Tuesday": [
+      "1 - 2 pm (Pickleball)*",
+      "2 - 3 pm (Pickleball)*"
     ],
-    "Saturday": [
-      "10:45 - 11:45 am (Pickleball)",
-      "11:45 am - 12:45 pm (Pickleball)",
-      "12:45 - 1:45 pm (Pickleball - family)"
+    "Wednesday": [
+      "10:45 - 11:45 am (Pickleball)*",
+      "11:45 am - 12:45 pm (Pickleball)*",
+      "12:45 - 1:45 pm (Pickleball - family)*"
     ],
-    "Sunday": [
-      "1 - 2 pm (Pickleball)",
-      "2 - 3 pm (Pickleball)"
+    "Thursday": [
+      "1 - 2 pm (Pickleball)*",
+      "2 - 3 pm (Pickleball)*"
     ]
   },
   "Eva James Memorial Community Centre September 9 to December 20": {
@@ -204,7 +191,36 @@
       "11 am - 12 pm (Pickleball - family)"
     ]
   },
-  "François Dupuis Recreation Centre December 21 to 29": {
+  "Eva James Memorial Community Centre January 6 to March 9": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/eva-james-memorial-community-centre",
+    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
+    "coordinates": {
+      "lat": "45.2898956",
+      "lon": "-75.85628624467708"
+    },
+    "Monday": [
+      "10:15 - 11:15 am (Pickleball)*"
+    ],
+    "Thursday": [
+      "10 - 11 am (Pickleball)",
+      "11 am - 12 pm (Pickleball)"
+    ],
+    "Friday": [
+      "1 - 2 pm (Pickleball)",
+      "2 - 3pm (Pickleball)"
+    ],
+    "Saturday": [
+      "12 pm - 1 pm (Pickleball)*",
+      "1 - 2 pm (Pickleball)*"
+    ],
+    "Sunday": [
+      "9 - 10 am (Pickleball)",
+      "10 - 11 am (Pickleball)",
+      "11 am - 12 pm (Pickleball - family)"
+    ]
+  },
+  "François Dupuis Recreation Centre December 23 to 29": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/francoisdupuis",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/francois-dupuis-recreation-centre",
     "address": "2263 Portobello Boulevard Ottawa ON K4A 0X3",
@@ -325,6 +341,27 @@
     }
   },
   "Hunt Club-Riverside Park Community Centre November 16 to December 22": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/hunt-club-riverside-park-community-centre",
+    "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
+    "coordinates": {
+      "lat": "45.352061500000005",
+      "lon": "-75.67274397046596"
+    },
+    "Monday": [
+      "11:45 am - 12:45 pm (Pickleball - adult)",
+      "1 - 2 pm (Pickleball - adult)"
+    ],
+    "Tuesday": [
+      "11:45 am - 12:45 pm (Pickleball - adult)",
+      "1 - 2 pm (Pickleball - adult)"
+    ],
+    "Thursday": [
+      "11:45 am - 12:45 pm (Pickleball - adult - intermediate)",
+      "1 - 2 pm (Pickleball - adult - intermediate)"
+    ]
+  },
+  "Hunt Club-Riverside Park Community Centre January 6 to March 31": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/huntclubCC",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/hunt-club-riverside-park-community-centre",
     "address": "3320 Paul Anka Drive Ottawa ON K1V 0J9",
