@@ -200,7 +200,11 @@
       "lon": "-75.85628624467708"
     },
     "Monday": [
-      "10:15 - 11:15 am (Pickleball)*"
+      "11:15 am  - 12:15 pm (Pickleball)*"
+    ],
+    "Tuesday": [
+      "1:10 - 2:10 pm (Pickleball)",
+      "2:10 - 3:10 pm (Pickleball)"
     ],
     "Thursday": [
       "10 - 11 am (Pickleball)",
@@ -297,7 +301,7 @@
       "12:50 - 1:50 pm (Pickleball - family (parent with child))"
     ]
   },
-  "Hintonburg Community Centre September 3 to December 22": {
+  "Hintonburg Community Centre September 3 to December 23": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/hintonburgcc",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/hintonburg-community-centre",
     "address": "1064 Wellington Street West Ottawa ON K1Y 2Y3",
@@ -306,9 +310,11 @@
       "lon": "-75.72428267352942"
     },
     "Monday": [
+      "10 - 11 am (Pickleball - rotations)*",
+      "11 - 12 pm (Pickleball - rotations)*",
       "12 pm - 1 pm (Pickleball - rotations)",
       "1 - 2 pm (Pickleball - rotations)",
-      "2 - 3 pm (Pickleball - rotations)"
+      "2 - 3 pm (Pickleball - rotations)*"
     ],
     "Tuesday": [
       "10 - 11 am (Pickleball - rotations)",
@@ -442,6 +448,47 @@
       "3 - 4 pm (Pickleball)"
     ]
   },
+  "Minto Recreation Complex - Barrhaven January 6 to March 9": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/mintobarrhaven",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/minto-recreation-complex-barrhaven",
+    "address": "3500 Cambrian Road Ottawa ON K2J 0V1",
+    "coordinates": {
+      "lat": "45.252972150000005",
+      "lon": "-75.73453126552369"
+    },
+    "Monday": [
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 - 1:50 pm (Pickleball)",
+      "1:55 - 2:55 pm (Pickleball)",
+      "3 - 4 pm (Pickleball)"
+    ],
+    "Tuesday": [
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 - 1:50 pm (Pickleball)",
+      "1:55 - 2:55 pm (Pickleball)",
+      "3 - 4 pm (Pickleball)"
+    ],
+    "Wednesday": [
+      "9 - 10 am (Pickleball)",
+      "10:05 - 11:05 am (Pickleball)",
+      "11:10 am - 12:10 pm (Pickleball)",
+      "12:15 - 1:15 pm (Pickleball)",
+      "1:20 - 2:20 pm (Pickleball)",
+      "2:25 - 3:25 pm (Pickleball)"
+    ],
+    "Thursday": [
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 - 1:50 pm (Pickleball)",
+      "1:55 - 2:55 pm (Pickleball)",
+      "3 - 4 pm (Pickleball)"
+    ],
+    "Friday": [
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:50 - 1:50 pm (Pickleball)",
+      "1:55 - 2:55 pm (Pickleball)",
+      "3 - 4 pm (Pickleball)"
+    ]
+  },
   "Nepean Sportsplex December 22 to 29": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/nepeansportsplex",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/nepean-sportsplex",
@@ -523,6 +570,49 @@
       "10 - 11 am (Pickleball)",
       "11 am - 12 pm (Pickleball)",
       "12 pm - 1 pm (Pickleball)"
+    ],
+    "Friday": [
+      "9 - 10 am (Pickleball)",
+      "10 - 11 am (Pickleball)",
+      "11 am - 12 pm (Pickleball)",
+      "12 pm - 1 pm (Pickleball)"
+    ]
+  },
+  "Overbrook Community Centre January 6 to March 29": {
+    "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
+    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/overbrook-community-centre",
+    "address": "33 Quill Street Ottawa ON K1K 4E7",
+    "coordinates": {
+      "lat": "45.4254727",
+      "lon": "-75.65684704689782"
+    },
+    "Monday": [
+      "9 - 10 am (Pickleball)",
+      "10 - 11 am (Pickleball)",
+      "11 am - 12 pm (Pickleball)",
+      "12 pm - 1 pm (Pickleball)",
+      "1 - 2 pm (Pickleball)"
+    ],
+    "Tuesday": [
+      "9 - 10 am (Pickleball)",
+      "10 - 11 am (Pickleball)",
+      "11 am - 12 pm (Pickleball)",
+      "12 pm - 1 pm (Pickleball)",
+      "1 - 2 pm (Pickleball)"
+    ],
+    "Wednesday": [
+      "9 - 10 am (Pickleball)",
+      "10 - 11 am (Pickleball)",
+      "11 am - 12 pm (Pickleball)",
+      "12 pm - 1 pm (Pickleball)",
+      "1 - 2 pm (Pickleball)"
+    ],
+    "Thursday": [
+      "9 - 10 am (Pickleball)",
+      "10 - 11 am (Pickleball)",
+      "11 am - 12 pm (Pickleball)",
+      "12 pm - 1 pm (Pickleball)",
+      "1 - 2 pm (Pickleball)*"
     ],
     "Friday": [
       "9 - 10 am (Pickleball)",
