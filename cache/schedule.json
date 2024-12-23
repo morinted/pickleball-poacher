@@ -150,33 +150,6 @@
       "lon": "-75.63647823186619"
     }
   },
-  "Diane Deans Greenboro Community Centre September 16 to December 21": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/diane-deans-greenboro-community-centre",
-    "address": "363 Lorry Greenberg Drive Ottawa ON K1T 3P8",
-    "coordinates": {
-      "lat": "45.36331905",
-      "lon": "-75.63647823186619"
-    },
-    "Tuesday": [
-      "11:30 am  -  12:30 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "9:30 - 10:30 am (Pickleball)",
-      "12:30 - 1:30 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "1 - 2 pm (Pickleball)"
-    ],
-    "Friday": [
-      "9:30 - 10:30 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)"
-    ],
-    "Sunday": [
-      "10:30 - 12 pm (Pickleball)*"
-    ]
-  },
   "Diane Deans Greenboro Community Centre January 6 to March 7": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/greenborocommunitycentre",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/diane-deans-greenboro-community-centre",
@@ -235,41 +208,7 @@
       "12:45 - 1:45 pm (Pickleball - family)*"
     ],
     "Thursday": [
-      "1 - 2 pm (Pickleball)*",
-      "2 - 3 pm (Pickleball)*"
-    ]
-  },
-  "Eva James Memorial Community Centre September 9 to December 20": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/evajamescc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/eva-james-memorial-community-centre",
-    "address": "65 Stonehaven Drive Ottawa ON K2M 2Y2",
-    "coordinates": {
-      "lat": "45.2898956",
-      "lon": "-75.85628624467708"
-    },
-    "Monday": [
-      "11:15 am - 12:15 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "1:10 - 2:10 pm (Pickleball)",
-      "2:10 - 3:10 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)"
-    ],
-    "Friday": [
-      "1 - 2 pm (Pickleball)",
-      "2 - 3pm (Pickleball)"
-    ],
-    "Saturday": [
-      "12 - 1 pm (Pickleball)",
-      "1 - 2pm (Pickleball)"
-    ],
-    "Sunday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball - family)"
+      "1 - 2 pm (Pickleball)*"
     ]
   },
   "Eva James Memorial Community Centre January 6 to March 9": {
@@ -705,48 +644,6 @@
       "3:30 - 4:30 pm (Pickleball)"
     ]
   },
-  "Overbrook Community Centre September 3 to December 20": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/overbrook-community-centre",
-    "address": "33 Quill Street Ottawa ON K1K 4E7",
-    "coordinates": {
-      "lat": "45.4254727",
-      "lon": "-75.65684704689782"
-    },
-    "Monday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)"
-    ],
-    "Tuesday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)"
-    ],
-    "Wednesday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)",
-      "1 - 2 pm (Pickleball)"
-    ],
-    "Thursday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ],
-    "Friday": [
-      "9 - 10 am (Pickleball)",
-      "10 - 11 am (Pickleball)",
-      "11 am - 12 pm (Pickleball)",
-      "12 pm - 1 pm (Pickleball)"
-    ]
-  },
   "Overbrook Community Centre January 6 to March 29": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/overbrookcc",
     "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/overbrook-community-centre",
@@ -891,24 +788,6 @@
       "5:30 - 6:30 pm (Pickleball 18+ - recreational play)",
       "6:30 - 7:30 pm (Pickleball 18+ - recreational play)",
       "7:30 - 8:30 pm (Pickleball 18+ - recreational play)"
-    ]
-  },
-  "Rideauview Community Centre September 3 to December 20": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/rideauviewcc",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/rideauview-community-centre",
-    "address": "4310 Shoreline Drive Ottawa ON K1V 1N4",
-    "coordinates": {
-      "lat": "45.27724445",
-      "lon": "-75.68700676468175"
-    },
-    "Tuesday": [
-      "9:30 - 10:30 am (Pickleball - Adult)"
-    ],
-    "Wednesday": [
-      "12 pm - 1 pm (Pickleball - Adult)"
-    ],
-    "Thursday": [
-      "10:30 - 11:30 am (Pickleball - Adult)"
     ]
   },
   "Rideauview Community Centre January 6 to June 13": {
