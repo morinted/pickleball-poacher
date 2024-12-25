@@ -199,16 +199,16 @@
       "11:45 am - 12:45 pm (Pickleball)"
     ],
     "Tuesday": [
-      "1 - 2 pm (Pickleball)*",
-      "2 - 3 pm (Pickleball)*"
+      "1 - 2 pm (Pickleball)",
+      "2 - 3 pm (Pickleball)"
     ],
     "Wednesday": [
-      "10:45 - 11:45 am (Pickleball)*",
-      "11:45 am - 12:45 pm (Pickleball)*",
-      "12:45 - 1:45 pm (Pickleball - family)*"
+      "10:45 - 11:45 am (Pickleball)",
+      "11:45 am - 12:45 pm (Pickleball)",
+      "12:45 - 1:45 pm (Pickleball - family)"
     ],
     "Thursday": [
-      "1 - 2 pm (Pickleball)*"
+      "1 - 2 pm (Pickleball)"
     ]
   },
   "Eva James Memorial Community Centre January 6 to March 9": {
@@ -235,8 +235,8 @@
       "2 - 3pm (Pickleball)"
     ],
     "Saturday": [
-      "12 pm - 1 pm (Pickleball)*",
-      "1 - 2 pm (Pickleball)*"
+      "12 pm - 1 pm (Pickleball)",
+      "1 - 2 pm (Pickleball)"
     ],
     "Sunday": [
       "9 - 10 am (Pickleball)",
@@ -704,33 +704,6 @@
       "lat": "45.34042705",
       "lon": "-75.93049740835963"
     }
-  },
-  "Richcraft Recreation Complex-Kanata September 10 to December 22": {
-    "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
-    "home": "https://ottawa.ca/en/recreation-and-parks/facilities/place-listing/richcraft-recreation-complex-kanata",
-    "address": "4101 Innovation Drive Ottawa ON K2K 0J3",
-    "coordinates": {
-      "lat": "45.34042705",
-      "lon": "-75.93049740835963"
-    },
-    "Tuesday": [
-      "1:30 - 2:30 pm (Pickleball - rotations)",
-      "2:30 - 3:30 pm (Pickleball - rotations)"
-    ],
-    "Wednesday": [
-      "1:30 - 2:30 pm (Pickleball - rotations)",
-      "2:30 - 3:30 pm (Pickleball - rotations)"
-    ],
-    "Thursday": [
-      "1:30 - 2:30 pm (Pickleball - rotations)",
-      "2:30 - 3:30 pm (Pickleball - rotations)"
-    ],
-    "Friday": [
-      "8:30 - 9:30 am (Pickleball - rotations)",
-      "9:30 - 10:30 am (Pickleball - rotations)",
-      "1:30 - 2:30 pm (Pickleball - rotations)",
-      "2:30 - 3:30 pm (Pickleball - rotations)"
-    ]
   },
   "Richcraft Recreation Complex-Kanata January 6 to March 9": {
     "link": "https://reservation.frontdesksuite.ca/rcfs/richcraftkanata",
